@@ -55,9 +55,16 @@ export const TestText = styled("div")(() => ({
   fontSize: "54px",
 
   span: {
-    "&:first-letter": {
-      fontStyle: "italic",
-      marginRight: "7px",
+    "&:first-of-type": {
+      marginRight: "1rem",
+    },
+    p: {
+      margin: 0,
+      display: "inline-block",
+      "::first-letter": {
+        fontStyle: "italic",
+        marginRight: "7px",
+      },
     },
   },
 }));

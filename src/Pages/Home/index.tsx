@@ -21,48 +21,92 @@ const Home = () => {
       <div className="container">
         <div className="text-wrapper">
           <TestText className="text-1">
-            <span>Pure</span>
-            <span>Divilment</span>
+            <span>
+              <p>Pure</p>
+            </span>
+            <span>
+              <p>Divilment</p>
+            </span>
           </TestText>
           <TestText className="text-2">
-            <span>Pure</span>
-            <span>Divilment</span>
+            <span>
+              <p>Pure</p>
+            </span>
+            <span>
+              <p>Divilment</p>
+            </span>
           </TestText>
           <TestText className="text-3">
-            <span>Pure</span>
-            <span>Divilment</span>
+            <span>
+              <p>Pure</p>
+            </span>
+            <span>
+              <p>Divilment</p>
+            </span>
           </TestText>
           <TestText className="text-4">
-            <span>Pure</span>
-            <span>Divilment</span>
+            <span>
+              <p>Pure</p>
+            </span>
+            <span>
+              <p>Divilment</p>
+            </span>
           </TestText>
           <TestText className="text-5">
-            <span>Pure</span>
-            <span>Divilment</span>
+            <span>
+              <p>Pure</p>
+            </span>
+            <span>
+              <p>Divilment</p>
+            </span>
           </TestText>
           <TestText className="text-6">
-            <span>Pure</span>
-            <span>Divilment</span>
+            <span>
+              <p>Pure</p>
+            </span>
+            <span>
+              <p>Divilment</p>
+            </span>
           </TestText>
           <TestText className="text-7">
-            <span>Pure</span>
-            <span>Divilment</span>
+            <span>
+              <p>Pure</p>
+            </span>
+            <span>
+              <p>Divilment</p>
+            </span>
           </TestText>
           <TestText className="text-8">
-            <span>Pure</span>
-            <span>Divilment</span>
+            <span>
+              <p>Pure</p>
+            </span>
+            <span>
+              <p>Divilment</p>
+            </span>
           </TestText>
           <TestText className="text-9">
-            <span>Pure</span>
-            <span>Divilment</span>
+            <span>
+              <p>Pure</p>
+            </span>
+            <span>
+              <p>Divilment</p>
+            </span>
           </TestText>
           <TestText className="text-10">
-            <span>Pure</span>
-            <span>Divilment</span>
+            <span>
+              <p>Pure</p>
+            </span>
+            <span>
+              <p>Divilment</p>
+            </span>
           </TestText>
           <TestText className="text-11">
-            <span>Pure</span>
-            <span>Divilment</span>
+            <span>
+              <p>Pure</p>
+            </span>
+            <span>
+              <p>Divilment</p>
+            </span>
           </TestText>
         </div>
       </div>

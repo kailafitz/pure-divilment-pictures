@@ -10,11 +10,15 @@ declare module '@mui/material/styles' {
         // neutral?: PaletteOptions['primary'];
         white: PaletteOptions["primary"];
     }
+
+    interface CommonColors {
+        white: string;
+    }
 }
 
 declare module '@mui/material/Typography' {
     interface TypographyPropsColorOverrides {
         // neutral: true;
-        white: true
+        white: true;
     }
 }

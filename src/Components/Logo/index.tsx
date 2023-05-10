@@ -3,12 +3,13 @@ import { LogoContainer, StyledLogoHeading, StyledLogoSubtitle } from "./styles";
 import { Link } from "@mui/material";
 
 interface LogoProps {
-  style: object;
+  color?: string;
+  style?: object;
 }
 
 export const Logo = (props: LogoProps) => {
   return (
-    <Link href="/" underline="none" sx={props.style}>
+    <Link href="/" color={props.color} sx={props.style} className="logo">
       <LogoContainer>
         <span>
           <StyledLogoHeading>Pure</StyledLogoHeading>

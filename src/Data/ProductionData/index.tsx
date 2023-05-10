@@ -12,6 +12,14 @@
 const bathsCoverImage = require("../../Assets/baths-cover-photo.png");
 const bathsStillImage1 = require("../../Assets/baths-still-1.png");
 const bathsStillImage2 = require("../../Assets/baths-still-2.png");
+const bathsMainImage = require("../../Assets/baths-production-main.png");
+
+const reelTwo1 = require("../../Assets/production-reel-2.1.png");
+const reelTwo2 = require("../../Assets/production-reel-2.2.png");
+const reelTwo3 = require("../../Assets/production-reel-2.3.png");
+const reelTwo4 = require("../../Assets/production-reel-2.4.png");
+
+const testFont = "'Comforter Brush',cursive";
 
 export interface ProductionDetails {
   fieldKey: string;
@@ -37,6 +45,12 @@ export interface ProductionItemInterface {
     details: ProductionDetails[];
     primary_still_src?: string;
     secondary_still_src?: string;
+    reel_one?: string[];
+    reel_two?: string[];
+    festivals?: string[];
+    accolades?: string[];
+    screenings?: string[];
+    production_image?: string;
   };
 }
 
@@ -48,7 +62,7 @@ export const ProductionData = [
       type: "Short Anthology",
       status: "In Distribution",
       pressReview:
-        "'A brilliantly conceived and memorably intimate  anthology short from acclaimed director Nell Hensey, with each chapter thematically linked and told from the perspective of someone taking a bath'",
+        "'A uniquely conceived and memorably intimate anthology short from acclaimed director Nell Hensey, with each chapter thematically linked and told from the perspective of someone taking a bath.'",
       reelButtonStyles: {
         fontFamily: "'Libre Baskerville', serif",
         textTransform: "capitalize",
@@ -85,7 +99,34 @@ export const ProductionData = [
       ],
       primary_still_src: bathsStillImage1,
       secondary_still_src: bathsStillImage2,
+      reel_one: [
+        bathsStillImage1,
+        bathsStillImage1,
+        bathsStillImage1,
+        bathsStillImage1,
+      ],
+      reel_two: [reelTwo1, reelTwo2, reelTwo3, reelTwo4],
       coverImage: bathsCoverImage,
+      festivals: [
+        "Galway Film Fleadh",
+        "Dublin International Film Festival",
+        "Irish Film Festival London",
+        "Disappear Here Film Festival",
+        "Meath Film Festival",
+        "Still Voices Film Festival",
+        "Kerry Film Festival",
+        "St. Brigid's Film Festival London",
+        "First Cut! Youth Film Festival",
+      ],
+      accolades: [
+        "WINNER Best Direction at First Cut! Youth Film Festival",
+        "NOMINATION Discovery Award",
+      ],
+      screenings: [
+        "Galway Film Society Spring Programme",
+        "Directed By HER Women's Day Film Event",
+      ],
+      production_image: bathsMainImage,
     },
   },
   {
@@ -97,7 +138,7 @@ export const ProductionData = [
       blurb:
         "A young woman hides under the delusion that her casual (bad) sex buddy has romantic potential and will sweep her off her feet. But after he drops her, she is more overcome by the lack of sympathy shown by her friends, her mother and even her therapist. A story of heartbreak - in more ways than one. Based off the short story 'What Feminism Is' by Louise Nealon.",
       reelButtonStyles: {
-        fontFamily: "'Comforter Brush', cursive",
+        fontFamily: testFont,
         textTransform: "none",
         fontSize: "2rem",
         fontWeight: 400,
@@ -137,7 +178,7 @@ export const ProductionData = [
       reelButtonStyles: {
         fontFamily: "'Arimo', sans-serif",
         textTransform: "uppercase",
-        fontSize: "initial",
+        fontSize: "1.5rem",
         fontWeight: 700,
       },
       details: [],
@@ -153,7 +194,7 @@ export const ProductionData = [
       reelButtonStyles: {
         fontFamily: "'Arapey', serif",
         textTransform: "uppercase",
-        fontSize: "2rem",
+        fontSize: "3rem",
         fontWeight: 400,
       },
       details: [],

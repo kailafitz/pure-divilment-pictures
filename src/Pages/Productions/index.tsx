@@ -1,83 +1,119 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Box, Button, Typography } from "@mui/material";
+import Grid from "@mui/material/Unstable_Grid2";
 import {
+  ProductionsReelContainer,
   Reel,
-  ReelItemButton,
   ReelItem,
-  ReelTypography,
   ProductionCoverImage,
 } from "./styles";
 import { ProductionData } from "../../Data/ProductionData";
+import ProductionContentLayout from "../../Components/ProductionContentLayout";
+
+const test = require("../../Assets/baths-cover-photo.png");
 
 // https://stackoverflow.com/questions/8944456/css3-transition-different-transition-for-in-and-out-or-returning-from-tran
 
 const Productions = () => {
-  const [coverImage, setCoverImage] = useState("");
+  const [hoverImage, setHoverImage] = useState("");
+  const [headerImage, setHeaderImage] = useState("");
+  const [selectProduction, setSelectProduction] = useState("0");
+
+  const SelectedProduction = ProductionData.filter((production) => {
+    return production.production.id === selectProduction;
+  });
+
+  useEffect(() => {
+    if (SelectedProduction.length > 0) {
+      setHeaderImage(SelectedProduction[0].production.coverImage);
+    }
+  }, [selectProduction]);
+
+  const scrollToProduction = () => {
+    setTimeout(function () {
+      let production =
+        document.querySelector("#selectedProduction") ?? undefined;
+
+      if (production) production.scrollIntoView();
+    }, 1000);
+  };
 
   return (
-    <Box sx={{ pt: { md: 3 } }}>
-      <Reel container>
-        {ProductionData.map((item) => {
-          return (
-            <ReelItemButton
-              component={Button}
-              href={
-                item.production.coverImage !== "Coming Soon"
-                  ? `/productions/production/${item.production.id}`
-                  : "#"
-              }
-              item
-              key={item.production.title}
-              xs={12}
-              sm={6}
-              md={3}
-              onMouseOver={() =>
-                item.production.coverImage !== "Coming Soon"
-                  ? setCoverImage(item.production.coverImage)
-                  : setCoverImage("lightgrey")
-              }
-              onMouseOut={() => setCoverImage("")}
-            >
-              <ReelItem
-                sx={{
-                  background: {
-                    xs:
-                      item.production.coverImage !== "Coming Soon"
-                        ? `url(${item.production.coverImage})`
-                        : "lightgrey",
-                    sm: "black",
-                  },
-                  backgroundSize: { xs: "cover" },
-                  backgroundPosition: { xs: "center bottom" },
-                }}
-              >
-                <ReelTypography m={0} sx={item.production.reelButtonStyles}>
-                  {item.production.title}
-                </ReelTypography>
-              </ReelItem>
-            </ReelItemButton>
-          );
-        })}
-      </Reel>
-      <ProductionCoverImage
+    <>
+      <ProductionsReelContainer
         sx={{
-          opacity: 0,
-          background:
-            coverImage === "lightgrey" ? coverImage : `url(${coverImage})`,
-          transition: "background .6s ease-in, opacity .6s ease-in",
-          display: { xs: "none", sm: "flex" },
+          minHeight:
+            SelectedProduction.length > 0
+              ? "calc(100vh - (97.5px + 50px))"
+              : "unset",
+          height: "100%",
+          flexGrow: SelectedProduction.length > 0 ? 0 : 1,
         }}
       >
-        {coverImage === "lightgrey" && (
-          <Typography
-            variant="h4"
-            color={(theme) => theme.palette.common.white}
-          >
-            Coming Soon
-          </Typography>
-        )}
-      </ProductionCoverImage>
-    </Box>
+        <Reel container columnSpacing={0.3} xs={12}>
+          {ProductionData.map((item) => {
+            return (
+              <Grid
+                sx={{
+                  py: 0,
+                  height: "inherit",
+                }}
+                key={item.production.title}
+                xs={12}
+                sm={6}
+                md={3}
+              >
+                <ReelItem
+                  sx={item.production.reelButtonStyles}
+                  onClick={() => {
+                    scrollToProduction();
+                    setSelectProduction(item.production.id);
+                    setHoverImage(item.production.coverImage);
+                  }}
+                  onMouseOver={() => {
+                    setSelectProduction("");
+                    item.production.coverImage !== "Coming Soon"
+                      ? setHoverImage(item.production.coverImage)
+                      : setHoverImage("lightgrey");
+                  }}
+                  onMouseOut={() => setHoverImage("")}
+                >
+                  {item.production.title}
+                </ReelItem>
+              </Grid>
+            );
+          })}
+        </Reel>
+        <ProductionCoverImage
+          sx={{
+            opacity: 1,
+            background:
+              selectProduction.length !== 1
+                ? hoverImage === "lightgrey"
+                  ? hoverImage
+                  : `url(${hoverImage})`
+                : `url(${headerImage})`,
+            transition: "background .6s ease-in, opacity .6s ease-in",
+          }}
+        >
+          {hoverImage === "lightgrey" && (
+            <Typography variant="h4" color="common.black">
+              Coming Soon
+            </Typography>
+          )}
+        </ProductionCoverImage>
+      </ProductionsReelContainer>
+      {SelectedProduction
+        ? SelectedProduction.map((production) => {
+            return (
+              <ProductionContentLayout
+                Production={production.production}
+                key={production.production.id}
+              />
+            );
+          })
+        : null}
+    </>
   );
 };
 

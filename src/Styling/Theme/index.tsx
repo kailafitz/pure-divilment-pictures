@@ -1,3 +1,4 @@
+import { common } from "@mui/material/colors";
 import { createTheme, responsiveFontSizes } from "@mui/material/styles";
 
 const theme = createTheme({
@@ -9,8 +10,11 @@ const theme = createTheme({
     },
   },
   palette: {
+    primary: {
+      main: common.black,
+    },
     white: {
-      main: "#ffffff",
+      main: common.white,
     },
   },
   components: {
@@ -22,6 +26,7 @@ const theme = createTheme({
       styleOverrides: {
         root: {
           fontFamily: "DM Sans",
+          borderRadius: "0px",
         },
       },
     },
@@ -29,6 +34,7 @@ const theme = createTheme({
       styleOverrides: {
         root: {
           fontFamily: "DM Sans",
+          textDecoration: "none",
         },
       },
     },

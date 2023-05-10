@@ -1,13 +1,16 @@
 import React from "react";
-import { Box, Container, Stack, Typography } from "@mui/material";
+import { Box, Container, Link, Stack, Typography } from "@mui/material";
+import { StyledAboutBanner } from "../About/styles";
+import Loader from "../../Components/Loader";
 const contactReel1 = require("../../Assets/contact-image-1.png");
 const contactReel2 = require("../../Assets/contact-image-2.png");
 const contactReel3 = require("../../Assets/contact-image-3.png");
+const AboutBanner = require("../../Assets/about.webp");
 
 const Contact = () => {
   return (
     <>
-      <Stack
+      {/* <Stack
         direction={{ xs: "column", md: "row" }}
         sx={{
           position: "relative",
@@ -58,8 +61,9 @@ const Contact = () => {
         >
           <img style={{ width: "100%" }} src={contactReel3} alt="contact-3" />
         </div>
-      </Stack>
-      <Container>
+      </Stack> */}
+      <StyledAboutBanner src={AboutBanner} alt="About Pure Divilment" />
+      <Container sx={{ mt: 4 }}>
         <Stack
           direction={{ xs: "column", sm: "row" }}
           sx={{
@@ -113,7 +117,8 @@ const Contact = () => {
               Follow Us
             </Typography>
             <Stack textAlign="right">
-              <Typography
+              <Link
+                color="primary"
                 variant="body2"
                 sx={{
                   fontWeight: 500,
@@ -121,10 +126,10 @@ const Contact = () => {
                 }}
               >
                 IMDB
-              </Typography>
-              <Typography variant="body2" sx={{ fontWeight: 500 }}>
+              </Link>
+              <Link color="primary" variant="body2" sx={{ fontWeight: 500 }}>
                 Instagram
-              </Typography>
+              </Link>
             </Stack>
           </Box>
         </Stack>

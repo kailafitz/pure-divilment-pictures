@@ -1,6 +1,36 @@
-html body {
+@font-face {
+  font-family: "GreatSejagad-JRpMM";
+  src: local("GreatSejagad-JRpMM"), url("./Fonts/great-sejagad-font/GreatSejagad-JRpMM.ttf") format("truetype");
+}
+@font-face {
+  font-family: "ApplicantSignature-3zXKX";
+  src: local("ApplicantSignature-3zXKX"), url("./Fonts/a-applicant-signature-font/ApplicantSignature-3zXKX.ttf") format("truetype");
+}
+@font-face {
+  font-family: "FreePen-RVq6";
+  src: local("FreePen-RVq6"), url("./Fonts/free-pen-font/FreePen-RVq6.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Striverx-j5Vj";
+  src: local("Striverx-j5Vj"), url("./Fonts/striverx-font/Striverx-j5Vj.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Takota-BRa8";
+  src: local("Takota-BRa8"), url("./Fonts/takota-font/Takota-BRa8.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Forturn-9Y94y";
+  src: local("Forturn-9Y94y"), url("./Fonts/forturn-font/Forturn-9Y94y.ttf") format("truetype");
+}
+@font-face {
+  font-family: "FakeSerif-K4dp";
+  src: local("FakeSerif-K4dp"), url("./Fonts/fake-serif-font/FakeSerif-K4dp.ttf") format("truetype");
+}
+html,
+body {
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
 html {
@@ -12,6 +42,19 @@ body {
   height: 100vh;
 }
 
+#home-screen-lock-for-animtation {
+  animation: animation-background-overflow-hidden 3.8s linear 0s 1 normal;
+  animation-fill-mode: forwards;
+}
+
+@keyframes animation-background-overflow-hidden {
+  0% {
+    overflow: hidden;
+  }
+  100% {
+    overflow: scroll;
+  }
+}
 #root {
   height: 100%;
   width: 100%;
@@ -20,32 +63,23 @@ body {
   justify-content: space-between;
 }
 
+.swiper-wrapper {
+  transition-timing-function: linear;
+}
+
 .active {
-  font-weight: 500;
+  font-weight: 900;
 }
 
-html,
-body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100vh;
+a {
+  text-decoration: none;
 }
-
-.header {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-family: "DM Sans";
-  text-transform: uppercase;
-  font-size: 100px;
-  z-index: -1;
+a:hover {
+  cursor: pointer;
 }
 
 .container {
   width: 100%;
-  height: 100vh;
   margin: 0px auto;
   display: flex;
   justify-content: center;
@@ -58,6 +92,11 @@ body {
 .text-wrapper {
   color: white;
   position: absolute;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .text-1,
@@ -81,7 +120,20 @@ body {
     opacity: 100%;
   }
   100% {
-    opacity: 0;
+    opacity: 0%;
+  }
+}
+@keyframes visible {
+  0% {
+    opacity: 100%;
+  }
+  50% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 0%;
+    z-index: -9;
+    position: absolute;
   }
 }
 .text-1 {
@@ -110,7 +162,7 @@ body {
 }
 
 .text-6 {
-  animation: blink 0.8s linear 0.4s, blink 0.8s linear 2.5s, slide-out 1s linear 3.2s;
+  animation: blink 0.8s linear 0.4s, blink 0.8s linear 2.5s, visible 5.5s linear 3.2s 1 normal;
   opacity: 0;
 }
 
@@ -185,11 +237,26 @@ body {
     height: 0%;
   }
 }
-@media (max-width: 990px) {
-  .header {
-    font-size: 24px;
-  }
-  .text {
-    font-size: 24px;
-  }
+.team-image {
+  --g: 4px;
+  /* the gap */
+  --b: 2px;
+  /* border thickness*/
+  --c: #000000;
+  /* the color */
+  padding: calc(var(--g) + var(--b));
+  --_c: #0000 0 25%, var(--c) 0 50%;
+  --_g1: repeating-linear-gradient(90deg, var(--_c)) repeat-x;
+  --_g2: repeating-linear-gradient(180deg, var(--_c)) repeat-y;
+  background: var(--_g1) var(--_p, 25%) 0, var(--_g2) 0 var(--_p, 125%), var(--_g1) var(--_p, 125%) 100%, var(--_g2) 100% var(--_p, 25%);
+  background-size: 200% var(--b), var(--b) 200%;
+  cursor: pointer;
+  filter: grayscale(50%);
+  transition: all 0.3s linear;
+}
+
+.team-image:hover {
+  --_p: 75%;
+  --c: #000000;
+  transition: all 0.3s linear;
 }/*# sourceMappingURL=styles.css.map */

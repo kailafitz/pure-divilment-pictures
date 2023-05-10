@@ -9,7 +9,7 @@ interface MobileDrawerProps {
 
 const MobileDrawer = (props: MobileDrawerProps) => {
   return (
-    <Drawer anchor="top" open={props.open}>
+    <Drawer anchor="top" open={props.open} sx={{ zIndex: 1 }}>
       <List sx={{ pt: (theme) => theme.spacing(10) }}>
         {NavigationItems.map((text, i) => (
           <ListItem key={i} disablePadding>

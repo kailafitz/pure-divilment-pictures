@@ -1,77 +1,59 @@
-import { Grid, Typography, Box } from "@mui/material";
-import { styled } from "@mui/material/styles";
+import { Box, Button } from "@mui/material";
+import Grid from "@mui/material/Unstable_Grid2";
+import { alpha, styled } from "@mui/material/styles";
 
-export const Reel = styled(Grid)(({ theme }) => ({
-  margin: theme.spacing(3, 0),
-  a: {
-    transform: "skewy(-8deg)",
-  },
-  [theme.breakpoints.up("md")]: {
-    alignItems: "center",
-    margin: theme.spacing(0),
-    "a + a": {
-      paddingLeft: ".5vh !important",
-    },
-    a: {
-      transform: "skewY(4deg)",
-    },
-    "& :nth-of-type(2)": {
-      marginTop: "calc(250px - 200px)",
-    },
-    "& :nth-of-type(3)": {
-      marginTop: "calc(250px - 150px)",
-    },
-    "& :nth-of-type(4)": {
-      marginTop: "calc(250px - 100px)",
-    },
-    "& .MuiGrid-item": {
-      padding: theme.spacing(0),
-    },
-    "&:has(> a) + div": {
-      transition: "background .6s ease-in, opacity .6s ease-in",
-    },
-    "&:hover:has(> a) + div": {
-      opacity: 1,
-      transition: "background .6s ease-in, opacity .6s ease-in",
-    },
-  },
-})) as typeof Grid;
-
-export const ReelItemButton = styled(Grid)(({ theme }) => ({
-  color: theme.palette.common.white,
-  transition: "background-color ease 1s",
-  borderRadius: 0,
-  overflow: "hidden",
-  padding: theme.spacing(3, 0),
-  "&:hover": {
-    backgroundColor: "transparent",
-  },
-  [theme.breakpoints.up("md")]: {},
-})) as typeof Grid;
-
-export const ReelItem = styled(Box)(() => ({
-  minHeight: "250px",
-  width: "100%",
+export const ProductionsReelContainer = styled(Box)(({ theme }) => ({
+  paddingTop: "50px",
   display: "flex",
   flexDirection: "column",
-  justifyContent: "center",
+  justifyContent: "space-around",
 })) as typeof Box;
 
-export const ReelTypography = styled(Typography)(() => ({
-  textAlign: "center",
-  width: "80%",
-  margin: "0 auto",
-})) as typeof Typography;
+export const Reel = styled(Grid)(({ theme }) => ({
+  background: theme.palette.common.white,
+  transform: "skewY(4deg)",
+  margin: 0,
+
+  "div:first-child": {
+    paddingLeft: 0,
+  },
+
+  "div:last-child": {
+    paddingRight: 0,
+  },
+
+  [theme.breakpoints.up("md")]: {
+    height: "200px",
+  },
+})) as typeof Grid;
+
+export const ReelItem = styled(Button)(({ theme }) => ({
+  background: theme.palette.common.black,
+  color: theme.palette.common.white,
+  width: "100%",
+  height: "100%",
+  borderRadius: 0,
+  padding: theme.spacing(3),
+  ":hover": {
+    // background: alpha(theme.palette.common.black, 0.2),
+    background: "lightgrey",
+    transition: "all .4s linear",
+  },
+})) as typeof Button;
 
 export const ProductionCoverImage = styled(Box)(({ theme }) => ({
   [theme.breakpoints.up("md")]: {
-    clipPath: "polygon(0 0, 100% 18%, 100% 100%, 0% 100%)",
     width: "100%",
-    backgroundPosition: "center",
-    height: "70vh",
-    marginTop: theme.spacing(-11),
+    backgroundPosition: "top center",
+    backgroundSize: "cover",
+    backgroundRepeat: "no-repeat",
+    display: "flex",
     flexDirection: "column",
     justifyContent: "center",
     textAlign: "center",
+    // flexGrow: 1,
+    marginTop: theme.spacing(-7),
+    // minHeight: "200px",
+    flexGrow: 1,
   },
 })) as typeof Box;

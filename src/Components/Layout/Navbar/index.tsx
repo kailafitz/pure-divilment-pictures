@@ -8,18 +8,18 @@ import { useState } from "react";
 import MobileDrawer from "./MobileDrawer";
 import { NavigationItems } from "./navbarLinks";
 import { Cross as Hamburger } from "hamburger-react";
-import { HamburgerContainer } from "./styles";
+import { NavigationContainer, HamburgerContainer } from "./styles";
 
 export default function Navbar() {
   const [isOpen, setOpen] = useState(false);
 
   return (
-    <Box sx={{ display: "flex" }}>
+    <NavigationContainer>
       <AppBar
         component="nav"
         elevation={0}
         color="transparent"
-        position="relative"
+        position="sticky"
         sx={{
           padding: (theme) => theme.spacing(2, 0),
         }}
@@ -30,17 +30,26 @@ export default function Navbar() {
             justifyContent: "space-between",
           }}
         >
-          <div style={{ position: "relative" }}>
+          <Box sx={{ position: "relative" }}>
             <Logo style={{ visibility: "hidden" }} />
-            <Logo style={{ position: "absolute", top: 0, zIndex: 1501 }} />
-          </div>
-
+            <Logo
+              style={{
+                position: "absolute",
+                top: 0,
+                zIndex: 1501,
+              }}
+            />
+          </Box>
           <HamburgerContainer>
             <Hamburger />
             <Hamburger toggled={isOpen} toggle={setOpen} />
           </HamburgerContainer>
           <MobileDrawer open={isOpen} />
-          <Box sx={{ display: { xs: "none", sm: "block" } }}>
+          <Box
+            sx={{
+              display: { xs: "none", sm: "block" },
+            }}
+          >
             {NavigationItems.map((navObj) => {
               return (
                 <NavigationLink linkObject={navObj} key={navObj.linkLabel} />
@@ -49,6 +58,6 @@ export default function Navbar() {
           </Box>
         </Toolbar>
       </AppBar>
-    </Box>
+    </NavigationContainer>
   );
 }

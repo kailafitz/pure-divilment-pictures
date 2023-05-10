@@ -4,57 +4,69 @@ import { styled } from "@mui/material/styles";
 
 export const StyledFooter = styled("div")(({ theme }) => ({
   padding: theme.spacing(3),
-  // marginTop: theme.spacing(5),
   backgroundColor: theme.palette.common.black,
   color: theme.palette.common.white,
 }));
 
-export const StyledTypography = styled(Typography)(({ theme }) => ({
-  textTransform: "uppercase",
-  textAlign: "center",
-  margin: theme.spacing(5, "auto"),
-
+export const Wrapper = styled("div")(({ theme }) => ({
+  position: "relative",
   [theme.breakpoints.up("md")]: {
-    marginRight: theme.spacing(3),
-    textAlign: "left",
+    width: "95%",
+    margin: theme.spacing(0, "auto"),
   },
 }));
 
-export const Affiliates = styled("div")(({ theme }) => ({
+export const AffiliatesFooterSection = styled("div")(({ theme }) => ({
   display: "flex",
   flexDirection: "column",
-  justifyContent: "center",
+  justifyContent: "space-between",
 
   [theme.breakpoints.up("md")]: {
     flexDirection: "row",
   },
 }));
 
-export const AffiliatesContainer = styled("div")(({ theme }) => ({
-  display: "flex",
-  flexDirection: "column",
-  justifyContent: "center",
+export const FooteSectionTitle = styled(Typography)(({ theme }) => ({
+  textTransform: "uppercase",
+  textAlign: "center",
+  margin: theme.spacing(5, "auto"),
+
+  [theme.breakpoints.up("md")]: {
+    margin: theme.spacing(4, 0),
+  },
+}));
+
+export const LogoGrid = styled(Grid2)(({ theme }) => ({
+  marginBottom: theme.spacing(5),
   img: {
-    width: "20%",
+    width: "70%",
+    display: "block",
+    margin: theme.spacing(0, "auto"),
   },
 
   [theme.breakpoints.up("md")]: {
+    marginBottom: theme.spacing(0),
+    "&:first-of-type": {
+      img: {
+        width: "65%",
+      },
+    },
     img: {
-      width: "70%",
-      margin: "0 auto",
+      width: "100%",
     },
   },
 }));
 
 export const SocailLinksContainer = styled("div")(({ theme }) => ({
   display: "flex",
-  flexDirection: "column",
-  justifyContent: "center",
+  flexDirection: "row",
+  justifyContent: "space-evenly",
   textAlign: "center",
   marginBottom: theme.spacing(3),
 
   [theme.breakpoints.up("md")]: {
     marginBottom: theme.spacing(0),
+    flexDirection: "column",
     justifyContent: "left",
     textAlign: "left",
   },
@@ -85,21 +97,5 @@ export const FooterDetails = styled("div")(({ theme }) => ({
   [theme.breakpoints.up("md")]: {
     flexDirection: "row",
     justifyContent: "space-between",
-  },
-}));
-
-export const LogoGrid = styled(Grid2)(({ theme }) => ({
-  marginBottom: theme.spacing(5),
-  img: {
-    width: "70%",
-    display: "block",
-    margin: theme.spacing(0, "auto"),
-  },
-
-  [theme.breakpoints.up("md")]: {
-    marginBottom: theme.spacing(0),
-    img: {
-      width: "100%",
-    },
   },
 }));

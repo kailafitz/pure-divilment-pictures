@@ -4,8 +4,8 @@ export const NavigationItems = [
     link: "/about",
   },
   {
-    linkLabel: "The Team",
-    link: "/the_team",
+    linkLabel: "The Creatives",
+    link: "/the_creatives",
   },
   {
     linkLabel: "Productions",
@@ -16,7 +16,11 @@ export const NavigationItems = [
   //   link: "/press",
   // },
   {
-    linkLabel: "Contact",
+    linkLabel: "Reach Out",
     link: "/contact",
+  },
+  {
+    linkLabel: "To Do",
+    link: "/todo",
   },
 ];

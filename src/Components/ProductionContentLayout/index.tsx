@@ -1,118 +1,204 @@
 import React from "react";
-import { Box, Grid, Stack, Typography } from "@mui/material";
-import { ProfileImage } from "../TeamMemberContentLayout/styles";
+import { Box, Stack, Typography } from "@mui/material";
 import { ProductionItemInterface } from "../../Data/ProductionData";
-import { Banner, ProductionTitle } from "./styles";
+import {
+  ProductionImage,
+  ProductionReelOne,
+  ProductionReelTwo,
+  ProductionTitle,
+} from "./styles";
+import Grid from "@mui/material/Unstable_Grid2/Grid2";
 
 const ProductionContentLayout = (props: ProductionItemInterface) => {
   return (
     <>
-      <Banner src={props.Production.coverImage} alt="Banner" />
-      <Box sx={{ pt: (theme) => theme.spacing(7) }}>
+      <Grid
+        id="selectedProduction"
+        container
+        sx={{
+          py: 5,
+          justifyContent: "center",
+        }}
+        columnSpacing={0.3}
+      >
+        <Grid xs={11} md={6}>
+          <ProductionTitle variant="h4" sx={props.Production.reelButtonStyles}>
+            {props.Production.title}
+          </ProductionTitle>
+          <Typography mb={2} sx={{ textAlign: "center" }}>
+            <span
+              style={{
+                fontWeight: 500,
+              }}
+            >
+              {props.Production.type}
+            </span>
+            {" / "}
+            <span>{props.Production.status}</span>
+          </Typography>
+          <Typography
+            mb={2}
+            variant="body2"
+            sx={{
+              fontStyle: "italic",
+              fontFamily: "'Libre Baskerville', serif",
+              textAlign: "center",
+            }}
+          >
+            {props.Production.pressReview}
+          </Typography>
+          {props.Production.details.map((deets) => {
+            return (
+              <Stack
+                key={deets.fieldKey}
+                mb={1}
+                direction={{ xs: "column", md: "row" }}
+              >
+                <Typography
+                  variant="body2"
+                  sx={{
+                    fontWeight: 500,
+                    mr: (theme) => theme.spacing(3),
+                    textTransform: "uppercase",
+                  }}
+                >
+                  {deets.fieldKey}
+                </Typography>
+                <Typography variant="body2" mb={{ xs: 3, md: 0 }}>
+                  {deets.fieldValue}
+                </Typography>
+              </Stack>
+            );
+          })}
+        </Grid>
+      </Grid>
+      <ProductionReelOne container columnSpacing={0.3}>
+        {props.Production.reel_one?.map((reelImage, i) => {
+          return (
+            <Grid
+              key={i}
+              sx={{
+                height: "inherit",
+                position: "relative",
+              }}
+              xs={12}
+              sm={6}
+              md={3}
+            >
+              <Box
+                sx={{
+                  height: "100%",
+                  width: "100%",
+                  overflow: "hidden",
+                  "&::before": {
+                    content: "''",
+                    display: "block",
+                    height: "100%",
+                    width: "120%",
+                    background: `url(${reelImage}) right center no-repeat`,
+                    backgroundSize: "cover",
+                    transform: "skew(3deg) translateX(-1rem)",
+                  },
+                }}
+              ></Box>
+            </Grid>
+          );
+        })}
+      </ProductionReelOne>
+      <Grid container columnGap={5} justifyContent="center" mb={6}>
+        <Grid md={5} textAlign="right">
+          <Typography
+            variant="body2"
+            sx={{
+              fontWeight: 900,
+              mb: 3,
+              textTransform: "uppercase",
+            }}
+          >
+            Festivals
+          </Typography>
+          {props.Production.festivals?.map((festival, i) => {
+            return <Typography key={i}>{festival}</Typography>;
+          })}
+        </Grid>
         <Grid
-          container
+          md={5}
           sx={{
-            justifyContent: { xs: "center", sm: "initial" },
+            display: "flex",
+            flexDirection: "column",
           }}
         >
-          <Grid
-            item
-            xs={12}
-            md={5}
-            sx={{
-              display: "flex",
-              justifyContent: "center",
-              flexDirection: "column",
-            }}
-          >
-            <ProfileImage
-              sx={{
-                backgroundImage: `url(${props.Production.primary_still_src})`,
-                // transform: "skewY(8deg)",
-                clipPath: "polygon(0 0, 100% 15%, 100% 100%, 0 85%)",
-              }}
-            />
-          </Grid>
-          <Grid
-            item
-            xs={10}
-            md={5}
-            pt={8}
-            sx={{
-              pl: { sm: 3 },
-              pt: { sm: 4 },
-            }}
-          >
-            <ProductionTitle
-              variant="h4"
-              sx={props.Production.reelButtonStyles}
-            >
-              {props.Production.title}
-            </ProductionTitle>
-            <Typography mb={2} sx={{ textAlign: { xs: "center", sm: "left" } }}>
-              <span
-                style={{
-                  fontWeight: 500,
-                }}
-              >
-                {props.Production.type}
-              </span>
-              {" / "}
-              <span>{props.Production.status}</span>
-            </Typography>
+          <Box mb={5}>
             <Typography
-              mb={2}
               variant="body2"
               sx={{
-                fontStyle: "italic",
-                fontFamily: "'Libre Baskerville', serif",
-                textAlign: "center",
+                fontWeight: 900,
+                mb: 3,
+                textTransform: "uppercase",
               }}
             >
-              {props.Production.pressReview}
+              Accolades
             </Typography>
-            {props.Production.details.map((deets) => {
-              return (
-                <Stack
-                  key={deets.fieldKey}
-                  mb={1}
-                  direction={{ xs: "column", md: "row" }}
-                >
-                  <Typography
-                    sx={{
-                      fontWeight: 500,
-                      mr: (theme) => theme.spacing(3),
-                      textTransform: "uppercase",
-                    }}
-                  >
-                    {deets.fieldKey}
-                  </Typography>
-                  <Typography mb={{ xs: 3, md: 0 }}>
-                    {deets.fieldValue}
-                  </Typography>
-                </Stack>
-              );
+            {props.Production.accolades?.map((accolade, i) => {
+              return <Typography key={i}>{accolade}</Typography>;
             })}
-          </Grid>
-        </Grid>
-        <Grid
-          container
-          pt={10}
-          sx={{ justifyContent: { xs: "center", sm: "end" } }}
-        >
-          <Grid item xs={10} md={5} sx={{ pl: { sm: 4 } }}>
-            <Typography></Typography>
-          </Grid>
-          <Grid item xs={12} md={5}>
-            <ProfileImage
+          </Box>
+          <Box>
+            <Typography
+              variant="body2"
               sx={{
-                backgroundImage: `url(${props.Production.secondary_still_src})`,
-                clipPath: "polygon(0 0, 100% 15%, 100% 100%, 0% 100%)",
+                fontWeight: 900,
+                mb: 3,
+                textTransform: "uppercase",
               }}
-            />
-          </Grid>
+            >
+              Additional Screenings
+            </Typography>
+            {props.Production.screenings?.map((screening, i) => {
+              return <Typography key={i}>{screening}</Typography>;
+            })}
+          </Box>
         </Grid>
-      </Box>
+      </Grid>
+      <ProductionImage
+        src={props.Production.production_image}
+        alt="production poster"
+      />
+      <ProductionReelTwo container columnSpacing={0.3}>
+        {props.Production.reel_two?.map((reelImage, i) => {
+          return (
+            <Grid
+              key={i}
+              sx={{
+                py: 0,
+                height: "inherit",
+                position: "relative",
+              }}
+              xs={12}
+              sm={6}
+              md={3}
+            >
+              <Box
+                sx={{
+                  height: "100%",
+                  width: "100%",
+                  overflow: "hidden",
+                  "&::before": {
+                    content: "''",
+                    display: "block",
+                    height: "100%",
+                    width: "120%",
+                    background: `url(${reelImage}) no-repeat`,
+                    backgroundSize: "cover",
+                    transform: "skew(3deg) translateX(-1rem)",
+                    filter: "grayscale(100%)",
+                  },
+                }}
+              ></Box>
+            </Grid>
+          );
+        })}
+      </ProductionReelTwo>
     </>
   );
 };

@@ -27,7 +27,8 @@ const NavigationLink = (props: CustomLinkProps) => {
     <StyledLink
       component={MyNavLink}
       to={props.linkObject.link}
-      underline="none"
+      aria-label={props.linkObject.linkLabel}
+      class="nav-link"
     >
       {props.linkObject.linkLabel}
     </StyledLink>

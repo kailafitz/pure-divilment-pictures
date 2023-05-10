@@ -4,10 +4,11 @@ import {
   GridImage,
   HomeTitleContainer,
   HomeFeatureProductionTitle,
-  TestText,
 } from "./styles";
 import Grid from "@mui/material/Unstable_Grid2/Grid2";
 import Typography from "@mui/material/Typography";
+import PureDivilmentButton from "../../Components/Button";
+import OpeningAnimation from "../../Components/OpeningAnimation";
 
 const HomeImage1 = require("../../Assets/home-1.png");
 const HomeImage2 = require("../../Assets/home-2.png");
@@ -15,131 +16,62 @@ const HomeImage3 = require("../../Assets/home-3.png");
 
 const Home = () => {
   return (
-    <HomeContainer>
-      {/* <div className="header">codegrid</div> */}
-
-      <div className="container">
-        <div className="text-wrapper">
-          <TestText className="text-1">
-            <span>
-              <p>Pure</p>
-            </span>
-            <span>
-              <p>Divilment</p>
-            </span>
-          </TestText>
-          <TestText className="text-2">
-            <span>
-              <p>Pure</p>
-            </span>
-            <span>
-              <p>Divilment</p>
-            </span>
-          </TestText>
-          <TestText className="text-3">
-            <span>
-              <p>Pure</p>
-            </span>
-            <span>
-              <p>Divilment</p>
-            </span>
-          </TestText>
-          <TestText className="text-4">
-            <span>
-              <p>Pure</p>
-            </span>
-            <span>
-              <p>Divilment</p>
-            </span>
-          </TestText>
-          <TestText className="text-5">
-            <span>
-              <p>Pure</p>
-            </span>
-            <span>
-              <p>Divilment</p>
-            </span>
-          </TestText>
-          <TestText className="text-6">
-            <span>
-              <p>Pure</p>
-            </span>
-            <span>
-              <p>Divilment</p>
-            </span>
-          </TestText>
-          <TestText className="text-7">
-            <span>
-              <p>Pure</p>
-            </span>
-            <span>
-              <p>Divilment</p>
-            </span>
-          </TestText>
-          <TestText className="text-8">
-            <span>
-              <p>Pure</p>
-            </span>
-            <span>
-              <p>Divilment</p>
-            </span>
-          </TestText>
-          <TestText className="text-9">
-            <span>
-              <p>Pure</p>
-            </span>
-            <span>
-              <p>Divilment</p>
-            </span>
-          </TestText>
-          <TestText className="text-10">
-            <span>
-              <p>Pure</p>
-            </span>
-            <span>
-              <p>Divilment</p>
-            </span>
-          </TestText>
-          <TestText className="text-11">
-            <span>
-              <p>Pure</p>
-            </span>
-            <span>
-              <p>Divilment</p>
-            </span>
-          </TestText>
-        </div>
-      </div>
-      <Grid container>
-        <GridImage
-          xs={12}
-          md={4}
+    <>
+      <OpeningAnimation />
+      <HomeContainer>
+        <Grid
+          container
           sx={{
-            backgroundImage: `url(${HomeImage1})`,
+            flexGrow: 1,
+            "& > div:nth-of-type(1), > div:nth-of-type(2)": {
+              borderRight: { md: "10px black solid" },
+              borderBottom: { xs: "5px black solid", md: "none" },
+            },
           }}
-        />
-        <GridImage
-          xs={12}
-          md={4}
-          sx={{
-            backgroundImage: `url(${HomeImage2})`,
-          }}
-        />
-        <GridImage
-          xs={12}
-          md={4}
-          sx={{
-            backgroundImage: `url(${HomeImage3})`,
-          }}
-        />
-        <HomeTitleContainer sx={{ position: { xs: "fixed", md: "absolute" } }}>
-          <HomeFeatureProductionTitle>Baths</HomeFeatureProductionTitle>
-          <Typography sx={{ textTransform: "uppercase", fontWeight: 700 }}>
-            Now Showing
-          </Typography>
-        </HomeTitleContainer>
-      </Grid>
-    </HomeContainer>
+        >
+          <Grid xs={12} md={4}>
+            <GridImage
+              sx={{
+                backgroundImage: `url(${HomeImage1})`,
+                backgroundPosition: "top center",
+              }}
+            />
+          </Grid>
+          <Grid xs={12} md={4}>
+            <GridImage
+              sx={{
+                backgroundImage: `url(${HomeImage2})`,
+                backgroundPosition: "center",
+              }}
+            />
+          </Grid>
+          <Grid xs={12} md={4}>
+            <GridImage
+              sx={{
+                backgroundImage: `url(${HomeImage3})`,
+                backgroundPosition: "center",
+              }}
+            />
+          </Grid>
+          <HomeTitleContainer
+            // sx={{ position: { xs: "fixed", md: "absolute" } }}
+            sx={{ position: "absolute" }}
+          >
+            <HomeFeatureProductionTitle>Baths</HomeFeatureProductionTitle>
+            <Typography
+              variant="h5"
+              sx={{ textTransform: "uppercase", fontWeight: 700, mb: 4 }}
+            >
+              Now Showing
+            </Typography>
+            <PureDivilmentButton
+              href="/the_creatives"
+              label="Meet the Creatives"
+            />
+          </HomeTitleContainer>
+        </Grid>
+      </HomeContainer>
+    </>
   );
 };
 

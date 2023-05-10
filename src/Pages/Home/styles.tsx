@@ -1,30 +1,22 @@
 import { Typography, Box } from "@mui/material";
-import Grid from "@mui/material/Unstable_Grid2/Grid2";
 import { styled } from "@mui/material/styles";
 
-export const HomeContainer = styled("div")(() => ({
+export const HomeContainer = styled(Box)(({ theme }) => ({
   position: "relative",
-  flexGrow: 1,
-  height: "100%",
-  width: "100%",
-  // position: "absolute",
-  // zIndex: -1,
-}));
+  minHeight: "calc(100vh - 88px)",
+  display: "flex",
+  [theme.breakpoints.up("md")]: {
+    flexGrow: 1,
+  },
+})) as typeof Box;
 
-export const GridImage = styled(Grid)(({ theme }) => ({
+export const GridImage = styled(Box)(() => ({
   display: "flex",
   flexGrow: "1",
   backgroundRepeat: "no-repeat",
   backgroundSize: "cover",
-  backgroundPosition: "center",
-  height: "100vh",
-
-  [theme.breakpoints.up("md")]: {
-    "&:not(:last-child)": {
-      borderRight: "7px black solid",
-    },
-  },
-}));
+  height: "100%",
+})) as typeof Box;
 
 export const HomeTitleContainer = styled(Box)(({ theme }) => ({
   position: "absolute",
@@ -35,36 +27,19 @@ export const HomeTitleContainer = styled(Box)(({ theme }) => ({
   flexDirection: "column",
   justifyContent: "center",
   textAlign: "center",
-  zIndex: 5,
-}));
+})) as typeof Box;
 
-export const HomeFeatureProductionTitle = styled(Typography)(() => ({
+export const HomeFeatureProductionTitle = styled(Typography)(({ theme }) => ({
   fontFamily: "Libre Baskerville",
-  fontSize: "5rem",
+  fontSize: "7rem",
   lineHeight: "initial",
   letterSpacing: "2px",
   "::first-letter": {
     fontStyle: "italic",
     marginRight: "1px",
   },
-}));
 
-export const TestText = styled("div")(() => ({
-  fontFamily: "DM Sans",
-  fontWeight: "lighter",
-  fontSize: "54px",
-
-  span: {
-    "&:first-of-type": {
-      marginRight: "1rem",
-    },
-    p: {
-      margin: 0,
-      display: "inline-block",
-      "::first-letter": {
-        fontStyle: "italic",
-        marginRight: "7px",
-      },
-    },
+  [theme.breakpoints.up("md")]: {
+    fontSize: "15rem",
   },
-}));
+})) as typeof Typography;

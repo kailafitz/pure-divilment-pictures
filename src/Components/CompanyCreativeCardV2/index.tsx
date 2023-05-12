@@ -11,7 +11,7 @@ const CompanyCreativeCard = (props: CreativeInterface) => {
       href={`/the_creatives/team_member/${props.Creative.id}`}
     >
       <TeamImage
-        className="team-image"
+        className="border-animation"
         src={props.Creative.profile_image_src}
         alt={props.Creative.name}
       />

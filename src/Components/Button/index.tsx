@@ -9,7 +9,10 @@ type ButtonProps = {
 
 const PureDivilmentButton = (props: ButtonProps) => {
   return (
-    <Box className="team-image" sx={{ width: "git-content", m: "0 auto" }}>
+    <Box
+      className="border-animation"
+      sx={{ width: "git-content", m: "0 auto" }}
+    >
       <BrandButton href={props.href}>{props.label}</BrandButton>
     </Box>
   );

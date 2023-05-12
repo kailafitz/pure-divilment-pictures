@@ -47,29 +47,31 @@ const ProductionContentLayout = (props: ProductionItemInterface) => {
           >
             {props.Production.pressReview}
           </Typography>
-          {props.Production.details.map((deets) => {
-            return (
-              <Stack
-                key={deets.fieldKey}
-                mb={1}
-                direction={{ xs: "column", md: "row" }}
-              >
-                <Typography
-                  variant="body2"
-                  sx={{
-                    fontWeight: 500,
-                    mr: (theme) => theme.spacing(3),
-                    textTransform: "uppercase",
-                  }}
-                >
-                  {deets.fieldKey}
-                </Typography>
-                <Typography variant="body2" mb={{ xs: 3, md: 0 }}>
-                  {deets.fieldValue}
-                </Typography>
-              </Stack>
-            );
-          })}
+          <Grid container rowSpacing={1}>
+            {props.Production.details.map((deets) => {
+              return (
+                <React.Fragment key={deets.fieldKey}>
+                  <Grid md={2}>
+                    <Typography
+                      variant="body2"
+                      sx={{
+                        fontWeight: 500,
+                        mr: (theme) => theme.spacing(3),
+                        textTransform: "uppercase",
+                      }}
+                    >
+                      {deets.fieldKey}
+                    </Typography>
+                  </Grid>
+                  <Grid md={9}>
+                    <Typography variant="body2" mb={{ xs: 3, md: 0 }}>
+                      {deets.fieldValue}
+                    </Typography>
+                  </Grid>
+                </React.Fragment>
+              );
+            })}
+          </Grid>
         </Grid>
       </Grid>
       <ProductionReelOne container columnSpacing={0.3}>

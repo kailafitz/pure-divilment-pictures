@@ -42,19 +42,6 @@ body {
   height: 100vh;
 }
 
-#home-screen-lock-for-animtation {
-  animation: animation-background-overflow-hidden 3.8s linear 0s 1 normal;
-  animation-fill-mode: forwards;
-}
-
-@keyframes animation-background-overflow-hidden {
-  0% {
-    overflow: hidden;
-  }
-  100% {
-    overflow: scroll;
-  }
-}
 #root {
   height: 100%;
   width: 100%;
@@ -63,10 +50,14 @@ body {
   justify-content: space-between;
 }
 
-.swiper-wrapper {
-  transition-timing-function: linear;
+@keyframes video-in {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
 }
-
 .active {
   font-weight: 900;
 }
@@ -78,25 +69,9 @@ a:hover {
   cursor: pointer;
 }
 
-.container {
-  width: 100%;
-  margin: 0px auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #161616;
-  animation: slide-out-container 4s cubic-bezier(0.97, 0.01, 0.36, 0.99) 2.8s;
-  animation-fill-mode: forwards;
-}
-
-.text-wrapper {
-  color: white;
-  position: absolute;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
+.react-loading {
+  margin: 0 auto;
+  animation: visible 0.9s linear forwards;
 }
 
 .text-1,
@@ -125,72 +100,18 @@ a:hover {
 }
 @keyframes visible {
   0% {
-    opacity: 100%;
+    opacity: 1;
   }
-  50% {
-    opacity: 0%;
+  98% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 0;
   }
   100% {
-    opacity: 0%;
-    z-index: -9;
-    position: absolute;
+    opacity: 0;
   }
 }
-.text-1 {
-  animation: blink 0.8s linear 0.9s, blink 0.8s linear 2s;
-  opacity: 0;
-}
-
-.text-2 {
-  animation: blink 0.8s linear 0.8s, blink 0.8s linear 2.1s;
-  opacity: 0;
-}
-
-.text-3 {
-  animation: blink 0.8s linear 0.7s, blink 0.8s linear 2.2s;
-  opacity: 0;
-}
-
-.text-4 {
-  animation: blink 0.8s linear 0.6s, blink 0.8s linear 2.3s;
-  opacity: 0;
-}
-
-.text-5 {
-  animation: blink 0.8s linear 0.5s, blink 0.8s linear 2.4s;
-  opacity: 0;
-}
-
-.text-6 {
-  animation: blink 0.8s linear 0.4s, blink 0.8s linear 2.5s, visible 5.5s linear 3.2s 1 normal;
-  opacity: 0;
-}
-
-.text-7 {
-  animation: blink 0.8s linear 0.5s, blink 0.8s linear 2.4s;
-  opacity: 0;
-}
-
-.text-8 {
-  animation: blink 0.8s linear 0.6s, blink 0.8s linear 2.3s;
-  opacity: 0;
-}
-
-.text-9 {
-  animation: blink 0.8s linear 0.7s, blink 0.8s linear 2.2s;
-  opacity: 0;
-}
-
-.text-10 {
-  animation: blink 0.8s linear 0.8s, blink 0.8s linear 2.1s;
-  opacity: 0;
-}
-
-.text-11 {
-  animation: blink 0.8s linear 0.9s, blink 0.8s linear 2s;
-  opacity: 0;
-}
-
 @keyframes slide-out {
   0% {
     opacity: 0%;
@@ -230,19 +151,74 @@ a:hover {
   0% {
     height: 100vh;
   }
-  40% {
+  50% {
     height: 100vh;
   }
   100% {
     height: 0%;
   }
 }
-.team-image {
+.text-1 {
+  animation: blink 0.8s linear 0.9s, blink 0.8s linear 2s;
+  opacity: 0;
+}
+
+.text-2 {
+  animation: blink 0.8s linear 0.8s, blink 0.8s linear 2.1s;
+  opacity: 0;
+}
+
+.text-3 {
+  animation: blink 0.8s linear 0.7s, blink 0.8s linear 2.2s;
+  opacity: 0;
+}
+
+.text-4 {
+  animation: blink 0.8s linear 0.6s, blink 0.8s linear 2.3s;
+  opacity: 0;
+}
+
+.text-5 {
+  animation: blink 0.8s linear 0.5s, blink 0.8s linear 2.4s;
+  opacity: 0;
+}
+
+.text-6 {
+  animation: blink 0.8s linear 0.4s, blink 0.8s linear 2.5s, visible 1s linear 3s 1 normal;
+  opacity: 0;
+}
+
+.text-7 {
+  animation: blink 0.8s linear 0.5s, blink 0.8s linear 2.4s;
+  opacity: 0;
+}
+
+.text-8 {
+  animation: blink 0.8s linear 0.6s, blink 0.8s linear 2.3s;
+  opacity: 0;
+}
+
+.text-9 {
+  animation: blink 0.8s linear 0.7s, blink 0.8s linear 2.2s;
+  opacity: 0;
+}
+
+.text-10 {
+  animation: blink 0.8s linear 0.8s, blink 0.8s linear 2.1s;
+  opacity: 0;
+}
+
+.text-11 {
+  animation: blink 0.8s linear 0.9s, blink 0.8s linear 2s;
+  opacity: 0;
+}
+
+.border-animation {
   --g: 4px;
   /* the gap */
-  --b: 2px;
+  --b: 4px;
   /* border thickness*/
-  --c: #000000;
+  --c: #FFF;
   /* the color */
   padding: calc(var(--g) + var(--b));
   --_c: #0000 0 25%, var(--c) 0 50%;
@@ -255,8 +231,8 @@ a:hover {
   transition: all 0.3s linear;
 }
 
-.team-image:hover {
+.border-animation:hover {
   --_p: 75%;
-  --c: #000000;
+  --c: #FFFFFF;
   transition: all 0.3s linear;
 }/*# sourceMappingURL=styles.css.map */

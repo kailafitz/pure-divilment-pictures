@@ -3,7 +3,7 @@ import Grid from "@mui/material/Unstable_Grid2";
 import { alpha, styled } from "@mui/material/styles";
 
 export const ProductionsReelContainer = styled(Box)(({ theme }) => ({
-  paddingTop: theme.spacing(9),
+  paddingTop: "50px",
   display: "flex",
   flexDirection: "column",
   justifyContent: "space-around",
@@ -35,7 +35,7 @@ export const ReelItem = styled(Button)(({ theme }) => ({
   borderRadius: 0,
   padding: theme.spacing(3),
   ":hover": {
-    background: alpha(theme.palette.common.black, 0.0),
+    background: theme.palette.common.white,
     color: theme.palette.common.black,
     transition: "all .4s linear",
   },

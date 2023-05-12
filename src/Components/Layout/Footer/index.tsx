@@ -26,7 +26,7 @@ const Affiliates = () => {
     <AffiliatesFooterSection
       sx={{ paddingBottom: (theme) => theme.spacing(5) }}
     >
-      <FooteSectionTitle>Affiliates & Financiers</FooteSectionTitle>
+      <FooteSectionTitle>Affiliates</FooteSectionTitle>
       <Grid
         container
         sx={{
@@ -100,21 +100,6 @@ const Footer = () => {
           >
             <Logo
               style={{
-                position: {
-                  xs: "relative",
-                  md:
-                    location.pathname === "/" ||
-                    location.pathname === "/contact"
-                      ? "absolute"
-                      : "relative",
-                },
-                left: {
-                  md:
-                    location.pathname === "/" ||
-                    location.pathname === "/contact"
-                      ? "calc(50% - (247.03px / 2))"
-                      : "unset",
-                },
                 div: {
                   "span h1": {
                     fontSize: "20px",

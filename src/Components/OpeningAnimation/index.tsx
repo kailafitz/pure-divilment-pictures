@@ -1,10 +1,11 @@
 import React from "react";
-import { AnimationContainer, TestText } from "./styles";
+import { AnimationContainer, TextWrapper, TestText } from "./styles";
+import { Box } from "@mui/material";
 
 const OpeningAnimation = () => {
   return (
-    <AnimationContainer className="container">
-      <div className="text-wrapper">
+    <AnimationContainer>
+      <TextWrapper>
         {/* {Array(11)
             .fill(null)
             .map((value, index) => (
@@ -105,7 +106,7 @@ const OpeningAnimation = () => {
             <p>DIVILMENT</p>
           </span>
         </TestText>
-      </div>
+      </TextWrapper>
     </AnimationContainer>
   );
 };

@@ -9,7 +9,6 @@ import {
 } from "./styles";
 import { ProductionData } from "../../Data/ProductionData";
 import ProductionContentLayout from "../../Components/ProductionContentLayout";
-
 const test = require("../../Assets/baths-cover-photo.png");
 
 // https://stackoverflow.com/questions/8944456/css3-transition-different-transition-for-in-and-out-or-returning-from-tran
@@ -23,12 +22,6 @@ const Productions = () => {
     return production.production.id === selectProduction;
   });
 
-  useEffect(() => {
-    if (SelectedProduction.length > 0) {
-      setHeaderImage(SelectedProduction[0].production.coverImage);
-    }
-  }, [selectProduction]);
-
   const scrollToProduction = () => {
     setTimeout(function () {
       let production =
@@ -37,6 +30,12 @@ const Productions = () => {
       if (production) production.scrollIntoView();
     }, 1000);
   };
+
+  useEffect(() => {
+    if (SelectedProduction.length > 0) {
+      setHeaderImage(SelectedProduction[0].production.coverImage);
+    }
+  }, [selectProduction]);
 
   return (
     <>
@@ -74,7 +73,7 @@ const Productions = () => {
                     setSelectProduction("");
                     item.production.coverImage !== "Coming Soon"
                       ? setHoverImage(item.production.coverImage)
-                      : setHoverImage("lightgrey");
+                      : setHoverImage("white");
                   }}
                   onMouseOut={() => setHoverImage("")}
                 >
@@ -89,14 +88,14 @@ const Productions = () => {
             opacity: 1,
             background:
               selectProduction.length !== 1
-                ? hoverImage === "lightgrey"
+                ? hoverImage === "white"
                   ? hoverImage
                   : `url(${hoverImage})`
                 : `url(${headerImage})`,
             transition: "background .6s ease-in, opacity .6s ease-in",
           }}
         >
-          {hoverImage === "lightgrey" && (
+          {hoverImage === "white" && (
             <Typography variant="h4" color="common.black">
               Coming Soon
             </Typography>

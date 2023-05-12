@@ -2,12 +2,13 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./Components/Layout/Navbar";
 import Footer from "./Components/Layout/Footer";
-import Home from "./Pages/Home";
+// import Home from "./Pages/Home";
+import Home from "./Pages/HomeV2";
 // import About from "./Pages/About";
 import About from "./Pages/AboutV2";
-// import TheCreatives from "./Pages/TheCreatives";
+import TheCreatives from "./Pages/TheCreatives";
 // import CompanyCreativeProfile from "./Pages/CompanyCreativeProfile";
-import TheCreatives from "./Pages/TheCreativesV2";
+// import TheCreatives from "./Pages/TheCreativesV2";
 import CompanyCreativeProfile from "./Pages/CompanyCreativeProfileV2";
 import ProductionProfile from "./Pages/ProductionProfile";
 // import Productions from "./Pages/Productions";
@@ -29,7 +30,7 @@ function App() {
           path="/the_creatives/team_member/:id"
           element={<CompanyCreativeProfile />}
         />
-        <Route path="/productions" element={<Productions />} />
+        <Route path="/productions/:id" element={<Productions />} />
         <Route
           path="/productions/production/:id"
           element={<ProductionProfile />}

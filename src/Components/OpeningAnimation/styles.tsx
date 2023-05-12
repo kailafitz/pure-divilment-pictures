@@ -1,9 +1,29 @@
+import { Box } from "@mui/material";
 import { styled } from "@mui/material/styles";
 
 export const AnimationContainer = styled("div")(() => ({
   position: "fixed",
   height: "100%",
   zIndex: 101,
+  width: "100%",
+  margin: "0px auto",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  background: "#161616",
+  animation: "slide-out-container 1.8s linear 3.8s",
+  animationFillMode: "forwards",
+  overflow: "hidden",
+}));
+
+export const TextWrapper = styled(Box)(() => ({
+  color: "white",
+  position: "absolute",
+  height: "100%",
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "space-around",
+  alignItems: "center",
 }));
 
 export const TestText = styled("div")(({ theme }) => ({

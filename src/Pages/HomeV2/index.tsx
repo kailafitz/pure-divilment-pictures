@@ -9,6 +9,8 @@ import Grid from "@mui/material/Unstable_Grid2/Grid2";
 import Typography from "@mui/material/Typography";
 import PureDivilmentButton from "../../Components/Button";
 import OpeningAnimation from "../../Components/OpeningAnimation";
+import BillboardSwiper from "./BillboardSwiper";
+import BillboardTextSwiper from "./BillboardTextSwiper";
 
 const HomeImage1 = require("../../Assets/home-1.png");
 const HomeImage2 = require("../../Assets/home-2.png");
@@ -30,42 +32,30 @@ const Home = () => {
           }}
         >
           <Grid xs={12} md={4}>
-            <GridImage
-              sx={{
-                backgroundImage: `url(${HomeImage1})`,
-                backgroundPosition: "top center",
-              }}
+            <BillboardSwiper
+              delay={2000}
+              source1={HomeImage1}
+              source2={HomeImage2}
+              source3={HomeImage3}
             />
           </Grid>
           <Grid xs={12} md={4}>
-            <GridImage
-              sx={{
-                backgroundImage: `url(${HomeImage2})`,
-                backgroundPosition: "center",
-              }}
+            <BillboardSwiper
+              delay={2200}
+              source1={HomeImage1}
+              source2={HomeImage2}
+              source3={HomeImage3}
             />
           </Grid>
           <Grid xs={12} md={4}>
-            <GridImage
-              sx={{
-                backgroundImage: `url(${HomeImage3})`,
-                backgroundPosition: "center",
-              }}
+            <BillboardSwiper
+              delay={2400}
+              source1={HomeImage1}
+              source2={HomeImage2}
+              source3={HomeImage3}
             />
           </Grid>
-          <HomeTitleContainer
-            // sx={{ position: { xs: "fixed", md: "absolute" } }}
-            sx={{ position: "absolute" }}
-          >
-            <HomeFeatureProductionTitle>Baths</HomeFeatureProductionTitle>
-            <Typography
-              variant="h5"
-              sx={{ textTransform: "uppercase", fontWeight: 700, mb: 4 }}
-            >
-              Now Showing
-            </Typography>
-            <PureDivilmentButton href="/productions" label="Our Productions" />
-          </HomeTitleContainer>
+          <BillboardTextSwiper />
         </Grid>
       </HomeContainer>
     </>

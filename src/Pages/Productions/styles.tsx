@@ -35,8 +35,8 @@ export const ReelItem = styled(Button)(({ theme }) => ({
   borderRadius: 0,
   padding: theme.spacing(3),
   ":hover": {
-    // background: alpha(theme.palette.common.black, 0.2),
-    background: "lightgrey",
+    background: theme.palette.common.white,
+    color: theme.palette.common.black,
     transition: "all .4s linear",
   },
 })) as typeof Button;

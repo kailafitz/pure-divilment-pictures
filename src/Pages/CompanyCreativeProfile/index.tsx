@@ -2,7 +2,7 @@ import React from "react";
 import Box from "@mui/material/Box";
 import { useParams } from "react-router-dom";
 import { CreativesData } from "../../Data/TeamData";
-import CompanyCreativeProfileContent from "../../Components/CompanyCreativeProfileContent";
+import CompanyCreativeProfileContent from "../../Components/CompanyCreativeProfileContentV2";
 
 const CompanyCreativeProfile = () => {
   const id = useParams<{ id: string }>();

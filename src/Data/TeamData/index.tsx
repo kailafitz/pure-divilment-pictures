@@ -1,15 +1,15 @@
-// const Claire = require("../../Assets/claire.png");
-// const Nell = require("../../Assets/nell.png");
-// const Emma = require("../../Assets/emma.png");
-const Claire = require("../../Assets/test-profile-image.jpeg");
-const Nell = require("../../Assets/test-profile-image2.jpeg");
-const Emma = require("../../Assets/test-profile-image3.jpeg");
-// const NellCredit = require("../../Assets/nell-credits.png");
-// const EmmaCredit = require("../../Assets/emma-credits.png");
-// const ClaireCredit = require("../../Assets/claire-credits.png");
-const NellCredit = require("../../Assets/test-credits-image.jpeg");
-const EmmaCredit = require("../../Assets/test-credits-image3.jpeg");
-const ClaireCredit = require("../../Assets/test-credits-image2.jpeg");
+const Claire = require("../../Assets/claire.png");
+const Nell = require("../../Assets/nell.png");
+const Emma = require("../../Assets/emma.png");
+// const Claire = require("../../Assets/test-profile-image.jpeg");
+// const Nell = require("../../Assets/test-profile-image2.jpeg");
+// const Emma = require("../../Assets/test-profile-image3.jpeg");
+const NellCredit = require("../../Assets/nell-credits.png");
+const EmmaCredit = require("../../Assets/emma-credits.png");
+const ClaireCredit = require("../../Assets/claire-credits.png");
+// const NellCredit = require("../../Assets/test-credits-image.jpeg");
+// const EmmaCredit = require("../../Assets/test-credits-image3.jpeg");
+// const ClaireCredit = require("../../Assets/test-credits-image2.jpeg");
 
 const NellAccolades = require("../../Assets/nell-accolades.png");
 const EmmaAccolades = require("../../Assets/emma-accolades.png");

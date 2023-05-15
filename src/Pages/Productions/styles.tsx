@@ -10,7 +10,7 @@ export const ProductionsReelContainer = styled(Box)(({ theme }) => ({
 })) as typeof Box;
 
 export const Reel = styled(Grid)(({ theme }) => ({
-  background: theme.palette.common.white,
+  background: theme.palette.white.main,
   transform: "skewY(4deg)",
   margin: 0,
 
@@ -28,15 +28,15 @@ export const Reel = styled(Grid)(({ theme }) => ({
 })) as typeof Grid;
 
 export const ReelItem = styled(Button)(({ theme }) => ({
-  background: theme.palette.common.black,
-  color: theme.palette.common.white,
+  background: theme.palette.primary.main,
+  color: theme.palette.white.main,
   width: "100%",
   height: "100%",
   borderRadius: 0,
   padding: theme.spacing(3),
   ":hover": {
-    background: theme.palette.common.white,
-    color: theme.palette.common.black,
+    background: theme.palette.white.main,
+    color: theme.palette.primary.main,
     transition: "all .4s linear",
   },
 })) as typeof Button;

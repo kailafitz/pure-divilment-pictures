@@ -1,7 +1,7 @@
 import { Box } from "@mui/material";
 import { styled } from "@mui/material/styles";
 
-export const AnimationContainer = styled("div")(() => ({
+export const AnimationContainer = styled("div")(({ theme }) => ({
   position: "fixed",
   height: "100%",
   zIndex: 101,
@@ -10,7 +10,7 @@ export const AnimationContainer = styled("div")(() => ({
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
-  background: "#161616",
+  background: theme.palette.primary.main,
   animation: "slide-out-container 1.8s linear 3.8s",
   animationFillMode: "forwards",
   overflow: "hidden",

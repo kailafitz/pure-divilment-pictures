@@ -1,6 +1,10 @@
 import { common } from "@mui/material/colors";
 import { createTheme, responsiveFontSizes } from "@mui/material/styles";
 
+// const { palette } = createTheme();
+// const { augmentColor } = palette;
+// const createColor = (mainColor: any) => augmentColor({ color: { main: mainColor } });
+
 const theme = createTheme({
   typography: {
     fontFamily: "DM Sans",
@@ -11,10 +15,13 @@ const theme = createTheme({
   },
   palette: {
     primary: {
-      main: common.black,
+      main: "#0d0c0c",
     },
     white: {
-      main: common.white,
+      main: "#f9f9f9",
+    },
+    dark: {
+      main: "#0d0c0c",
     },
   },
   components: {

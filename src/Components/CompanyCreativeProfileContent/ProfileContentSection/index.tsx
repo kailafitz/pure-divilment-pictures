@@ -34,7 +34,7 @@ const ProfileContentSection = (props: Props) => {
           md={props.grid}
           p={5}
           sx={{
-            color: (theme) => theme.palette.common.white,
+            color: (theme) => theme.palette.white.main,
             background: "#00000060",
             backdropFilter: "blur(4px)",
           }}

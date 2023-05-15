@@ -2,10 +2,12 @@ import React from "react";
 import Grid from "@mui/material/Unstable_Grid2";
 import { CreativesData } from "../../Data/TeamData";
 import CompanyCreativeCard from "../../Components/CompanyCreativeCard";
+import Loader from "../../Components/Loader";
 
 const TheCreatives = () => {
   return (
     <>
+      <Loader title="The Creatives" />
       <Grid
         container
         spacing={{ xs: 2, md: 7 }}

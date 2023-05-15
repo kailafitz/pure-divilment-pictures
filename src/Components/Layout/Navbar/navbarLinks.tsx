@@ -9,7 +9,7 @@ export const NavigationItems = [
   },
   {
     linkLabel: "Productions",
-    link: "/productions",
+    link: "/productions/0",
   },
   // {
   //   linkLabel: "Press",

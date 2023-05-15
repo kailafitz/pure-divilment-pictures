@@ -4,8 +4,8 @@ import { styled } from "@mui/material/styles";
 
 export const StyledFooter = styled("div")(({ theme }) => ({
   padding: theme.spacing(3),
-  backgroundColor: theme.palette.common.black,
-  color: theme.palette.common.white,
+  backgroundColor: theme.palette.primary.main,
+  color: theme.palette.white.main,
 }));
 
 export const Wrapper = styled("div")(({ theme }) => ({

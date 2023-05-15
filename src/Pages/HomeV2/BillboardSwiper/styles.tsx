@@ -7,12 +7,12 @@ export const BillboardSwiperSection = styled(Swiper)(({ theme }) => ({
   height: "100%",
 
   "div:nth-child(even)": {
-    background: "black",
+    background: theme.palette.primary.main,
   },
 }));
 
 export const BillboardSwiperSectionSlide = styled(SwiperSlide)(({ theme }) => ({
   width: "100%",
   height: "100%",
-  background: theme.palette.common.black,
+  background: theme.palette.primary.main,
 }));

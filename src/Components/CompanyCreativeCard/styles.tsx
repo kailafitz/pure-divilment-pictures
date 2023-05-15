@@ -4,15 +4,23 @@ import { Typography, Box } from "@mui/material";
 export const TeamMemberCardContainer = styled(Box)(({ theme }) => ({
   display: "flex",
   flexDirection: "column",
+  svg: {
+    opacity: 1,
+  },
   [theme.breakpoints.up("sm")]: {
+    svg: {
+      opacity: 0,
+      transition: "opacity .8s ease",
+    },
     "&:hover": {
       backgroundColor: "transparent",
       img: {
         filter: "grayscale(100%)",
         cursor: "pointer",
       },
-      p: {
+      "p, svg": {
         opacity: 1,
+        transition: "opacity .8s ease",
       },
     },
   },

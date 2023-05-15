@@ -43,7 +43,7 @@ const CompanyCreativeProfileContent = (props: CreativeInterface) => {
           xs={11}
           sx={{
             height: "400px",
-            background: "black",
+            background: (theme) => theme.palette.primary.main,
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
@@ -77,7 +77,7 @@ const CompanyCreativeProfileContent = (props: CreativeInterface) => {
                 return (
                   <ListItem key={i}>
                     <ListItemIcon
-                      sx={{ color: (theme) => theme.palette.common.black }}
+                      sx={{ color: (theme) => theme.palette.primary.main }}
                     >
                       <HorizontalRuleIcon />
                     </ListItemIcon>
@@ -115,7 +115,7 @@ const CompanyCreativeProfileContent = (props: CreativeInterface) => {
                   return (
                     <ListItem key={i} sx={{ py: 1, px: 0 }}>
                       <ListItemIcon
-                        sx={{ color: (theme) => theme.palette.common.black }}
+                        sx={{ color: (theme) => theme.palette.primary.main }}
                       >
                         <HorizontalRuleIcon />
                       </ListItemIcon>

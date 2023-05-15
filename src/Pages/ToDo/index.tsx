@@ -41,7 +41,7 @@ const ToDo = () => {
         label="Nav links hover effect"
       />
       <FormControlLabel
-        control={<Checkbox />}
+        control={<Checkbox checked />}
         label="Nav links hover effect animation"
       />
       <FormControlLabel
@@ -65,7 +65,7 @@ const ToDo = () => {
         label="Slow fade in and hold of the PD logo"
       />
       <FormControlLabel
-        control={<Checkbox />}
+        control={<Checkbox checked />}
         label="Final PURE DIVILMENT up a little higher"
       />
       <Typography variant="h5" mb={1} mt={3}>

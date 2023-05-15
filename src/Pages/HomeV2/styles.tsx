@@ -20,7 +20,7 @@ export const GridImage = styled(Box)(() => ({
 
 export const HomeTitleContainer = styled(Box)(({ theme }) => ({
   position: "absolute",
-  color: theme.palette.common.white,
+  color: theme.palette.white.main,
   height: "100%",
   width: "100%",
   display: "flex",

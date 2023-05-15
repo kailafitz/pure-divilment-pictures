@@ -24,8 +24,13 @@ const Home = () => {
           sx={{
             flexGrow: 1,
             "& > div:nth-of-type(1), > div:nth-of-type(2)": {
-              borderRight: { md: "10px black solid" },
-              borderBottom: { xs: "5px black solid", md: "none" },
+              borderRight: {
+                md: (theme) => `10px ${theme.palette.primary.main} solid`,
+              },
+              borderBottom: {
+                xs: (theme) => `5px ${theme.palette.primary.main} solid`,
+                md: "none",
+              },
             },
           }}
         >

@@ -2,6 +2,7 @@ import React from "react";
 import { TeamMemberCardContainer, TeamImage, TeamMemberTitle } from "./styles";
 import { Box, Button } from "@mui/material";
 import { CreativeInterface } from "../../Data/TeamData";
+import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 
 const CompanyCreativeCard = (props: CreativeInterface) => {
   return (
@@ -14,17 +15,28 @@ const CompanyCreativeCard = (props: CreativeInterface) => {
         src={props.Creative.profile_image_src}
         alt={props.Creative.name}
       />
-      <Box sx={{ width: "100%", paddingLeft: (theme) => theme.spacing(1) }}>
-        <TeamMemberTitle
-          className="text"
-          variant="body2"
-          sx={{ fontWeight: 500 }}
-        >
-          {props.Creative.name}
-        </TeamMemberTitle>
-        <TeamMemberTitle className="text" variant="body2">
-          {props.Creative.role}
-        </TeamMemberTitle>
+      <Box
+        sx={{
+          width: "100%",
+          paddingLeft: (theme) => theme.spacing(1),
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+        }}
+      >
+        <div>
+          <TeamMemberTitle
+            className="text"
+            variant="body2"
+            sx={{ fontWeight: 500 }}
+          >
+            {props.Creative.name}
+          </TeamMemberTitle>
+          <TeamMemberTitle className="text" variant="body2">
+            {props.Creative.role}
+          </TeamMemberTitle>
+        </div>
+        <PlayArrowIcon />
       </Box>
     </TeamMemberCardContainer>
   );

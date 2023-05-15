@@ -26,8 +26,8 @@ const Home = () => {
           sx={{
             flexGrow: 1,
             "& > div:nth-of-type(1), > div:nth-of-type(2)": {
-              borderRight: { md: "10px black solid" },
-              borderBottom: { xs: "5px black solid", md: "none" },
+              borderRight: { md: "10px #0d0c0c solid" },
+              borderBottom: { xs: "5px #0d0c0c solid", md: "none" },
             },
           }}
         >
@@ -41,7 +41,7 @@ const Home = () => {
           </Grid>
           <Grid xs={12} md={4}>
             <BillboardSwiper
-              delay={2200}
+              delay={2100}
               source1={HomeImage1}
               source2={HomeImage2}
               source3={HomeImage3}
@@ -49,7 +49,7 @@ const Home = () => {
           </Grid>
           <Grid xs={12} md={4}>
             <BillboardSwiper
-              delay={2400}
+              delay={2200}
               source1={HomeImage1}
               source2={HomeImage2}
               source3={HomeImage3}

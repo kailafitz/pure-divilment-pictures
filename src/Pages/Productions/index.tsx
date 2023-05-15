@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Box, Button, Typography } from "@mui/material";
+import { Typography } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2";
 import {
   ProductionsReelContainer,
@@ -9,14 +9,18 @@ import {
 } from "./styles";
 import { ProductionData } from "../../Data/ProductionData";
 import ProductionContentLayout from "../../Components/ProductionContentLayout";
+import { useParams } from "react-router-dom";
+import Loader from "../../Components/Loader";
+
 const test = require("../../Assets/baths-cover-photo.png");
 
 // https://stackoverflow.com/questions/8944456/css3-transition-different-transition-for-in-and-out-or-returning-from-tran
 
 const Productions = () => {
+  const id = useParams<{ id: string }>();
   const [hoverImage, setHoverImage] = useState("");
   const [headerImage, setHeaderImage] = useState("");
-  const [selectProduction, setSelectProduction] = useState("0");
+  const [selectProduction, setSelectProduction] = useState(id.id ? id.id : "0");
 
   const SelectedProduction = ProductionData.filter((production) => {
     return production.production.id === selectProduction;
@@ -32,6 +36,7 @@ const Productions = () => {
   };
 
   useEffect(() => {
+    scrollToProduction();
     if (SelectedProduction.length > 0) {
       setHeaderImage(SelectedProduction[0].production.coverImage);
     }
@@ -39,6 +44,7 @@ const Productions = () => {
 
   return (
     <>
+      <Loader title="Productions" />
       <ProductionsReelContainer
         sx={{
           minHeight:
@@ -96,7 +102,7 @@ const Productions = () => {
           }}
         >
           {hoverImage === "white" && (
-            <Typography variant="h4" color="common.black">
+            <Typography variant="h4" color="primary">
               Coming Soon
             </Typography>
           )}

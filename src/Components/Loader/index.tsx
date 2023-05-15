@@ -10,7 +10,7 @@ const Loader = (props: LoaderProps) => {
   return (
     <Box
       sx={{
-        background: (theme) => theme.palette.common.black,
+        background: (theme) => theme.palette.primary.main,
         width: "100vw",
         position: "absolute",
         top: 0,

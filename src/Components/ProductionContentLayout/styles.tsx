@@ -24,7 +24,7 @@ export const ProductionTitle = styled(Typography)(({ theme }) => ({
 export const ProductionReelOne = styled(Grid)(({ theme }) => ({
   marginTop: theme.spacing(2),
   marginBottom: theme.spacing(8),
-  background: theme.palette.common.white,
+  background: theme.palette.white.main,
   height: "250px",
   transform: "skewY(-3deg)",
 
@@ -46,7 +46,7 @@ export const ProductionImage = styled("img")(({ theme }) => ({
 export const ProductionReelTwo = styled(Grid)(({ theme }) => ({
   clipPath: "polygon(0 0, 100% 25%, 100% 100%, 0% 100%)",
   marginTop: theme.spacing(2),
-  background: theme.palette.common.white,
+  background: theme.palette.white.main,
   height: "250px",
 
   "div:first-child": {

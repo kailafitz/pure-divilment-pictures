@@ -7,8 +7,7 @@ import Home from "./Pages/HomeV2";
 // import About from "./Pages/About";
 import About from "./Pages/AboutV2";
 import TheCreatives from "./Pages/TheCreatives";
-// import CompanyCreativeProfile from "./Pages/CompanyCreativeProfile";
-import CompanyCreativeProfile from "./Pages/CompanyCreativeProfileV3";
+import CompanyCreativeProfile from "./Pages/CompanyCreativeProfile";
 import ProductionProfile from "./Pages/ProductionProfile";
 import Productions from "./Pages/Productions";
 // import Contact from "./Pages/Contact";
@@ -33,7 +32,7 @@ function App() {
           path="/productions/production/:id"
           element={<ProductionProfile />}
         />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/reach-out" element={<Contact />} />
         <Route path="/todo" element={<ToDo />} />
       </Routes>
       <Footer />

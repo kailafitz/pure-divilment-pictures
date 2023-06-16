@@ -1,15 +1,9 @@
 const Claire = require("../../Assets/claire.png");
 const Nell = require("../../Assets/nell.png");
 const Emma = require("../../Assets/emma.png");
-// const Claire = require("../../Assets/test-profile-image.jpeg");
-// const Nell = require("../../Assets/test-profile-image2.jpeg");
-// const Emma = require("../../Assets/test-profile-image3.jpeg");
 const NellCredit = require("../../Assets/nell-credits.png");
 const EmmaCredit = require("../../Assets/emma-credits.png");
 const ClaireCredit = require("../../Assets/claire-credits.png");
-// const NellCredit = require("../../Assets/test-credits-image.jpeg");
-// const EmmaCredit = require("../../Assets/test-credits-image3.jpeg");
-// const ClaireCredit = require("../../Assets/test-credits-image2.jpeg");
 
 const NellAccolades = require("../../Assets/nell-accolades.png");
 const EmmaAccolades = require("../../Assets/emma-accolades.png");
@@ -21,25 +15,19 @@ export interface ListItemInterface {
   affiliates?: string;
 }
 
-export interface ProfileTextPositionInterface {
-  xValue?: string;
-  yValue?: string;
-}
-
 export interface CreativeInterface {
   Creative: {
     id: string;
     name: string;
     role: string;
     profile_image_src: string;
+    reelURL?: string;
     bio: string[];
-    bio_position: ProfileTextPositionInterface;
     credit_image_src: string;
     credits: ListItemInterface[];
-    credits_position: ProfileTextPositionInterface;
     accolades_image_src?: string;
     accolades?: ListItemInterface[];
-    accolades_position?: ProfileTextPositionInterface;
+    image_reel?: string[];
   };
 }
 
@@ -54,10 +42,6 @@ export const CreativesData = [
         "Claire is a creative producer from County Meath with a Masters in Creative Production and Screen Finance from the National Film School IADT.",
         "While studying at IADT, Claire produced an animated short, PORK, under Screen Ireland’s prestigious Frameworks scheme. During this time, Claire was also the Senior Production Coordinator on Nora Twomey's recent release, My Father's Dragon, at Cartoon Saloon. Claire is currently the Development Production Supervisor at DNEG Animation, as well as overseeing the set up of production structures for new incoming shows for the studio. Claire helped in the development of Nell's short film, Try & Touch. Arts Council funded short film Baths was received to positive reviews due to its unconventional anthology writing development structure. Claire is dedicated to bringing female & non-binary voices & POV to the screen on an international scale.",
       ],
-      bio_position: {
-        xValue: "flex-start",
-        yValue: "flex-start",
-      },
       credit_image_src: ClaireCredit,
       credits: [
         {
@@ -85,10 +69,7 @@ export const CreativesData = [
           affiliates: "Screen Ireland",
         },
       ],
-      credits_position: {
-        xValue: "flex-start",
-        yValue: "flex-end",
-      },
+      image_reel: [ClaireCredit, Claire, ClaireCredit, Claire],
     },
   },
   {
@@ -97,14 +78,11 @@ export const CreativesData = [
       name: "Nell Hensey",
       role: "Co-Founder | Creative Director",
       profile_image_src: Nell,
+      reelURL: "gu",
       bio: [
         "Nell Hensey is a Filipino-Irish director and screenwriter from County Clare.",
         " After studying at the National Film School IADT, Nell worked as a production assistant, writers room assistant and showrunner's assistant on TV series for Netflix, BBC and RTÉ. Her short films Try & Touch and Baths both premiered at the Galway Film Fleadh 2022. Nell's latest short film Good Chips premiered at the Dublin International Film Festival 2023 and was broadcast on Virgin Media One. Nell was nominated for the Dublin International Film Festival's prestigious Discovers Award 2023. She is especially drawn to stories that centre on women, explore themes of coming-of-age or give honest representation of minorities.",
       ],
-      bio_position: {
-        xValue: "flex-end",
-        yValue: "flex-start",
-      },
       credit_image_src: NellCredit,
       credits: [
         {
@@ -132,10 +110,6 @@ export const CreativesData = [
           affiliates: "Engine Short Film Scheme",
         },
       ],
-      credits_position: {
-        xValue: "flex-start",
-        yValue: "flex-end",
-      },
       accolades_image_src: NellAccolades,
       accolades: [
         {
@@ -154,10 +128,7 @@ export const CreativesData = [
           affiliates: "Dublin International Film Festival 2023",
         },
       ],
-      accolades_position: {
-        xValue: "flex-end",
-        yValue: "flex-start",
-      },
+      image_reel: [NellAccolades, NellCredit, NellAccolades, NellCredit],
     },
   },
   {
@@ -170,10 +141,6 @@ export const CreativesData = [
         "Emma graduated from IADT Film and TV Production BA majoring in Direction. Her short film, Starry Night won Indie Cork's Best Short film award and was shortlisted for the Young Director Award at Cannes. She won a rising star award at Irish Screen America.",
         "She directed Buymie's 'We Shop Like You do' TV Commercial early last year and has made a number of music videos for artists like Lucy McWilliams, Junior Brother and Nixer. She is excited to create honest depictions of lost or directionless female characters going through the struggles of modern day life.",
       ],
-      bio_position: {
-        xValue: "flex-end",
-        yValue: "flex-start",
-      },
       credit_image_src: EmmaCredit,
       credits: [
         {
@@ -212,10 +179,6 @@ export const CreativesData = [
           heading: " | Short Film | Director",
         },
       ],
-      credits_position: {
-        xValue: "flex-end",
-        yValue: "flex-start",
-      },
       accolades_image_src: EmmaAccolades,
       accolades: [
         {
@@ -239,10 +202,7 @@ export const CreativesData = [
           affiliates: "Emerging Directors Awards 2020",
         },
       ],
-      accolades_position: {
-        xValue: "flex-start",
-        yValue: "flex-start",
-      },
+      image_reel: [EmmaAccolades, EmmaCredit, EmmaAccolades, EmmaCredit],
     },
   },
   {
@@ -255,10 +215,6 @@ export const CreativesData = [
         "Claire is a creative producer from County Meath with a Masters in Creative Production and Screen Finance from the National Film School IADT.",
         "While studying at IADT, Claire produced an animated short, PORK, under Screen Ireland’s prestigious Frameworks scheme. During this time, Claire was also the Senior Production Coordinator on Nora Twomey's recent release, My Father's Dragon, at Cartoon Saloon. Claire is currently the Development Production Supervisor at DNEG Animation, as well as overseeing the set up of production structures for new incoming shows for the studio. Claire helped in the development of Nell's short film, Try & Touch. Arts Council funded short film Baths was received to positive reviews due to its unconventional anthology writing development structure. Claire is dedicated to bringing female & non-binary voices & POV to the screen on an international scale.",
       ],
-      bio_position: {
-        xValue: "flex-start",
-        yValue: "flex-start",
-      },
       credit_image_src: ClaireCredit,
       credits: [
         {
@@ -286,10 +242,6 @@ export const CreativesData = [
           affiliates: "Screen Ireland",
         },
       ],
-      credits_position: {
-        xValue: "flex-start",
-        yValue: "flex-end",
-      },
     },
   },
   {
@@ -302,10 +254,6 @@ export const CreativesData = [
         "Emma graduated from IADT Film and TV Production BA majoring in Direction. Her short film, Starry Night won Indie Cork's Best Short film award and was shortlisted for the Young Director Award at Cannes. She won a rising star award at Irish Screen America.",
         "She directed Buymie's 'We Shop Like You do' TV Commercial early last year and has made a number of music videos for artists like Lucy McWilliams, Junior Brother and Nixer. She is excited to create honest depictions of lost or directionless female characters going through the struggles of modern day life.",
       ],
-      bio_position: {
-        xValue: "flex-end",
-        yValue: "flex-start",
-      },
       credit_image_src: EmmaCredit,
       credits: [
         {
@@ -344,10 +292,6 @@ export const CreativesData = [
           heading: " | Short Film | Director",
         },
       ],
-      credits_position: {
-        xValue: "flex-end",
-        yValue: "flex-start",
-      },
       accolades_image_src: EmmaAccolades,
       accolades: [
         {
@@ -371,10 +315,6 @@ export const CreativesData = [
           affiliates: "Emerging Directors Awards 2020",
         },
       ],
-      accolades_position: {
-        xValue: "flex-start",
-        yValue: "flex-start",
-      },
     },
   },
 ];

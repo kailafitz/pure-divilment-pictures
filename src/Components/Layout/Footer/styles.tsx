@@ -1,5 +1,4 @@
-import { Typography } from "@mui/material";
-import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
+import { Box, Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
 
 export const StyledFooter = styled("div")(({ theme }) => ({
@@ -33,27 +32,6 @@ export const FooteSectionTitle = styled(Typography)(({ theme }) => ({
 
   [theme.breakpoints.up("md")]: {
     margin: theme.spacing(4, 0),
-  },
-}));
-
-export const LogoGrid = styled(Grid2)(({ theme }) => ({
-  marginBottom: theme.spacing(5),
-  img: {
-    width: "70%",
-    display: "block",
-    margin: theme.spacing(0, "auto"),
-  },
-
-  [theme.breakpoints.up("md")]: {
-    marginBottom: theme.spacing(0),
-    "&:first-of-type": {
-      img: {
-        width: "65%",
-      },
-    },
-    img: {
-      width: "100%",
-    },
   },
 }));
 
@@ -98,4 +76,26 @@ export const FooterDetails = styled("div")(({ theme }) => ({
     flexDirection: "row",
     justifyContent: "space-between",
   },
+}));
+
+export const TestBox = styled(Box)(({ theme }) => ({
+  width: "fit-content",
+  img: {
+    height: "40px",
+    width: "auto",
+    margin: "0 auto",
+    display: "block",
+    padding: "1rem",
+  },
+
+  [theme.breakpoints.up("md")]: {
+    img: {
+      padding: "0",
+    },
+  },
+}));
+
+export const AffiliateLogo = styled("img")(({ theme }) => ({
+  width: "fit-content",
+  height: "100%",
 }));

@@ -1,10 +1,12 @@
 import React from "react";
-import { Box, Stack, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import { ProductionItemInterface } from "../../Data/ProductionData";
 import {
   ProductionImage,
   ProductionReelOne,
+  ReelOneWrapper,
   ProductionReelTwo,
+  ReelTwoWrapper,
   ProductionTitle,
 } from "./styles";
 import Grid from "@mui/material/Unstable_Grid2/Grid2";
@@ -22,7 +24,10 @@ const ProductionContentLayout = (props: ProductionItemInterface) => {
         columnSpacing={0.3}
       >
         <Grid xs={11} md={6}>
-          <ProductionTitle variant="h4" sx={props.Production.reelButtonStyles}>
+          <ProductionTitle
+            variant="h4"
+            sx={props.Production.titleStyles.baseStyles}
+          >
             {props.Production.title}
           </ProductionTitle>
           <Typography mb={2} sx={{ textAlign: "center" }}>
@@ -47,11 +52,11 @@ const ProductionContentLayout = (props: ProductionItemInterface) => {
           >
             {props.Production.pressReview}
           </Typography>
-          <Grid container rowSpacing={1}>
+          <Grid container rowSpacing={1} justifyContent="center" mt={{ xs: 5 }}>
             {props.Production.details.map((deets) => {
               return (
                 <React.Fragment key={deets.fieldKey}>
-                  <Grid md={2}>
+                  <Grid xs={4} md={2}>
                     <Typography
                       variant="body2"
                       sx={{
@@ -63,7 +68,7 @@ const ProductionContentLayout = (props: ProductionItemInterface) => {
                       {deets.fieldKey}
                     </Typography>
                   </Grid>
-                  <Grid md={9}>
+                  <Grid xs={7} md={9}>
                     <Typography variant="body2" mb={{ xs: 3, md: 0 }}>
                       {deets.fieldValue}
                     </Typography>
@@ -74,41 +79,45 @@ const ProductionContentLayout = (props: ProductionItemInterface) => {
           </Grid>
         </Grid>
       </Grid>
-      <ProductionReelOne container columnSpacing={0.3}>
+      <ProductionReelOne
+        container
+        columnSpacing={0.3}
+        rowSpacing={{ xs: 4, md: 0 }}
+        justifyContent={{ xs: "center", lg: "unset" }}
+      >
         {props.Production.reel_one?.map((reelImage, i) => {
           return (
             <Grid
               key={i}
               sx={{
-                height: "inherit",
+                height: { xs: "250px", md: "inherit" },
                 position: "relative",
               }}
-              xs={12}
+              xs={10}
               sm={6}
               md={3}
             >
-              <Box
+              <ReelOneWrapper
                 sx={{
-                  height: "100%",
-                  width: "100%",
-                  overflow: "hidden",
                   "&::before": {
-                    content: "''",
-                    display: "block",
-                    height: "100%",
-                    width: "120%",
                     background: `url(${reelImage}) right center no-repeat`,
                     backgroundSize: "cover",
-                    transform: "skew(3deg) translateX(-1rem)",
+                    backgroundPosition: "center",
                   },
                 }}
-              ></Box>
+              ></ReelOneWrapper>
             </Grid>
           );
         })}
       </ProductionReelOne>
-      <Grid container columnGap={5} justifyContent="center" mb={6}>
-        <Grid md={5} textAlign="right">
+      <Grid
+        container
+        columnGap={5}
+        rowSpacing={{ xs: 8, lg: 0 }}
+        justifyContent="center"
+        mb={6}
+      >
+        <Grid xs={10} md={5} textAlign={{ xs: "center", lg: "right" }}>
           <Typography
             variant="body2"
             sx={{
@@ -124,13 +133,14 @@ const ProductionContentLayout = (props: ProductionItemInterface) => {
           })}
         </Grid>
         <Grid
+          xs={11}
           md={5}
           sx={{
             display: "flex",
             flexDirection: "column",
           }}
         >
-          <Box mb={5}>
+          <Box mb={5} textAlign={{ xs: "center", lg: "left" }}>
             <Typography
               variant="body2"
               sx={{
@@ -142,10 +152,30 @@ const ProductionContentLayout = (props: ProductionItemInterface) => {
               Accolades
             </Typography>
             {props.Production.accolades?.map((accolade, i) => {
-              return <Typography key={i}>{accolade}</Typography>;
+              return (
+                <Box key={i}>
+                  <Typography
+                    sx={{
+                      display: { xs: "block", lg: "inline" },
+                      fontWeight: { xs: 800, lg: 400 },
+                    }}
+                  >
+                    {accolade.type}
+                  </Typography>
+                  <Typography
+                    sx={{
+                      display: { xs: "block", lg: "inline" },
+                      mb: { xs: 2, lg: 0 },
+                      pl: { lg: 0.5 },
+                    }}
+                  >
+                    {accolade.accoladeName}
+                  </Typography>
+                </Box>
+              );
             })}
           </Box>
-          <Box>
+          <Box sx={{ textAlign: { xs: "center", lg: "left" } }}>
             <Typography
               variant="body2"
               sx={{
@@ -165,38 +195,35 @@ const ProductionContentLayout = (props: ProductionItemInterface) => {
       <ProductionImage
         src={props.Production.production_image}
         alt="production poster"
+        sx={{ mb: { xs: 6, lg: 10 } }}
       />
-      <ProductionReelTwo container columnSpacing={0.3}>
+      <ProductionReelTwo
+        container
+        justifyContent={{ xs: "center", lg: "unset" }}
+        columnSpacing={0.3}
+        rowSpacing={{ xs: 4, lg: 0 }}
+      >
         {props.Production.reel_two?.map((reelImage, i) => {
           return (
             <Grid
               key={i}
               sx={{
-                py: 0,
-                height: "inherit",
+                py: { lg: 0 },
                 position: "relative",
+                height: { xs: "250px", md: "inherit" },
               }}
-              xs={12}
+              xs={10}
               sm={6}
               md={3}
             >
-              <Box
+              <ReelTwoWrapper
                 sx={{
-                  height: "100%",
-                  width: "100%",
-                  overflow: "hidden",
                   "&::before": {
-                    content: "''",
-                    display: "block",
-                    height: "100%",
-                    width: "120%",
                     background: `url(${reelImage}) no-repeat`,
                     backgroundSize: "cover",
-                    transform: "skew(3deg) translateX(-1rem)",
-                    filter: "grayscale(100%)",
                   },
                 }}
-              ></Box>
+              ></ReelTwoWrapper>
             </Grid>
           );
         })}

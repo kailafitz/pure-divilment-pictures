@@ -4,14 +4,13 @@ import {
   Wrapper,
   FooteSectionTitle,
   AffiliatesFooterSection,
-  LogoGrid,
   SocailLinksContainer,
   Copyright,
   FooterDetails,
+  TestBox,
 } from "./styles";
 import { Box, Link, Typography } from "@mui/material";
 import CopyrightIcon from "@mui/icons-material/Copyright";
-import Grid from "@mui/material/Unstable_Grid2/Grid2";
 import { useLocation } from "react-router-dom";
 import { Logo } from "../../Logo";
 const ArtsCouncil = require("../../../Assets/arts-council.webp");
@@ -20,42 +19,52 @@ const DIFF = require("../../../Assets/diff.webp");
 const GFF = require("../../../Assets/gff.webp");
 const RTE = require("../../../Assets/rte.webp");
 const IFL = require("../../../Assets/ifl.webp");
+const SafeToCreate = require("../../../Assets/safe-to-create.png");
+const ScreenProducersIreland = require("../../../Assets/screen-producers-ireland.png");
 
 const Affiliates = () => {
   return (
     <AffiliatesFooterSection
-      sx={{ paddingBottom: (theme) => theme.spacing(5) }}
+      sx={{ paddingBottom: (theme) => theme.spacing(8) }}
     >
-      <FooteSectionTitle>Affiliates</FooteSectionTitle>
-      <Grid
-        container
+      <FooteSectionTitle>Partners & Affiliates</FooteSectionTitle>
+      <Box
         sx={{
           justifyContent: { xs: "center", md: "space-between" },
           alignItems: "center",
           width: {
             md: "80%",
           },
+          display: "flex",
+          flexDirection: "row",
+          flexWrap: "wrap",
         }}
       >
-        <LogoGrid xs={5} sm={3} md={1}>
-          <img src={ArtsCouncil} alt="Arts Council" />
-        </LogoGrid>
-        <LogoGrid xs={5} sm={3} md={1}>
-          <img src={RTE} alt="RTE" />
-        </LogoGrid>
-        <LogoGrid xs={12} sm={6} md={2}>
+        <TestBox>
           <img src={ScreenIreland} alt="Screen Ireland" />
-        </LogoGrid>
-        <LogoGrid xs={5} sm={3} md={1}>
+        </TestBox>
+        <TestBox>
+          <img src={RTE} alt="RTE" />
+        </TestBox>
+        <TestBox>
+          <img src={ScreenProducersIreland} alt="Screen Producers Ireland" />
+        </TestBox>
+        <TestBox>
+          <img src={ArtsCouncil} alt="Arts Council" />
+        </TestBox>
+        <TestBox>
           <img src={DIFF} alt="DIFF" />
-        </LogoGrid>
-        <LogoGrid xs={5} sm={3} md={1}>
-          <img src={GFF} alt="GFF" />
-        </LogoGrid>
-        <LogoGrid xs={5} sm={3} md={1}>
+        </TestBox>
+        <TestBox>
           <img src={IFL} alt="IFL" />
-        </LogoGrid>
-      </Grid>
+        </TestBox>
+        <TestBox>
+          <img src={GFF} alt="GFF" />
+        </TestBox>
+        <TestBox>
+          <img src={SafeToCreate} alt="Safe to Create" />
+        </TestBox>
+      </Box>
     </AffiliatesFooterSection>
   );
 };
@@ -65,7 +74,7 @@ const Footer = () => {
   return (
     <StyledFooter>
       <Wrapper>
-        {(location.pathname === "/" || location.pathname === "/contact") && (
+        {(location.pathname === "/" || location.pathname === "/about") && (
           <Affiliates />
         )}
         <FooterDetails>

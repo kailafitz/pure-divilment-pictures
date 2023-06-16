@@ -1,9 +1,8 @@
 import { Box, Button } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2";
-import { alpha, styled } from "@mui/material/styles";
+import { styled } from "@mui/material/styles";
 
 export const ProductionsReelContainer = styled(Box)(({ theme }) => ({
-  paddingTop: "50px",
   display: "flex",
   flexDirection: "column",
   justifyContent: "space-around",
@@ -11,7 +10,6 @@ export const ProductionsReelContainer = styled(Box)(({ theme }) => ({
 
 export const Reel = styled(Grid)(({ theme }) => ({
   background: theme.palette.white.main,
-  transform: "skewY(4deg)",
   margin: 0,
 
   "div:first-child": {
@@ -23,7 +21,9 @@ export const Reel = styled(Grid)(({ theme }) => ({
   },
 
   [theme.breakpoints.up("md")]: {
-    height: "200px",
+    height: "300px",
+    transform: "skewY(4deg)",
+    paddingTop: "calc(100px)",
   },
 })) as typeof Grid;
 
@@ -34,6 +34,7 @@ export const ReelItem = styled(Button)(({ theme }) => ({
   height: "100%",
   borderRadius: 0,
   padding: theme.spacing(3),
+  lineHeight: 1,
   ":hover": {
     background: theme.palette.white.main,
     color: theme.palette.primary.main,
@@ -45,7 +46,6 @@ export const ProductionCoverImage = styled(Box)(({ theme }) => ({
   [theme.breakpoints.up("md")]: {
     width: "100%",
     backgroundPosition: "top center",
-    backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
     display: "flex",
     flexDirection: "column",

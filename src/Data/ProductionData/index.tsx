@@ -9,15 +9,23 @@
 // font-family: 'Square Peg', cursive;
 // font-family: 'Water Brush', cursive;
 
+// Baths Media
 const bathsCoverImage = require("../../Assets/baths-cover-photo.png");
 const bathsStillImage1 = require("../../Assets/baths-still-1.png");
 const bathsStillImage2 = require("../../Assets/baths-still-2.png");
 const bathsMainImage = require("../../Assets/baths-production-main.png");
+const bathsTitleVideoDesktop = require("../../Assets/baths-production-video-hp.mp4");
+const bathsTitleVideoMobile = require("../../Assets/baths-production-video-hp-mobile.mp4");
+const bathsProductionReel21 = require("../../Assets/baths-production-page-reel-2.1.png");
+const bathsProductionReel22 = require("../../Assets/baths-production-page-reel-2.2.png");
+const bathsProductionReel23 = require("../../Assets/baths-production-page-reel-2.3.png");
+const bathsProductionReel24 = require("../../Assets/baths-production-page-reel-2.4.png");
 
-const reelTwo1 = require("../../Assets/production-reel-2.1.png");
-const reelTwo2 = require("../../Assets/production-reel-2.2.png");
-const reelTwo3 = require("../../Assets/production-reel-2.3.png");
-const reelTwo4 = require("../../Assets/production-reel-2.4.png");
+// Alex Media
+const alexTitleVideo = require("../../Assets/test-alex-video.mp4");
+
+// Feminism Media
+const femTitleVideo = require("../../Assets/test-feminism-video.mp4");
 
 const testFont = "'Comforter Brush',cursive";
 
@@ -25,18 +33,35 @@ export interface ProductionDetails {
   fieldKey: string;
   fieldValue: string;
 }
+export interface AccoladeDetails {
+  type: string;
+  accoladeName: string;
+}
+
+export interface slideTitleFontSizes {
+  desktop: string;
+  mobile: string;
+}
 
 export interface ProductionItemInterface {
   Production: {
     id: string;
     title: string;
-    reelButtonStyles?: {
-      fontFamily?: string;
-      fontSize?: string;
-      textTransform?: string;
-      fontWeight?: number;
+    titleStyles: {
+      baseStyles: {
+        fontFamily: string;
+        textTransform: string;
+        fontWeight: number;
+      };
+
+      reelButtonStyles: {
+        fontSize: string;
+      };
+
+      slideFontSize: slideTitleFontSizes;
     };
-    // reelButtonStyles?: Object;
+    videoDesktop?: string;
+    videoMobile?: string;
     coverImage?: string;
     blurb?: string;
     type?: string;
@@ -48,7 +73,7 @@ export interface ProductionItemInterface {
     reel_one?: string[];
     reel_two?: string[];
     festivals?: string[];
-    accolades?: string[];
+    accolades?: AccoladeDetails[];
     screenings?: string[];
     production_image?: string;
   };
@@ -59,19 +84,29 @@ export const ProductionData = [
     production: {
       id: "1",
       title: "Baths",
+      videoDesktop: bathsTitleVideoDesktop,
+      videoMobile: bathsTitleVideoMobile,
       type: "Short Anthology",
       status: "In Distribution",
       pressReview:
         "'A uniquely conceived and memorably intimate anthology short from acclaimed director Nell Hensey, with each chapter thematically linked and told from the perspective of someone taking a bath.'",
-      reelButtonStyles: {
-        fontFamily: "'Libre Baskerville', serif",
-        textTransform: "capitalize",
-        fontSize: "2rem",
-        fontWeight: 400,
-        letterSpacing: "2px",
-        "::first-letter": {
-          fontStyle: "italic",
-          marginRight: "1px",
+      titleStyles: {
+        baseStyles: {
+          fontFamily: "'Libre Baskerville', serif",
+          textTransform: "capitalize",
+          fontWeight: 400,
+          letterSpacing: "2px",
+          "::first-letter": {
+            fontStyle: "italic",
+            marginRight: "1px",
+          },
+        },
+        reelButtonStyles: {
+          fontSize: "2rem",
+        },
+        slideFontSize: {
+          mobile: "7rem",
+          desktop: "15rem",
         },
       },
       details: [
@@ -105,7 +140,12 @@ export const ProductionData = [
         bathsStillImage1,
         bathsStillImage1,
       ],
-      reel_two: [reelTwo1, reelTwo2, reelTwo3, reelTwo4],
+      reel_two: [
+        bathsProductionReel21,
+        bathsProductionReel22,
+        bathsProductionReel23,
+        bathsProductionReel24,
+      ],
       coverImage: bathsCoverImage,
       festivals: [
         "Galway Film Fleadh",
@@ -119,8 +159,14 @@ export const ProductionData = [
         "First Cut! Youth Film Festival",
       ],
       accolades: [
-        "WINNER Best Direction at First Cut! Youth Film Festival",
-        "NOMINATION Discovery Award",
+        {
+          type: "WINNER",
+          accoladeName: "Best Direction at First Cut! Youth Film Festival",
+        },
+        {
+          type: "NOMINATION",
+          accoladeName: "Discovery Award",
+        },
       ],
       screenings: [
         "Galway Film Society Spring Programme",
@@ -133,15 +179,25 @@ export const ProductionData = [
     production: {
       id: "2",
       title: "Falling for the life of Alex Whelan",
-      type: "In Development",
-      status: "TV Drama",
+      videoDesktop: alexTitleVideo,
+      videoMobile: alexTitleVideo,
+      type: "TV Drama",
+      status: "In Development",
       blurb:
         "A young woman hides under the delusion that her casual (bad) sex buddy has romantic potential and will sweep her off her feet. But after he drops her, she is more overcome by the lack of sympathy shown by her friends, her mother and even her therapist. A story of heartbreak - in more ways than one. Based off the short story 'What Feminism Is' by Louise Nealon.",
-      reelButtonStyles: {
-        fontFamily: testFont,
-        textTransform: "none",
-        fontSize: "2rem",
-        fontWeight: 400,
+      titleStyles: {
+        baseStyles: {
+          fontFamily: testFont,
+          textTransform: "none",
+          fontWeight: 400,
+        },
+        reelButtonStyles: {
+          fontSize: "2rem",
+        },
+        slideFontSize: {
+          mobile: "4.5rem",
+          desktop: "7rem",
+        },
       },
       details: [
         {
@@ -159,7 +215,7 @@ export const ProductionData = [
         {
           fieldKey: "Based Off",
           fieldValue:
-            "the short story 'How I Fell In Love With The Well-Documented Life of Alexander Whelan' by Yan Ge (Faber & Faber)",
+            "The short story 'How I Fell In Love With The Well-Documented Life of Alexander Whelan' by Yan Ge (Faber & Faber)",
         },
         {
           fieldKey: "Financiers",
@@ -173,13 +229,23 @@ export const ProductionData = [
     production: {
       id: "3",
       title: "What Feminism Is",
+      videoDesktop: femTitleVideo,
+      videoMobile: femTitleVideo,
       type: "",
-      status: "",
-      reelButtonStyles: {
-        fontFamily: "'Arimo', sans-serif",
-        textTransform: "uppercase",
-        fontSize: "1.5rem",
-        fontWeight: 700,
+      status: "In Development",
+      titleStyles: {
+        baseStyles: {
+          fontFamily: "'Arimo', sans-serif",
+          textTransform: "uppercase",
+          fontWeight: 700,
+        },
+        reelButtonStyles: {
+          fontSize: "1.5rem",
+        },
+        slideFontSize: {
+          mobile: "4rem",
+          desktop: "7rem",
+        },
       },
       details: [],
       coverImage: "Coming Soon",
@@ -189,14 +255,22 @@ export const ProductionData = [
     production: {
       id: "4",
       title: "Musical",
-      type: "",
-      status: "",
-      reelButtonStyles: {
-        fontFamily: "'Arapey', serif",
-        textTransform: "uppercase",
-        fontSize: "3rem",
-        fontWeight: 400,
+      titleStyles: {
+        baseStyles: {
+          fontFamily: "'Arapey', serif",
+          textTransform: "uppercase",
+          fontWeight: 400,
+        },
+        reelButtonStyles: {
+          fontSize: "3rem",
+        },
+        slideFontSize: {
+          mobile: "5rem",
+          desktop: "13rem",
+        },
       },
+      type: "",
+      status: "In Development",
       details: [],
       coverImage: "Coming Soon",
     },

@@ -16,14 +16,14 @@ const Loader = (props: LoaderProps) => {
         top: 0,
         left: 0,
         zIndex: 3,
-        animation: "slide-out-container 2s linear forwards",
+        animation: "slide-out-container 1s linear forwards",
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
         overflow: "hidden",
       }}
     >
-      <ReactLoading type="bars" color="#ffffff" className="react-loading" />
+      {/* <ReactLoading type="bars" color="#ffffff" className="react-loading" /> */}
 
       {/* <Typography
         textAlign="center"

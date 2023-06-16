@@ -11,7 +11,7 @@ export const AnimationContainer = styled("div")(({ theme }) => ({
   justifyContent: "center",
   alignItems: "center",
   background: theme.palette.primary.main,
-  animation: "slide-out-container 1.8s linear 3.8s",
+  animation: "slide-out-container 1.5s linear 2.5s",
   animationFillMode: "forwards",
   overflow: "hidden",
 }));

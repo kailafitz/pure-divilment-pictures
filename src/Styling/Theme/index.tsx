@@ -1,4 +1,3 @@
-import { common } from "@mui/material/colors";
 import { createTheme, responsiveFontSizes } from "@mui/material/styles";
 
 // const { palette } = createTheme();
@@ -19,9 +18,11 @@ const theme = createTheme({
     },
     white: {
       main: "#f9f9f9",
+      dark: "#c9c9c9",
     },
     dark: {
       main: "#0d0c0c",
+      dark: "#000000",
     },
   },
   components: {

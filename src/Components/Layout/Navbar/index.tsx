@@ -44,10 +44,12 @@ export default function Navbar() {
             <Hamburger />
             <Hamburger toggled={isOpen} toggle={setOpen} />
           </HamburgerContainer>
-          <MobileDrawer open={isOpen} />
+          <MobileDrawer open={isOpen} closeDrawer={() => setOpen(false)} />
           <Box
             sx={{
-              display: { xs: "none", sm: "block" },
+              display: { xs: "none", sm: "flex" },
+              width: "50%",
+              justifyContent: "space-around",
             }}
           >
             {NavigationItems.map((navObj) => {

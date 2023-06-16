@@ -9,12 +9,11 @@ const AboutUs = require("../../Assets/about-us.jpeg");
 const About = () => {
   return (
     <>
-      <Loader title="About Us" />
       {/* <Box sx={{ paddingBottom: (theme) => theme.spacing(5) }}>
         <StyledAboutBanner src={AboutBanner} alt="About Pure Divilment" />
       </Box> */}
       <Grid container sx={{ justifyContent: "center", position: "relative" }}>
-        <Grid
+        {/* <Grid
           xs={12}
           md={7}
           sx={{
@@ -24,67 +23,79 @@ const About = () => {
             background: `url(${AboutUs}) center no-repeat`,
             backgroundSize: "cover",
           }}
-        >
-          {/* <Box
+        ></Grid> */}
+        <Grid md={8} p={5}>
+          <Typography
+            variant="h4"
             sx={{
-              height: "100%",
-              minHeight: "400px",
-              width: "100%",
-              background: `url(${AboutUs}) center no-repeat`,
-              backgroundSize: "cover",
-            }}
-          ></Box> */}
-        </Grid>
-        <Grid md={5}></Grid>
-
-        <Grid container sx={{ position: "absolute", right: 0 }}>
-          <Grid md={4}></Grid>
-          <Grid
-            xs={11}
-            md={8}
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-              py: 5,
-              background: (theme) => theme.palette.white.main,
+              fontWeight: 400,
+              textAlign: "center",
+              marginBottom: (theme) => theme.spacing(2),
+              textTransform: "unset",
+              span: {
+                fontStyle: "italic",
+                letterSpacing: "2px",
+              },
             }}
           >
-            <Typography
-              variant="h4"
-              sx={{
-                fontWeight: 700,
-                textAlign: "center",
-                marginBottom: (theme) => theme.spacing(2),
-                textTransform: "uppercase",
-                span: {
-                  fontStyle: "italic",
-                  letterSpacing: "2px",
-                },
-              }}
-            >
-              We tell stories...
-              <br />
-              Out of <span>pure divilment.</span>
-            </Typography>
-            <Typography
-              sx={{ width: { xs: "90%", sm: "75%" }, margin: "0 auto" }}
-            >
-              Established in 2022, Pure Divilment is a film production company
-              that specializes in creating visually stunning and emotionally
-              compelling content for a global audience. Our team of experienced
-              professionals brings together expertise in all aspects of
-              filmmaking, from pre-production to post-production, to ensure that
-              every project is executed with the highest level of creativity and
-              technical excellence.
-              {/* <br />
-              <br />
-              Whether it's a feature film, a TV series, or a commercial project,
-              Pure Divilment is dedicated to producing content that captivates
-              audiences and inspires them to think, feel, and experience the
-              world in a different way. */}
-            </Typography>
-          </Grid>
+            We tell stories
+            <br />
+            ... out of <span>pure divilment.</span>
+          </Typography>
+          <Typography variant="body1" mb={2}>
+            Pure Divilment Pictures is a film and television production company,
+            based in Ireland.
+          </Typography>
+          <Typography variant="body1" mb={2}>
+            Co-founded by Claire Mooney and Nell Hensey, the pair met while
+            completing their Masters degrees in Creative Production and Screen
+            Finance at Ireland's National Film School IADT. Together, they want
+            to champion a new generation of great storytelling.
+          </Typography>
+          <Typography
+            color="white"
+            variant="body2"
+            sx={{
+              background: (theme) => theme.palette.primary.main,
+              color: (theme) => theme.palette.white.main,
+            }}
+            mb={2}
+          >
+            "From literary onscreen adaptations to original musicals, our goal
+            is to tell bold, important stories. Stories that haven't been told
+            before. Stories made by and about outsiders like us." - Nell Hensey
+          </Typography>
+          <Typography variant="body1" mb={2}>
+            Pure Divilment is dedicated to producing entertainment that
+            captivates audiences and inspires them to think, feel, and
+            experience the world in a different way. We deeply value
+            representation and strive to create opportunities to grow
+            exceptional talent.
+          </Typography>
+          <Typography
+            color="white"
+            variant="body2"
+            sx={{
+              background: (theme) => theme.palette.primary.main,
+              color: (theme) => theme.palette.white.main,
+            }}
+            mb={2}
+          >
+            "With each new project, we strive for the highest level of
+            creativity and technical excellence. Our slate is carefully curated
+            with select pieces that focus on compelling characters, new
+            perspectives, and demonstrate international appeal." - Claire Mooney
+          </Typography>
+          <Typography variant="body1" mb={2}>
+            In 2023, the company launched its highly anticipated debut slate
+            featuring an array of exciting projects across television,
+            independent film and short form content. The company also expanded
+            its creative team, adding positions across development, production
+            and marketing.
+          </Typography>
+          <Typography variant="h6" mb={3}>
+            And this is only the beginning.
+          </Typography>
         </Grid>
       </Grid>
     </>

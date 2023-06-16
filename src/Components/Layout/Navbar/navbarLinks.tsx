@@ -17,10 +17,10 @@ export const NavigationItems = [
   // },
   {
     linkLabel: "Reach Out",
-    link: "/contact",
+    link: "/reach-out",
   },
-  {
-    linkLabel: "To Do",
-    link: "/todo",
-  },
+  // {
+  //   linkLabel: "To Do",
+  //   link: "/todo",
+  // },
 ];

@@ -22,7 +22,7 @@ export const ProductionTitle = styled(Typography)(({ theme }) => ({
 
 export const ProductionReelOne = styled(Grid)(({ theme }) => ({
   marginTop: theme.spacing(2),
-  marginBottom: theme.spacing(8),
+  marginBottom: theme.spacing(10),
   background: theme.palette.white.main,
 
   [theme.breakpoints.up("md")]: {

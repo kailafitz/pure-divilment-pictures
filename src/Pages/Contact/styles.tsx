@@ -12,4 +12,5 @@ export const StyledBackgroundImage = styled(Box)(({ theme }) => ({
   right: 0,
   top: 0,
   zIndex: -7,
+  boxShadow: "inset 7px 18px 49px 2px black",
 })) as typeof Box;

@@ -36,10 +36,10 @@ export const AnimationText = styled("div")(({ theme }) => ({
   p: {
     margin: 0,
     display: "inline-block",
-    letterSpacing: "2px",
+    letterSpacing: "4px",
     "&::first-letter": {
       fontStyle: "italic",
-      marginRight: "3px",
+      marginRight: "9px",
     },
     "&:first-of-type": {
       marginRight: "1rem",

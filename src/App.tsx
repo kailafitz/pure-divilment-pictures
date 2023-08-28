@@ -15,19 +15,19 @@ function App() {
     <>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/the-creatives" element={<TheCreatives />} />
+        <Route path="/test" element={<Home />} />
+        <Route path="/test/about" element={<About />} />
+        <Route path="/test/the-creatives" element={<TheCreatives />} />
         <Route
-          path="/the-creatives/creative/:id"
+          path="/test/the-creatives/creative/:id"
           element={<CompanyCreativeProfile />}
         />
-        <Route path="/productions/:id" element={<Productions />} />
+        <Route path="/test/productions/:id" element={<Productions />} />
         <Route
-          path="/productions/production/:id"
+          path="/test/productions/production/:id"
           element={<ProductionProfile />}
         />
-        <Route path="/reach-out" element={<Contact />} />
+        <Route path="/test/reach-out" element={<Contact />} />
       </Routes>
       <Footer />
     </>

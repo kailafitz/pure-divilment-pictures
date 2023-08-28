@@ -1,7 +1,9 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import { Typography } from "@mui/material";
+import { Button, Stack, Typography } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2/Grid2";
+import { StyledAboutImage } from "./styles";
+import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
 
 const About = () => {
   return (
@@ -23,25 +25,55 @@ const About = () => {
           content={"How we started and where we're going!"}
         />
       </Helmet>
+      <Typography
+        variant="h4"
+        sx={{
+          paddingTop: "10vh",
+          fontWeight: 400,
+          textAlign: "center",
+          marginBottom: (theme) => theme.spacing(3),
+          textTransform: "unset",
+          span: {
+            fontStyle: "italic",
+            letterSpacing: "2px",
+          },
+        }}
+      >
+        We tell stories
+        <br />
+        ... out of <span>pure divilment.</span>
+      </Typography>
+      <Stack
+        direction="row"
+        margin="0 auto"
+        alignContent="center"
+        justifyContent="space-between"
+        // sx={{ width: { xs: "70vw", sm: "40vw", lg: "40vw" } }}
+        sx={{ minWidth: "300px" }}
+        mb={6}
+      >
+        <Typography display="inline" textAlign="center">
+          Inclusive
+        </Typography>
+        <Typography>
+          {/* <FiberManualRecordIcon sx={{ width: "8px", height: "8px" }} /> */}
+          //
+        </Typography>
+        <Typography display="inline" textAlign="center">
+          Dynamic
+        </Typography>
+        <Typography>
+          {/* <FiberManualRecordIcon sx={{ width: "8px", height: "8px" }} /> */}
+          //
+        </Typography>
+        <Typography display="inline" textAlign="center">
+          Empowering
+        </Typography>
+      </Stack>
+
+      <StyledAboutImage></StyledAboutImage>
       <Grid container sx={{ justifyContent: "center", position: "relative" }}>
         <Grid md={8} p={5}>
-          <Typography
-            variant="h4"
-            sx={{
-              fontWeight: 400,
-              textAlign: "center",
-              marginBottom: (theme) => theme.spacing(2),
-              textTransform: "unset",
-              span: {
-                fontStyle: "italic",
-                letterSpacing: "2px",
-              },
-            }}
-          >
-            We tell stories
-            <br />
-            ... out of <span>pure divilment.</span>
-          </Typography>
           <Typography variant="body1" mb={2}>
             Pure Divilment Pictures is a film and television production company,
             based in Ireland.
@@ -96,6 +128,49 @@ const About = () => {
           <Typography variant="h6" mb={3}>
             And this is only the beginning.
           </Typography>
+        </Grid>
+      </Grid>
+      <Grid
+        container
+        justifyContent="center"
+        py={3}
+        sx={{ background: (theme) => theme.palette.primary.main }}
+      >
+        <Grid
+          xs={8}
+          md={6}
+          sx={{
+            p: { xs: 2, md: 5 },
+            display: "flex",
+            justifyContent: { md: "flex-end" },
+          }}
+        >
+          <Button
+            href="/test/the-creatives"
+            variant="contained"
+            color="white"
+            sx={{
+              p: 2,
+              borderRadius: 0,
+              width: { xs: "100%", md: "fit-content" },
+            }}
+          >
+            Meet our Creatives
+          </Button>
+        </Grid>
+        <Grid xs={8} md={6} sx={{ p: { xs: 2, md: 5 } }}>
+          <Button
+            href="/test/reach-out"
+            variant="contained"
+            color="white"
+            sx={{
+              p: 2,
+              borderRadius: 0,
+              width: { xs: "100%", md: "fit-content" },
+            }}
+          >
+            Get in Touch
+          </Button>
         </Grid>
       </Grid>
     </>

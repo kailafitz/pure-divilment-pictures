@@ -63,9 +63,8 @@ const Footer = () => {
   return (
     <StyledFooter>
       <Wrapper>
-        {(location.pathname === "/" || location.pathname === "/about") && (
-          <Affiliates />
-        )}
+        {(location.pathname === "/test" ||
+          location.pathname === "/test/about") && <Affiliates />}
         <FooterDetails>
           <SocailLinksContainer
             sx={{

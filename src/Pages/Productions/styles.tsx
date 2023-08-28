@@ -6,13 +6,22 @@ export const ProductionsReelContainer = styled(Box)(({ theme }) => ({
   display: "flex",
   flexDirection: "column",
   justifyContent: "space-around",
+  paddingBottom: theme.spacing(4),
+  minHeight: "unset",
+  [theme.breakpoints.up("md")]: {
+    paddingBottom: "0",
+    minHeight: "calc(100vh - 97.5px)",
+  },
+  [theme.breakpoints.up("lg")]: {
+    height: "100%",
+  },
 })) as typeof Box;
 
 export const Reel = styled(Grid)(({ theme }) => ({
   background: theme.palette.white.main,
   margin: 0,
 
-  "div:first-child": {
+  "div:nth-of-type": {
     paddingLeft: 0,
   },
 
@@ -43,17 +52,17 @@ export const ReelItem = styled(Button)(({ theme }) => ({
 })) as typeof Button;
 
 export const ProductionCoverImage = styled(Box)(({ theme }) => ({
+  opacity: 1,
   [theme.breakpoints.up("md")]: {
     width: "100%",
-    backgroundPosition: "top center",
+    // backgroundPosition: "top center",
+    backgroundPosition: "100% 100%",
     backgroundRepeat: "no-repeat",
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
     textAlign: "center",
-    // flexGrow: 1,
     marginTop: theme.spacing(-7),
-    // minHeight: "200px",
     flexGrow: 1,
   },
 })) as typeof Box;

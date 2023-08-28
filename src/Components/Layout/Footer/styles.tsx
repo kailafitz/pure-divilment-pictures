@@ -5,6 +5,7 @@ export const StyledFooter = styled("div")(({ theme }) => ({
   padding: theme.spacing(3),
   backgroundColor: theme.palette.primary.main,
   color: theme.palette.white.main,
+  marginTop: "-1px",
 }));
 
 export const Wrapper = styled("div")(({ theme }) => ({
@@ -78,7 +79,7 @@ export const FooterDetails = styled("div")(({ theme }) => ({
   },
 }));
 
-export const TestBox = styled(Box)(({ theme }) => ({
+export const LogoWrapper = styled(Box)(({ theme }) => ({
   width: "fit-content",
   img: {
     height: "40px",

@@ -26,26 +26,23 @@ export const TextWrapper = styled(Box)(() => ({
   alignItems: "center",
 }));
 
-export const TestText = styled("div")(({ theme }) => ({
+export const AnimationText = styled("div")(({ theme }) => ({
   fontFamily: "DM Sans",
   fontWeight: "lighter",
-  fontSize: "30px",
-
+  fontSize: "40px",
   [theme.breakpoints.up("md")]: {
     fontSize: "54px",
   },
-
-  span: {
+  p: {
+    margin: 0,
+    display: "inline-block",
+    letterSpacing: "2px",
+    "&::first-letter": {
+      fontStyle: "italic",
+      marginRight: "3px",
+    },
     "&:first-of-type": {
       marginRight: "1rem",
-    },
-    p: {
-      margin: 0,
-      display: "inline-block",
-      "::first-letter": {
-        fontStyle: "italic",
-        marginRight: "7px",
-      },
     },
   },
 }));

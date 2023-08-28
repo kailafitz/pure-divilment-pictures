@@ -18,6 +18,8 @@ import { ProductionData } from "../../Data/ProductionData";
 import ProductionContentLayout from "../../Components/ProductionContentLayout";
 import { useParams } from "react-router-dom";
 import Loader from "../../Components/Loader";
+import ExpandLessIcon from "@mui/icons-material/ExpandLess";
+import { Helmet } from "react-helmet";
 
 // https://stackoverflow.com/questions/8944456/css3-transition-different-transition-for-in-and-out-or-returning-from-tran
 
@@ -67,9 +69,17 @@ const Productions = () => {
         <Box
           onClick={handleClick}
           role="presentation"
-          sx={{ position: "fixed", bottom: 16, right: 16 }}
+          sx={{
+            position: "fixed",
+            bottom: 16,
+            right: 16,
+            zIndex: 10,
+          }}
         >
-          <Button color="dark">Back to Productions</Button>
+          <Button color="primary" variant="contained">
+            {/* Back to Productions */}
+            <ExpandLessIcon />
+          </Button>
         </Box>
       </Fade>
     );
@@ -80,7 +90,8 @@ const Productions = () => {
     if (SelectedProduction.length > 0) {
       setHeaderImage(SelectedProduction[0].production.coverImage);
     }
-  }, [selectProduction]);
+    return () => {};
+  }, [selectProduction, SelectedProduction]);
 
   let condition =
     hoverImage === white ||
@@ -88,14 +99,26 @@ const Productions = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Productions | Pure Divilment Pictures</title>
+        <meta
+          name="description"
+          content={
+            "Scroll through the company's productions from short films to feature films to music videos and more."
+          }
+        />
+        <meta
+          property="og:title"
+          content={"Productions | Pure Divilment Pictures"}
+        />
+        <meta
+          property="og:description"
+          content={"Have a look through our work and see for yourself!"}
+        />
+      </Helmet>
       <Loader title="Productions" />
       <ProductionsReelContainer
         sx={{
-          minHeight: {
-            xs: "unset",
-            md: "calc(100vh - 97.5px)",
-          },
-          height: { lg: "100%" },
           flexGrow: SelectedProduction.length > 0 ? 0 : 1,
         }}
       >
@@ -113,6 +136,7 @@ const Productions = () => {
             };
             return (
               <Grid
+                py={{ lg: 0 }}
                 sx={{
                   py: { lg: 0 },
                 }}
@@ -144,19 +168,17 @@ const Productions = () => {
         </Reel>
         <ProductionCoverImage
           sx={{
-            opacity: 1,
             background:
               selectProduction.length !== 1
                 ? hoverImage === white
                   ? hoverImage
-                  : `url(${hoverImage})`
-                : `url(${headerImage})`,
+                  : `url("${hoverImage}") fixed`
+                : `url(${headerImage}) fixed`,
             transition: "background .6s ease-in, opacity .6s ease-in",
-            backgroundSize: "cover",
           }}
         >
           {condition && (
-            <Typography variant="h4" color="primary">
+            <Typography variant="h4" color="primary" textAlign="center">
               Coming Soon
             </Typography>
           )}
@@ -166,13 +188,10 @@ const Productions = () => {
       SelectedProduction[0]?.production.status !== "In Development"
         ? SelectedProduction.map((production) => {
             return (
-              <>
-                <ProductionContentLayout
-                  Production={production.production}
-                  key={production.production.id}
-                />
+              <React.Fragment key={production.production.id}>
+                <ProductionContentLayout Production={production.production} />
                 <ScrollTop />
-              </>
+              </React.Fragment>
             );
           })
         : null}

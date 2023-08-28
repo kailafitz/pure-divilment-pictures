@@ -38,7 +38,7 @@ export interface AccoladeDetails {
   accoladeName: string;
 }
 
-export interface slideTitleFontSizes {
+export interface SlideTitleFontSizes {
   desktop: string;
   mobile: string;
 }
@@ -58,7 +58,7 @@ export interface ProductionItemInterface {
         fontSize: string;
       };
 
-      slideFontSize: slideTitleFontSizes;
+      slideFontSize: SlideTitleFontSizes;
     };
     videoDesktop?: string;
     videoMobile?: string;

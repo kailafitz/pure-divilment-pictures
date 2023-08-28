@@ -6,7 +6,7 @@ import { Logo } from "../../Logo";
 import NavigationLink from "./NavigationLink";
 import { useState } from "react";
 import MobileDrawer from "./MobileDrawer";
-import { NavigationItems } from "./navbarLinks";
+import { NavigationItems } from "../../../Data/NavigationLinks";
 import { Cross as Hamburger } from "hamburger-react";
 import { NavigationContainer, HamburgerContainer } from "./styles";
 
@@ -50,6 +50,7 @@ export default function Navbar() {
               display: { xs: "none", sm: "flex" },
               width: "50%",
               justifyContent: "space-around",
+              flexGrow: { sm: 1, md: 0 },
             }}
           >
             {NavigationItems.map((navObj) => {

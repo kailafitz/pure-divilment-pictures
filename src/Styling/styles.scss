@@ -65,10 +65,57 @@ body {
     justify-content: space-between;
 }
 
+.active span {
+    font-weight: 500 !important;
+
+    &:nth-of-type(1) {
+        transform: skewX(-15deg);
+        font-weight: 700 !important;
+    }
+}
+
+a:nth-of-type(1).active span:last-child {
+    margin-left: -0.5px;
+}
+
+a:not(:nth-of-type(1)).active span:last-child,
+li:not(:nth-of-type(1)) a.active span:last-child {
+    margin-left: 1.55px;
+}
+
+a {
+    text-decoration: none;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.display-on-mobile {
+    display: block;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .display-on-mobile {
+        display: none;
+    }
+
+    .display-on-desktop {
+        display: block;
+    }
+}
+
+.react-loading {
+    margin: 0 auto;
+    animation: visible 1s linear forwards;
+}
+
 // .swiper-wrapper {
 //     transition-timing-function: linear;
 // }
 
+// home page slider text animation
 @keyframes text-in {
     0% {
         opacity: 0;
@@ -123,28 +170,6 @@ body {
         opacity: 0;
         transform: translateY(40px);
     }
-}
-
-.active {
-    font-weight: 900;
-
-    &::first-letter {
-        font-style: italic;
-        margin-right: 2.7px;
-    }
-}
-
-a {
-    text-decoration: none;
-
-    &:hover {
-        cursor: pointer;
-    }
-}
-
-.react-loading {
-    margin: 0 auto;
-    animation: visible 1s linear forwards;
 }
 
 .text-1,
@@ -262,33 +287,4 @@ a {
 .text-11 {
     animation: blink 0.8s linear 0.4s;
     opacity: 0;
-}
-
-// Credits to https://codepen.io/t_afif/pen/ExQLWNE
-.border-animation {
-    --g: 4px;
-    /* the gap */
-    --b: 4px;
-    /* border thickness*/
-    --c: #FFF;
-    /* the color */
-
-
-    padding: calc(var(--g) + var(--b));
-    --_c: #0000 0 25%, var(--c) 0 50%;
-    --_g1: repeating-linear-gradient(90deg, var(--_c)) repeat-x;
-    --_g2: repeating-linear-gradient(180deg, var(--_c)) repeat-y;
-    background:
-        var(--_g1) var(--_p, 25%) 0, var(--_g2) 0 var(--_p, 125%),
-        var(--_g1) var(--_p, 125%) 100%, var(--_g2) 100% var(--_p, 25%);
-    background-size: 200% var(--b), var(--b) 200%;
-    cursor: pointer;
-    filter: grayscale(50%);
-    transition: all .3s linear;
-}
-
-.border-animation:hover {
-    --_p: 75%;
-    --c: #FFFFFF;
-    transition: all .3s linear;
 }

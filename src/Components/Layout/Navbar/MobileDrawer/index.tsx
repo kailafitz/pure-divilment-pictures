@@ -1,7 +1,7 @@
 import * as React from "react";
 import Drawer from "@mui/material/Drawer";
 import { List, ListItem } from "@mui/material";
-import { NavigationItems } from "../navbarLinks";
+import { NavigationItems } from "../../../../Data/NavigationLinks";
 import NavigationLink from "../NavigationLink";
 
 interface MobileDrawerProps {
@@ -14,7 +14,10 @@ const MobileDrawer = (props: MobileDrawerProps) => {
     <Drawer
       anchor="top"
       open={props.open}
-      sx={{ zIndex: 1, backgroundColor: (theme) => theme.palette.white.main }}
+      PaperProps={{
+        sx: { backgroundColor: (theme) => theme.palette.white.main },
+      }}
+      sx={{ zIndex: 1 }}
     >
       <List sx={{ pt: (theme) => theme.spacing(12) }}>
         {NavigationItems.map((navObj, i) => (

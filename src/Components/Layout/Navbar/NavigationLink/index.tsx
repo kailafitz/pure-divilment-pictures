@@ -1,7 +1,7 @@
 import * as React from "react";
 import { LinkProps } from "@mui/material/Link";
 import { NavLink as ReactRouterLink } from "react-router-dom";
-import { StyledLink } from "./styles";
+import { StyledLink, StyledSpan, StyledFirstLetter } from "./styles";
 
 const MyNavLink = React.forwardRef<any, any>((props, ref) => (
   <ReactRouterLink
@@ -23,14 +23,17 @@ export interface CustomLinkProps extends LinkProps {
 }
 
 const NavigationLink = (props: CustomLinkProps) => {
+  let firstLetter = props.linkObject.linkLabel.charAt(0);
   return (
     <StyledLink
       component={MyNavLink}
       to={props.linkObject.link}
       aria-label={props.linkObject.linkLabel}
-      class="nav-link"
+      className="nav-link"
     >
       {props.linkObject.linkLabel}
+      <StyledFirstLetter>{firstLetter}</StyledFirstLetter>
+      <StyledSpan>{props.linkObject.linkLabel}</StyledSpan>
     </StyledLink>
   );
 };

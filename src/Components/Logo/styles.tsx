@@ -16,7 +16,7 @@ export const LogoContainer = styled("div")(({ theme }) => ({
 }));
 
 export const StyledLogoHeading = styled("h1")(({ theme }) => ({
-  fontSize: "25px",
+  fontSize: "20px",
   width: "fit-content",
   fontWeight: 700,
   margin: 0,
@@ -32,7 +32,7 @@ export const StyledLogoHeading = styled("h1")(({ theme }) => ({
 }));
 
 export const StyledLogoSubtitle = styled("h1")(({ theme }) => ({
-  fontSize: "17px",
+  fontSize: "12px",
   display: "block",
   width: "fit-content",
   margin: "0 auto",

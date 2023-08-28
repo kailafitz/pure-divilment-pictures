@@ -18,7 +18,7 @@ const ProductionContentLayout = (props: ProductionItemInterface) => {
         id="selectedProduction"
         container
         sx={{
-          py: 5,
+          py: { xs: 10, md: 5 },
           justifyContent: "center",
         }}
         columnSpacing={0.3}

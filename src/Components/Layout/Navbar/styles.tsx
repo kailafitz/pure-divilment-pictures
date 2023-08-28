@@ -3,35 +3,22 @@ import { styled } from "@mui/material";
 export const NavigationContainer = styled("div")(({ theme }) => ({
   display: "flex",
   position: "sticky",
-  "nav div div:nth-child(3)": {
+  // opacity 0.3 on links
+  "nav div div:nth-of-type(3)": {
     transition: "opacity .3s linear",
-
-    "&:hover a": {
+    "&:hover span": {
       opacity: 0.3,
       transition: "opacity .3s linear",
     },
   },
-  "nav div div:nth-child(3) a": {
-    display: "inline-block",
-    transition: "all 1s linear",
-
-    "&:not(.active)::first-letter": {
-      transition: "all 1s linear",
-      fontStyle: "normal",
-      marginRight: "0px",
-      fontWeight: 400,
+  // opacity 1 on hovered link
+  "nav div div:nth-of-type(3) a": {
+    span: {
+      transition: "all .3s linear",
     },
-
-    "&:hover": {
+    "&:hover span": {
       opacity: 1,
-      transition: "all 1s linear",
-
-      "&:not(.active)::first-letter": {
-        transition: "all 1s linear",
-        fontStyle: "italic",
-        marginRight: "3px",
-        fontWeight: 900,
-      },
+      transition: "all .3s linear",
     },
   },
   background: theme.palette.white.main,
@@ -40,16 +27,16 @@ export const NavigationContainer = styled("div")(({ theme }) => ({
 }));
 
 export const HamburgerContainer = styled("div")(({ theme }) => ({
-  ">div:nth-of-type(1)": {
+  "> div:nth-of-type(1)": {
     visibility: "hidden",
   },
-  ">div:nth-of-type(2)": {
+  "> div:nth-of-type(2)": {
     position: "absolute !important",
     top: 0,
   },
 
   [theme.breakpoints.up("sm")]: {
-    ">div:nth-of-type(2)": {
+    "> div:nth-of-type(2)": {
       display: "none",
     },
   },

@@ -2,18 +2,13 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./Components/Layout/Navbar";
 import Footer from "./Components/Layout/Footer";
-// import Home from "./Pages/Home";
-import Home from "./Pages/HomeV2";
-// import About from "./Pages/About";
-import About from "./Pages/AboutV2";
+import Home from "./Pages/Home";
+import About from "./Pages/About";
 import TheCreatives from "./Pages/TheCreatives";
-import CompanyCreativeProfile from "./Pages/CompanyCreativeProfile";
+import CompanyCreativeProfile from "./Pages/CreativeProfile";
 import ProductionProfile from "./Pages/ProductionProfile";
 import Productions from "./Pages/Productions";
-// import Contact from "./Pages/Contact";
-import Contact from "./Pages/ContactV2";
-
-import ToDo from "./Pages/ToDo";
+import Contact from "./Pages/Contact";
 
 function App() {
   return (
@@ -22,9 +17,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/the_creatives" element={<TheCreatives />} />
+        <Route path="/the-creatives" element={<TheCreatives />} />
         <Route
-          path="/the_creatives/team_member/:id"
+          path="/the-creatives/creative/:id"
           element={<CompanyCreativeProfile />}
         />
         <Route path="/productions/:id" element={<Productions />} />
@@ -33,7 +28,6 @@ function App() {
           element={<ProductionProfile />}
         />
         <Route path="/reach-out" element={<Contact />} />
-        <Route path="/todo" element={<ToDo />} />
       </Routes>
       <Footer />
     </>

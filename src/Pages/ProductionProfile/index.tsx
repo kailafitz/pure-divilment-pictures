@@ -12,16 +12,18 @@ const ProductionProfile = () => {
   });
 
   return (
-    <Box>
-      {SelectedProduction.map((production) => {
-        return (
-          <ProductionContentLayout
-            key={production.production.id}
-            Production={production.production}
-          />
-        );
-      })}
-    </Box>
+    <>
+      <Box>
+        {SelectedProduction.map((production) => {
+          return (
+            <ProductionContentLayout
+              key={production.production.id}
+              Production={production.production}
+            />
+          );
+        })}
+      </Box>
+    </>
   );
 };
 

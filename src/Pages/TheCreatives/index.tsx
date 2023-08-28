@@ -1,13 +1,29 @@
 import React from "react";
 import Grid from "@mui/material/Unstable_Grid2";
-import { CreativesData } from "../../Data/TeamData";
-import CompanyCreativeCard from "../../Components/CompanyCreativeCard";
-import Loader from "../../Components/Loader";
+import { CreativesData } from "../../Data/CreativesData";
+import CompanyCreativeCard from "../../Components/CreativeCard";
+import { Helmet } from "react-helmet";
 
 const TheCreatives = () => {
   return (
     <>
-      <Loader title="The Creatives" />
+      <Helmet>
+        <title>Creatives | Pure Divilment Pictures</title>
+        <meta
+          name="description"
+          content={
+            "Meet the creatives behind the projects at Pure Divilment Pictures."
+          }
+        />
+        <meta
+          property="og:title"
+          content={"Creatives | Pure Divilment Pictures"}
+        />
+        <meta
+          property="og:description"
+          content={"Meet the creatives behind our projects."}
+        />
+      </Helmet>
       <Grid
         container
         spacing={{ xs: 2, md: 7 }}

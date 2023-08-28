@@ -4,7 +4,7 @@ import Grid from "@mui/material/Unstable_Grid2"; // Grid version 2
 import { Helmet } from "react-helmet";
 import { StyledBackgroundImage } from "./styles";
 
-const Contact = () => {
+const ReachOut = () => {
   return (
     <>
       <Helmet>
@@ -102,4 +102,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default ReachOut;

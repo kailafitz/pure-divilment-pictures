@@ -8,7 +8,7 @@ import TheCreatives from "./Pages/TheCreatives";
 import CompanyCreativeProfile from "./Pages/CreativeProfile";
 import ProductionProfile from "./Pages/ProductionProfile";
 import Productions from "./Pages/Productions";
-import Contact from "./Pages/Contact";
+import ReachOut from "./Pages/ReachOut";
 import { Logo } from "./Components/Logo";
 import { Box, Typography, useTheme } from "@mui/material";
 
@@ -34,7 +34,7 @@ function App() {
           path="/test/productions/production/:id"
           element={<ProductionProfile />}
         />
-        <Route path="/test/reach-out" element={<Contact />} />
+        <Route path="/test/reach-out" element={<ReachOut />} />
       </Routes>
       {current.includes("test") && <Footer />}
       {current === "/" && (

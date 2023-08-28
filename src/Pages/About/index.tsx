@@ -169,7 +169,7 @@ const About = () => {
               width: { xs: "100%", md: "fit-content" },
             }}
           >
-            Get in Touch
+            Reach Out
           </Button>
         </Grid>
       </Grid>

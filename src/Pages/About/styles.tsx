@@ -7,6 +7,11 @@ export const StyledAboutImage = styled(Box)(({ theme }) => ({
   backgroundPosition: "center",
   backgroundSize: "cover",
   margin: theme.spacing(3, "auto"),
-  width: "90%",
-  minHeight: "700px",
+  width: "100%",
+  minHeight: "500px",
+
+  [theme.breakpoints.up("md")]: {
+    width: "90%",
+    minHeight: "700px",
+  },
 }));

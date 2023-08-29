@@ -2,7 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import { ProductionData } from "../../Data/ProductionData";
 import { Box } from "@mui/material";
-import ProductionContentLayout from "../../Components/ProductionContentLayout";
+import ProductionContent from "../../Components/ProductionContent";
 
 const ProductionProfile = () => {
   const id = useParams<{ id: string }>();
@@ -16,7 +16,7 @@ const ProductionProfile = () => {
       <Box>
         {SelectedProduction.map((production) => {
           return (
-            <ProductionContentLayout
+            <ProductionContent
               key={production.production.id}
               Production={production.production}
             />

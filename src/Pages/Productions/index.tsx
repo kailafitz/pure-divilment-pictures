@@ -15,7 +15,7 @@ import {
   ProductionCoverImage,
 } from "./styles";
 import { ProductionData } from "../../Data/ProductionData";
-import ProductionContentLayout from "../../Components/ProductionContentLayout";
+import ProductionContentLayout from "../../Components/ProductionContent";
 import { useParams } from "react-router-dom";
 import Loader from "../../Components/Loader";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
@@ -142,7 +142,7 @@ const Productions = () => {
                 }}
                 key={item.production.title}
                 xs={10}
-                sm={6}
+                // sm={6}
                 md={3}
               >
                 <ReelItem

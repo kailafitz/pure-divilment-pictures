@@ -1,7 +1,7 @@
 import React from "react";
 import { HomeContainer } from "./styles";
 import OpeningAnimation from "../../Components/OpeningAnimation";
-import BillboardVideoSwiper from "../../Components/BillboardVideoSwiper";
+import VideoCarousel from "../../Components/VideoCarousel";
 import { Helmet } from "react-helmet";
 
 const Home = () => {
@@ -23,7 +23,7 @@ const Home = () => {
       </Helmet>
       <OpeningAnimation />
       <HomeContainer>
-        <BillboardVideoSwiper />
+        <VideoCarousel />
       </HomeContainer>
     </>
   );

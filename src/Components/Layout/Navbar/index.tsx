@@ -47,7 +47,7 @@ export default function Navbar() {
           <MobileDrawer open={isOpen} closeDrawer={() => setOpen(false)} />
           <Box
             sx={{
-              display: { xs: "none", sm: "flex" },
+              display: { xs: "none", md: "flex" },
               width: "50%",
               justifyContent: "space-around",
               flexGrow: { sm: 1, md: 0 },

@@ -21,6 +21,10 @@ export const Reel = styled(Grid)(({ theme }) => ({
   background: theme.palette.white.main,
   margin: 0,
 
+  div: {
+    minHeight: "200px",
+  },
+
   "div:nth-of-type": {
     paddingLeft: 0,
   },
@@ -33,6 +37,9 @@ export const Reel = styled(Grid)(({ theme }) => ({
     height: "300px",
     transform: "skewY(4deg)",
     paddingTop: "calc(100px)",
+    div: {
+      minHeight: "unset",
+    },
   },
 })) as typeof Grid;
 

@@ -35,7 +35,7 @@ export const HamburgerContainer = styled("div")(({ theme }) => ({
     top: 0,
   },
 
-  [theme.breakpoints.up("sm")]: {
+  [theme.breakpoints.up("md")]: {
     "> div:nth-of-type(2)": {
       display: "none",
     },

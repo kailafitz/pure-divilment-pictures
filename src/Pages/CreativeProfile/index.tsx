@@ -2,7 +2,7 @@ import React from "react";
 import Box from "@mui/material/Box";
 import { useParams } from "react-router-dom";
 import { CreativesData } from "../../Data/CreativesData";
-import CompanyCreativeProfileContent from "../../Components/CreativeProfileContent";
+import CreativeContent from "../../Components/CreativeContent";
 
 const CreativeProfile = () => {
   const id = useParams<{ id: string }>();
@@ -14,9 +14,7 @@ const CreativeProfile = () => {
   return (
     <Box sx={{ flexGrow: 1 }}>
       {SelectedCreative.map((member, i) => {
-        return (
-          <CompanyCreativeProfileContent key={i} Creative={member.creative} />
-        );
+        return <CreativeContent key={i} Creative={member.creative} />;
       })}
     </Box>
   );

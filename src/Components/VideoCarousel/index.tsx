@@ -56,7 +56,7 @@ const TextSlideContent = (props: textProps) => {
   );
 };
 
-const BillboardVideoSwiper = () => {
+const VideoCarousel = () => {
   const vid1 = useRef<HTMLVideoElement>(null);
   const vid2 = useRef<HTMLVideoElement>(null);
   const vid3 = useRef<HTMLVideoElement>(null);
@@ -158,4 +158,4 @@ const BillboardVideoSwiper = () => {
   );
 };
 
-export default BillboardVideoSwiper;
+export default VideoCarousel;

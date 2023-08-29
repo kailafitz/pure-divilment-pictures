@@ -9,12 +9,9 @@ import {
 import { BioTypography, ProfileImage } from "./styles";
 import { CreativeInterface, ListItemInterface } from "../../Data/CreativesData";
 import Grid from "@mui/material/Unstable_Grid2/Grid2";
-import {
-  ProductionReelTwo,
-  ReelTwoWrapper,
-} from "../ProductionContentLayout/styles";
+import { ProductionReelTwo, ReelTwoWrapper } from "../PageEndReel/styles";
 
-const CompanyCreativeProfileContent = (props: CreativeInterface) => {
+const CreativeContent = (props: CreativeInterface) => {
   const BioBody = () => {
     return (
       <>
@@ -240,4 +237,4 @@ const CompanyCreativeProfileContent = (props: CreativeInterface) => {
   );
 };
 
-export default CompanyCreativeProfileContent;
+export default CreativeContent;

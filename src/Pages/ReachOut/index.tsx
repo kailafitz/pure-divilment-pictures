@@ -1,12 +1,5 @@
 import React from "react";
-import {
-  Box,
-  Container,
-  Link,
-  Stack,
-  Typography,
-  useTheme,
-} from "@mui/material";
+import { Container, Link, Stack, Typography, useTheme } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2"; // Grid version 2
 import { Helmet } from "react-helmet";
 import { StyledBackgroundImage, StyledReelImage } from "./styles";
@@ -76,14 +69,6 @@ const ReachOut = () => {
             },
           }}
         ></StyledReelImage>
-        <StyledReelImage
-          sx={{
-            "&::before": {
-              backgroundImage:
-                "url('https://images.unsplash.com/photo-1616341590753-7840bdd2fb29?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2792&q=80')",
-            },
-          }}
-        ></StyledReelImage>
       </Stack>
       <Stack
         sx={{
@@ -91,9 +76,17 @@ const ReachOut = () => {
           minHeight: "100vh",
           width: "290px",
           right: 300,
-          top: 60,
+          top: -21,
         }}
       >
+        <StyledReelImage
+          sx={{
+            "&::before": {
+              backgroundImage:
+                "url('https://images.unsplash.com/photo-1509884424292-74240c07aae2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3174&q=80')",
+            },
+          }}
+        ></StyledReelImage>
         <StyledReelImage
           sx={{
             "&::before": {
@@ -115,22 +108,6 @@ const ReachOut = () => {
             "&::before": {
               backgroundImage:
                 "url('https://images.unsplash.com/photo-1474164490978-9c265ac04f93?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80')",
-            },
-          }}
-        ></StyledReelImage>
-        <StyledReelImage
-          sx={{
-            "&::before": {
-              backgroundImage:
-                "url('https://images.unsplash.com/photo-1509884424292-74240c07aae2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3174&q=80')",
-            },
-          }}
-        ></StyledReelImage>
-        <StyledReelImage
-          sx={{
-            "&::before": {
-              backgroundImage:
-                "url('https://images.unsplash.com/photo-1508657794088-375f2f60c581?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2938&q=80')",
             },
           }}
         ></StyledReelImage>

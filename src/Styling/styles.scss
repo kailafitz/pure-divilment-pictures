@@ -1,44 +1,70 @@
 @font-face {
-    font-family: "GreatSejagad-JRpMM";
-    src: local("GreatSejagad-JRpMM"),
-        url("./Fonts/great-sejagad-font/GreatSejagad-JRpMM.ttf") format("truetype");
+    font-family: "DM Sans";
+    src: local("DM_Sans"),
+        url("./Fonts/DefaultFonts/DM_Sans/DMSans-VariableFont_opsz\,wght.ttf") format("truetype")
 }
 
 @font-face {
-    font-family: "ApplicantSignature-3zXKX";
-    src: local("ApplicantSignature-3zXKX"),
-        url("./Fonts/a-applicant-signature-font/ApplicantSignature-3zXKX.ttf") format("truetype");
+    font-family: "Libre Baskerville";
+    src: local("Libre_Baskerville"),
+        url("./Fonts/ProductionFonts/baths/Libre_Baskerville/LibreBaskerville-Regular.ttf") format("truetype")
 }
 
 @font-face {
-    font-family: "FreePen-RVq6";
-    src: local("FreePen-RVq6"),
-        url("./Fonts/free-pen-font/FreePen-RVq6.ttf") format("truetype");
+    font-family: "Arapey";
+    src: local("Arapey"),
+        url("./Fonts/ProductionFonts/musical/Arapey/Arapey-Regular.ttf") format("truetype")
 }
 
 @font-face {
-    font-family: "Striverx-j5Vj";
-    src: local("Striverx-j5Vj"),
-        url("./Fonts/striverx-font/Striverx-j5Vj.ttf") format("truetype");
+    font-family: "Arimo";
+    src: local("Arimo"),
+        url("./Fonts/ProductionFonts/what-is-feminism/Arimo/Arimo-VariableFont_wght.ttf") format("truetype")
 }
 
-@font-face {
-    font-family: "Takota-BRa8";
-    src: local("Takota-BRa8"),
-        url("./Fonts/takota-font/Takota-BRa8.ttf") format("truetype");
-}
+// -------------------------------------------------------
 
-@font-face {
-    font-family: "Forturn-9Y94y";
-    src: local("Forturn-9Y94y"),
-        url("./Fonts/forturn-font/Forturn-9Y94y.ttf") format("truetype");
-}
+// @font-face {
+//     font-family: "GreatSejagad-JRpMM";
+//     src: local("GreatSejagad-JRpMM"),
+//         url("./Fonts/ProductionFonts/falling-for-the-life-of-alex-whelan/great-sejagad-font/GreatSejagad-JRpMM.ttf") format("truetype");
+// }
 
-@font-face {
-    font-family: "FakeSerif-K4dp";
-    src: local("FakeSerif-K4dp"),
-        url("./Fonts/fake-serif-font/FakeSerif-K4dp.ttf") format("truetype");
-}
+// @font-face {
+//     font-family: "ApplicantSignature-3zXKX";
+//     src: local("ApplicantSignature-3zXKX"),
+//         url("./Fonts/ProductionFonts/falling-for-the-life-of-alex-whelan/a-applicant-signature-font/ApplicantSignature-3zXKX.ttf") format("truetype");
+// }
+
+// @font-face {
+//     font-family: "FreePen-RVq6";
+//     src: local("FreePen-RVq6"),
+//         url("./Fonts/ProductionFonts/falling-for-the-life-of-alex-whelan/free-pen-font/FreePen-RVq6.ttf") format("truetype");
+// }
+
+// @font-face {
+//     font-family: "Striverx-j5Vj";
+//     src: local("Striverx-j5Vj"),
+//         url("./Fonts/ProductionFonts/falling-for-the-life-of-alex-whelan/striverx-font/Striverx-j5Vj.ttf") format("truetype");
+// }
+
+// @font-face {
+//     font-family: "Takota-BRa8";
+//     src: local("Takota-BRa8"),
+//         url("./Fonts/ProductionFonts/falling-for-the-life-of-alex-whelan/takota-font/Takota-BRa8.ttf") format("truetype");
+// }
+
+// @font-face {
+//     font-family: "Forturn-9Y94y";
+//     src: local("Forturn-9Y94y"),
+//         url("./Fonts/ProductionFonts/falling-for-the-life-of-alex-whelan/forturn-font/Forturn-9Y94y.ttf") format("truetype");
+// }
+
+// @font-face {
+//     font-family: "FakeSerif-K4dp";
+//     src: local("FakeSerif-K4dp"),
+//         url("./Fonts/ProductionFonts/falling-for-the-life-of-alex-whelan/fake-serif-font/FakeSerif-K4dp.ttf") format("truetype");
+// }
 
 html,
 body {

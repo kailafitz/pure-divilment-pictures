@@ -41,14 +41,16 @@ const ProductionContent = (props: ProductionItemInterface) => {
               return (
                 <Box key={i}>
                   <Typography
+                    variant="body1"
                     sx={{
                       display: { xs: "block", lg: "inline" },
-                      fontWeight: { xs: 800, lg: 400 },
+                      fontWeight: { xs: 500, lg: 400 },
                     }}
                   >
                     {accolade.type}
                   </Typography>
                   <Typography
+                    variant="body1"
                     sx={{
                       display: { xs: "block", lg: "inline" },
                       mb: { xs: 2, lg: 0 },

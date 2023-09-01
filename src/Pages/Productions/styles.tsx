@@ -63,13 +63,14 @@ export const ProductionCoverImage = styled(Box)(({ theme }) => ({
   [theme.breakpoints.up("md")]: {
     width: "100%",
     // backgroundPosition: "top center",
+    backgroundSize: "cover",
     backgroundPosition: "100% 100%",
     backgroundRepeat: "no-repeat",
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
     textAlign: "center",
-    marginTop: theme.spacing(-7),
+    marginTop: theme.spacing(-20),
     flexGrow: 1,
   },
 })) as typeof Box;

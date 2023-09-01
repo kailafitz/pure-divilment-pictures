@@ -136,13 +136,11 @@ const Productions = () => {
             };
             return (
               <Grid
-                py={{ lg: 0 }}
                 sx={{
                   py: { lg: 0 },
                 }}
                 key={item.production.title}
                 xs={10}
-                // sm={6}
                 md={3}
               >
                 <ReelItem

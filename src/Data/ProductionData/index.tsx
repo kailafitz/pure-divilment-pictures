@@ -178,7 +178,7 @@ export const ProductionData = [
   {
     production: {
       id: "2",
-      title: "Falling for the life of Alex Whelan",
+      title: "Falling for the Life of Alex Whelan",
       videoDesktop: alexTitleVideo,
       videoMobile: alexTitleVideo,
       type: "TV Drama",

@@ -29,6 +29,7 @@ export const TextWrapper = styled(Box)(() => ({
 export const AnimationText = styled("div")(({ theme }) => ({
   fontFamily: "DM Sans",
   fontSize: "40px",
+  fontWeight: 500,
   [theme.breakpoints.up("md")]: {
     fontSize: "54px",
   },

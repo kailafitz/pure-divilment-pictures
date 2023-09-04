@@ -1,6 +1,6 @@
 import React from "react";
 import { HomeContainer } from "./styles";
-import OpeningAnimation from "../../Components/OpeningAnimation";
+import OpeningAnimation from "../../Components/Home/OpeningAnimation";
 import VideoCarousel from "../../Components/VideoCarousel";
 import { Helmet } from "react-helmet";
 

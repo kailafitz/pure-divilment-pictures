@@ -47,7 +47,7 @@ const TextSlideContent = (props: textProps) => {
       <Button
         color="white"
         variant="contained"
-        href={`/productions/${props.id}`}
+        href={`/test/productions/${props.id}`}
         sx={{ width: "fit-content", m: "0 auto", borderRadius: 0 }}
       >
         Find out more
@@ -61,8 +61,11 @@ const VideoCarousel = () => {
   const vid2 = useRef<HTMLVideoElement>(null);
   const vid3 = useRef<HTMLVideoElement>(null);
 
-  const productionsToShowOnHomePage = ["1", "2", "3"];
-  const productionVideos = [vid1, vid2, vid3];
+  // const productionsToShowOnHomePage = ["1", "2", "3"];
+  // const productionVideos = [vid1, vid2, vid3];
+
+  const productionsToShowOnHomePage = ["1"];
+  const productionVideos = [vid1];
 
   const handleActiveVideo = (
     isActive: boolean,
@@ -87,7 +90,7 @@ const VideoCarousel = () => {
       spaceBetween={0}
       slidesPerView={1}
       autoplay={{
-        disableOnInteraction: true,
+        disableOnInteraction: false,
       }}
     >
       {ProductionData.filter((prod) =>
@@ -147,10 +150,10 @@ const VideoCarousel = () => {
                 );
               }}
             </BillboardSwiperSectionSlide>
-            {/* <BillboardSwiperSectionSlide
+            <BillboardSwiperSectionSlide
               key={`${product.production.title}-blank-slide`}
               data-swiper-autoplay="200"
-            ></BillboardSwiperSectionSlide> */}
+            ></BillboardSwiperSectionSlide>
           </Fragment>
         );
       })}

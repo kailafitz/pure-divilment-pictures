@@ -7,26 +7,14 @@ import {
   Stack,
   Typography,
 } from "@mui/material";
-import { BioTypography, ProfileImage, Stills } from "./styles";
+import { ProfileImage, Stills } from "./styles";
 import { CreativeInterface, ListItemInterface } from "../../Data/CreativesData";
 import Grid from "@mui/material/Unstable_Grid2/Grid2";
 import PageEndReel from "../PageEndReel";
 import KeyboardDoubleArrowLeftIcon from "@mui/icons-material/KeyboardDoubleArrowLeft";
+import { Bio } from "./Bio";
 
 const CreativeContent = (props: CreativeInterface) => {
-  const BioBody = () => {
-    return (
-      <>
-        <Typography variant="h4">{props.Creative.name}</Typography>
-        <Typography>{props.Creative.role}</Typography>
-        <br />
-        {props.Creative.bio.map((paragraph, i) => {
-          return <BioTypography key={i}>{paragraph}</BioTypography>;
-        })}
-      </>
-    );
-  };
-
   const CreditsBody = () => {
     return (
       <>
@@ -128,7 +116,11 @@ const CreativeContent = (props: CreativeInterface) => {
           </picture>
         </Grid>
         <Grid xs={11} md={6}>
-          <BioBody />
+          <Bio
+            name={props.Creative.name}
+            role={props.Creative.role}
+            bio={props.Creative.bio}
+          />
         </Grid>
       </Grid>
       <Grid container justifyContent="center" columnGap={5} pt={8} pb={8}>
@@ -139,37 +131,42 @@ const CreativeContent = (props: CreativeInterface) => {
           <CreditsBody />
         </Grid>
       </Grid>
-      <Stack
-        direction={{ xs: "column", md: "row" }}
-        sx={{
-          width: { xs: "100%", md: "90%" },
-          margin: (theme) => theme.spacing(0, "auto", 8, "auto"),
-        }}
-        justifyContent="space-evenly"
+
+      <Grid
+        container
+        justifyContent="center"
+        columnGap={5}
+        rowGap={{ xs: 5, md: 0 }}
+        mb={8}
       >
-        <picture>
-          <source
-            src={`/creatives/${props.Creative.profile_image}/stills/1.webp`}
-          ></source>
-          <Stills
-            alt="Nell Hensey on set"
-            width={500}
-            height="auto"
-            src={`/creatives/${props.Creative.profile_image}/stills/1.png`}
-          />
-        </picture>
-        <picture>
-          <source
-            src={`/creatives/${props.Creative.profile_image}/stills/2.webp`}
-          ></source>
-          <Stills
-            alt="Nell Hensey on a panel talk"
-            width={500}
-            height="auto"
-            src={`/creatives/${props.Creative.profile_image}/stills/2.png`}
-          />
-        </picture>
-      </Stack>
+        <Grid xs={11} md={5}>
+          <picture>
+            <source
+              src={`/creatives/${props.Creative.profile_image}/stills/1.webp`}
+            ></source>
+            <Stills
+              alt="Nell Hensey on set"
+              width={500}
+              height="auto"
+              src={`/creatives/${props.Creative.profile_image}/stills/1.png`}
+            />
+          </picture>
+        </Grid>
+        <Grid xs={11} md={5}>
+          <picture>
+            <source
+              src={`/creatives/${props.Creative.profile_image}/stills/2.webp`}
+            ></source>
+            <Stills
+              alt="Nell Hensey on a panel talk"
+              width={500}
+              height="auto"
+              src={`/creatives/${props.Creative.profile_image}/stills/2.png`}
+            />
+          </picture>
+        </Grid>
+      </Grid>
+
       {/* <PageEndReel
         images={[
           `/creatives/${props.Creative.profile_image}/${props.Creative.profile_image}.webp`,

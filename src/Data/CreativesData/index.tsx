@@ -11,7 +11,7 @@ export interface CreativeInterface {
     name: string;
     role: string;
     profile_image: string;
-    reelURL?: string;
+    reel_url?: string;
     bio: string[];
     credits: ListItemInterface[];
     accolades?: ListItemInterface[];
@@ -70,7 +70,7 @@ export const CreativesData = [
       name: "Nell Hensey",
       role: "Co-Founder | Creative Director",
       profile_image: "nell",
-      reelURL: "gu",
+      reel_url: "/creatives/nell/show-reel.mp4",
       bio: [
         "Nell Hensey is a Filipino-Irish writer-director from the west of Ireland.",
         "After studying English Literature and Film Studies in UCD, Nell went on to complete a Masters in Creative Production and Screen Finance at the National Film School IADT. She has worked as a writers room assistant, showrunners assistant and television writer on shows for Netflix and Sky. She has directed work for Screen Ireland, RTÉ, Virgin Media Television, The Arts Council of Ireland, and more. Her latest short film, Good Chips, premiered at the 2023 Dublin International Film Festival and was piece in Irish cinema history to depict a majority Asian cast.",

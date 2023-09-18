@@ -4,9 +4,10 @@ import {
   List,
   ListItem,
   ListItemText,
+  Stack,
   Typography,
 } from "@mui/material";
-import { BioTypography, ProfileImage } from "./styles";
+import { BioTypography, ProfileImage, Stills } from "./styles";
 import { CreativeInterface, ListItemInterface } from "../../Data/CreativesData";
 import Grid from "@mui/material/Unstable_Grid2/Grid2";
 import PageEndReel from "../PageEndReel";
@@ -19,11 +20,9 @@ const CreativeContent = (props: CreativeInterface) => {
         <Typography variant="h4">{props.Creative.name}</Typography>
         <Typography>{props.Creative.role}</Typography>
         <br />
-        <Typography>
-          {props.Creative.bio.map((paragraph, i) => {
-            return <BioTypography key={i}>{paragraph}</BioTypography>;
-          })}
-        </Typography>
+        {props.Creative.bio.map((paragraph, i) => {
+          return <BioTypography key={i}>{paragraph}</BioTypography>;
+        })}
       </>
     );
   };
@@ -132,7 +131,7 @@ const CreativeContent = (props: CreativeInterface) => {
           <BioBody />
         </Grid>
       </Grid>
-      <Grid container justifyContent="center" columnGap={5} pt={15} pb={13}>
+      <Grid container justifyContent="center" columnGap={5} pt={8} pb={8}>
         <Grid xs={11} md={5}>
           {props.Creative.accolades && <AccoladesBody />}
         </Grid>
@@ -140,19 +139,50 @@ const CreativeContent = (props: CreativeInterface) => {
           <CreditsBody />
         </Grid>
       </Grid>
-      <PageEndReel
+      <Stack
+        direction={{ xs: "column", md: "row" }}
+        sx={{
+          width: { xs: "100%", md: "90%" },
+          margin: (theme) => theme.spacing(0, "auto", 8, "auto"),
+        }}
+        justifyContent="space-evenly"
+      >
+        <picture>
+          <source
+            src={`/creatives/${props.Creative.profile_image}/stills/1.webp`}
+          ></source>
+          <Stills
+            alt="Nell Hensey on set"
+            width={500}
+            height="auto"
+            src={`/creatives/${props.Creative.profile_image}/stills/1.png`}
+          />
+        </picture>
+        <picture>
+          <source
+            src={`/creatives/${props.Creative.profile_image}/stills/2.webp`}
+          ></source>
+          <Stills
+            alt="Nell Hensey on a panel talk"
+            width={500}
+            height="auto"
+            src={`/creatives/${props.Creative.profile_image}/stills/2.png`}
+          />
+        </picture>
+      </Stack>
+      {/* <PageEndReel
         images={[
           `/creatives/${props.Creative.profile_image}/${props.Creative.profile_image}.webp`,
           `/creatives/${props.Creative.profile_image}/${props.Creative.profile_image}.webp`,
           `/creatives/${props.Creative.profile_image}/${props.Creative.profile_image}.webp`,
           `/creatives/${props.Creative.profile_image}/${props.Creative.profile_image}.webp`,
         ]}
-      />
-      {props.Creative.reelURL && (
+      /> */}
+      {props.Creative.reel_url && (
         <Grid
           container
           justifyContent="center"
-          pt={7}
+          py={7}
           sx={{
             display: "flex",
             background: (theme) => theme.palette.primary.main,
@@ -162,16 +192,22 @@ const CreativeContent = (props: CreativeInterface) => {
             xs={10}
             md={6}
             sx={{
-              minHeight: "50vh",
               background: (theme) => theme.palette.white.main,
               display: "flex",
               flexDirection: "column",
               justifyContent: "center",
             }}
           >
-            <Typography textAlign="center" color="dark" variant="h3">
-              Show Reel
-            </Typography>
+            <video
+              className="production-title"
+              height="100%"
+              width="100%"
+              preload="none"
+              controls={true}
+              playsInline
+            >
+              <source src={props.Creative.reel_url} type="video/mp4"></source>
+            </video>
           </Grid>
         </Grid>
       )}
@@ -183,6 +219,7 @@ const CreativeContent = (props: CreativeInterface) => {
       >
         <Grid
           xs={8}
+          sm={7}
           md={6}
           sx={{
             p: { xs: 2, md: 5 },
@@ -203,7 +240,7 @@ const CreativeContent = (props: CreativeInterface) => {
             Back to Creatives
           </Button>
         </Grid>
-        <Grid xs={8} md={6} sx={{ p: { xs: 2, md: 5 } }}>
+        <Grid xs={8} sm={7} md={6} sx={{ p: { xs: 2, md: 5 } }}>
           <Button
             href="/test/productions/0"
             variant="contained"

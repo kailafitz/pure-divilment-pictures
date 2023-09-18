@@ -6,11 +6,10 @@ import Home from "./Pages/Home";
 import About from "./Pages/About";
 import TheCreatives from "./Pages/TheCreatives";
 import CompanyCreativeProfile from "./Pages/CreativeProfile";
-import ProductionProfile from "./Pages/ProductionProfile";
 import Productions from "./Pages/Productions";
 import ReachOut from "./Pages/ReachOut";
 import { Logo } from "./Components/Logo";
-import { Box, Typography, useTheme } from "@mui/material";
+import { Box, Container, Typography, useTheme } from "@mui/material";
 import Productions2 from "./Pages/Productions-2";
 
 function App() {
@@ -22,22 +21,20 @@ function App() {
   return (
     <>
       {current.includes("test") && <Navbar />}
-      <Routes>
-        <Route path="/test" element={<Home />} />
-        <Route path="/test/about" element={<About />} />
-        <Route path="/test/the-creatives" element={<TheCreatives />} />
-        <Route
-          path="/test/the-creatives/creative/:id"
-          element={<CompanyCreativeProfile />}
-        />
-        <Route path="/test/productions2/" element={<Productions2 />} />
-        <Route path="/test/productions/:id" element={<Productions />} />
-        {/* <Route
-          path="/test/productions/production/:id"
-          element={<ProductionProfile />}
-        /> */}
-        <Route path="/test/reach-out" element={<ReachOut />} />
-      </Routes>
+      <Container maxWidth="xl" disableGutters={true}>
+        <Routes>
+          <Route path="/test" element={<Home />} />
+          <Route path="/test/about" element={<About />} />
+          <Route path="/test/the-creatives" element={<TheCreatives />} />
+          <Route
+            path="/test/the-creatives/creative/:id"
+            element={<CompanyCreativeProfile />}
+          />
+          <Route path="/test/productions2/" element={<Productions2 />} />
+          <Route path="/test/productions/:id" element={<Productions />} />
+          <Route path="/test/reach-out" element={<ReachOut />} />
+        </Routes>
+      </Container>
       {current.includes("test") && <Footer />}
       {current === "/" && (
         <Box

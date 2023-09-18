@@ -12,3 +12,14 @@ export const BioTypography = styled(Typography)(({ theme }) => ({
     marginBottom: theme.spacing(2),
   },
 }));
+
+export const Stills = styled("img")(({ theme }) => ({
+  minWidth: "40%",
+  maxWidth: "80%",
+  display: "block",
+  margin: "1rem auto",
+  [theme.breakpoints.up("md")]: {
+    margin: "0 auto",
+    maxWidth: "95%",
+  },
+}));

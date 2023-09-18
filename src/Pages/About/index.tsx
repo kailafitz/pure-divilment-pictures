@@ -3,7 +3,12 @@ import { Helmet } from "react-helmet";
 import { Button, Stack, Typography } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2/Grid2";
 import { StyledAboutImage } from "./styles";
-import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
+import PageEndReel from "../../Components/PageEndReel";
+
+const image1 = require("../../Assets/about-picture-reel/1.png");
+const image2 = require("../../Assets/about-picture-reel/2.png");
+const image3 = require("../../Assets/about-picture-reel/3.png");
+const image4 = require("../../Assets/about-picture-reel/4.png");
 
 const About = () => {
   return (
@@ -25,6 +30,7 @@ const About = () => {
           content={"How we started and where we're going!"}
         />
       </Helmet>
+      <StyledAboutImage></StyledAboutImage>
       <Typography
         variant="h4"
         sx={{
@@ -39,140 +45,177 @@ const About = () => {
           },
         }}
       >
-        We tell stories
-        <br />
-        ... out of <span>pure divilment.</span>
+        <div>We Tell Stories</div>
+        <div>
+          out of <span>pure divilment</span>
+        </div>
       </Typography>
-      <Stack
-        direction="row"
-        margin="0 auto"
-        alignContent="center"
-        justifyContent="space-between"
-        // sx={{ width: { xs: "70vw", sm: "40vw", lg: "40vw" } }}
-        sx={{ minWidth: "300px" }}
-        mb={6}
-      >
-        <Typography display="inline" textAlign="center">
-          Inclusive
-        </Typography>
-        <Typography>
-          {/* <FiberManualRecordIcon sx={{ width: "8px", height: "8px" }} /> */}
-          //
-        </Typography>
-        <Typography display="inline" textAlign="center">
-          Dynamic
-        </Typography>
-        <Typography>
-          {/* <FiberManualRecordIcon sx={{ width: "8px", height: "8px" }} /> */}
-          //
-        </Typography>
-        <Typography display="inline" textAlign="center">
-          Empowering
-        </Typography>
-      </Stack>
-
-      <StyledAboutImage></StyledAboutImage>
+      <Grid container sx={{ justifyContent: "center", position: "relative" }}>
+        <Grid md={8} p={5}>
+          <Typography
+            variant="body1"
+            mb={2}
+            sx={{
+              span: {
+                fontStyle: "italic",
+                marginRight: (theme) => theme.spacing(0.3),
+              },
+            }}
+          >
+            <span>P</span>ure <span>D</span>ivilment Pictures is a women-led
+            Irish film and television production company. Our purpose is to
+            empower and create opportunity, empower and showcase exceptional
+            industry talent.
+          </Typography>
+          <Typography variant="body1">
+            At the helm of the company are Co-Founders, Claire Mooney and Nell
+            Hensey. The pair met in 2019 while studying a Masters in Creative
+            Production and Screen Finance at the National Film School IADT.
+            Together, they are championing a new generation of great
+            storytellers, both in Ireland and abroad.
+          </Typography>
+        </Grid>
+      </Grid>
+      <Grid container>
+        <Grid
+          xs={12}
+          md={7}
+          p={5}
+          sx={{
+            background: (theme) => theme.palette.primary.main,
+            color: (theme) => theme.palette.white.main,
+          }}
+        >
+          <Typography
+            color="white"
+            variant="h6"
+            sx={{ fontStyle: "italic", fontWeight: 400 }}
+            mb={3}
+          >
+            With each new project, we strive for the highest level of creativity
+            and technical excellence. Our slate is carefully curated with select
+            pieces that focus on compelling characters, new perspectives, and
+            demonstrate international appeal.
+          </Typography>
+          <Typography color="white" variant="h6" textAlign="right">
+            - Claire Mooney
+          </Typography>
+        </Grid>
+      </Grid>
       <Grid container sx={{ justifyContent: "center", position: "relative" }}>
         <Grid md={8} p={5}>
           <Typography variant="body1" mb={2}>
-            Pure Divilment Pictures is a film and television production company,
-            based in Ireland.
-          </Typography>
-          <Typography variant="body1" mb={2}>
-            Co-founded by Claire Mooney and Nell Hensey, the pair met while
-            completing their Masters degrees in Creative Production and Screen
-            Finance at Ireland's National Film School IADT. Together, they want
-            to champion a new generation of great storytelling.
+            We deeply value representation and inclusivity. Community is very
+            important to us. We only work with the best, collaborating with
+            like-minded people on local and international projects. Our slate
+            features bold and exciting work that showcases Irish talent and
+            provides a window for our audiences to experience the world in a new
+            and exciting way.
           </Typography>
           <Typography
-            color="white"
-            variant="body2"
-            sx={{
-              background: (theme) => theme.palette.primary.main,
-              color: (theme) => theme.palette.white.main,
-            }}
+            variant="body1"
             mb={2}
-          >
-            "From literary onscreen adaptations to original musicals, our goal
-            is to tell bold, important stories. Stories that haven't been told
-            before. Stories made by and about outsiders like us." - Nell Hensey
-          </Typography>
-          <Typography variant="body1" mb={2}>
-            Pure Divilment is dedicated to producing entertainment that
-            captivates audiences and inspires them to think, feel, and
-            experience the world in a different way. We deeply value
-            representation and strive to create opportunities to grow
-            exceptional talent.
-          </Typography>
-          <Typography
-            color="white"
-            variant="body2"
             sx={{
-              background: (theme) => theme.palette.primary.main,
-              color: (theme) => theme.palette.white.main,
+              span: {
+                fontStyle: "italic",
+                marginRight: (theme) => theme.spacing(0.3),
+              },
             }}
-            mb={2}
           >
-            "With each new project, we strive for the highest level of
-            creativity and technical excellence. Our slate is carefully curated
-            with select pieces that focus on compelling characters, new
-            perspectives, and demonstrate international appeal." - Claire Mooney
-          </Typography>
-          <Typography variant="body1" mb={2}>
-            In 2023, the company launched its highly anticipated debut slate
-            featuring an array of exciting projects across television,
-            independent film and short form content. The company also expanded
-            its creative team, adding positions across development, production
-            and marketing.
-          </Typography>
-          <Typography variant="h6" mb={3}>
-            And this is only the beginning.
+            In 2023, <span>P</span>ure <span>D</span>ivilment Pictures launched
+            its highly anticipated debut slate featuring an array of exciting
+            projects across television, independent film and short form content.
+            The company also expanded its creative team, adding positions across
+            development, production and marketing.
           </Typography>
         </Grid>
       </Grid>
-      <Grid
-        container
-        justifyContent="center"
-        py={3}
-        sx={{ background: (theme) => theme.palette.primary.main }}
-      >
+      <Grid container justifyContent="end">
         <Grid
-          xs={8}
-          md={6}
+          xs={12}
+          md={7}
+          p={5}
+          mb={5}
           sx={{
-            p: { xs: 2, md: 5 },
-            display: "flex",
-            justifyContent: { md: "flex-end" },
+            background: (theme) => theme.palette.primary.main,
+            color: (theme) => theme.palette.white.main,
           }}
         >
-          <Button
-            href="/test/the-creatives"
-            variant="contained"
+          <Typography
             color="white"
-            sx={{
-              p: 2,
-              borderRadius: 0,
-              width: { xs: "100%", md: "fit-content" },
-            }}
+            variant="h6"
+            sx={{ fontStyle: "italic", fontWeight: 400 }}
+            mb={3}
           >
-            Meet our Creatives
-          </Button>
-        </Grid>
-        <Grid xs={8} md={6} sx={{ p: { xs: 2, md: 5 } }}>
-          <Button
-            href="/test/reach-out"
-            variant="contained"
-            color="white"
-            sx={{
-              p: 2,
-              borderRadius: 0,
-              width: { xs: "100%", md: "fit-content" },
-            }}
-          >
-            Reach Out
-          </Button>
+            From literary screen adaptations to original character pieces, our
+            goal is to tell important stories. Stories that haven't been told on
+            screen before. Work that entertains, captivates and inspires.
+          </Typography>
+          <Typography color="white" variant="h6" textAlign="right">
+            - Nell Hensey
+          </Typography>
         </Grid>
       </Grid>
+      <Typography variant="h6" textAlign="center">
+        And we're only getting started.
+      </Typography>
+      <Stack
+        direction={{ xs: "column", md: "row" }}
+        justifyContent="center"
+        pt={5}
+        pb={9}
+        sx={{
+          width: { xs: "fit-content", md: "70%" },
+          margin: "0 auto",
+          display: "flex",
+          justifyContent: "space-around",
+        }}
+      >
+        <Button
+          href="/test/productions"
+          variant="contained"
+          color="dark"
+          sx={{
+            p: 2,
+            borderRadius: 0,
+            maxWidth: 200,
+            width: { xs: "100%", md: "-webkit-fill-available" },
+            mb: { xs: 5, md: 0 },
+          }}
+        >
+          Go To Productions
+        </Button>
+
+        <Button
+          href="/test/the-creatives"
+          variant="contained"
+          color="dark"
+          sx={{
+            p: 2,
+            borderRadius: 0,
+            maxWidth: 200,
+            width: { xs: "100%", md: "-webkit-fill-available" },
+            mb: { xs: 5, md: 0 },
+          }}
+        >
+          Meet our Creatives
+        </Button>
+
+        <Button
+          href="/test/reach-out"
+          variant="contained"
+          color="dark"
+          sx={{
+            p: 2,
+            borderRadius: 0,
+            maxWidth: 200,
+            width: { xs: "100%", md: "-webkit-fill-available" },
+          }}
+        >
+          Reach Out
+        </Button>
+      </Stack>
+      <PageEndReel images={[image1, image2, image3, image4]} />
     </>
   );
 };

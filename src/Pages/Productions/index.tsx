@@ -1,12 +1,5 @@
 import React, { useEffect, useState } from "react";
-import {
-  Box,
-  Button,
-  Fade,
-  Typography,
-  useScrollTrigger,
-  useTheme,
-} from "@mui/material";
+import { Typography, useTheme } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2";
 import {
   ProductionsReelContainer,
@@ -18,10 +11,18 @@ import { ProductionData } from "../../Data/ProductionData";
 import ProductionContentLayout from "../../Components/ProductionContent";
 import { useParams } from "react-router-dom";
 import Loader from "../../Components/Loader";
-import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 import { Helmet } from "react-helmet";
+import { ScrollTop } from "../../Components/ScrollTop";
 
 // https://stackoverflow.com/questions/8944456/css3-transition-different-transition-for-in-and-out-or-returning-from-tran
+
+const scrollToProduction = () => {
+  setTimeout(function () {
+    let production = document.querySelector("#selectedProduction") ?? undefined;
+
+    if (production) production.scrollIntoView();
+  }, 1000);
+};
 
 const Productions = () => {
   const theme = useTheme();
@@ -35,55 +36,6 @@ const Productions = () => {
   const SelectedProduction = ProductionData.filter((production) => {
     return production.production.id === selectProduction;
   });
-
-  const scrollToProduction = () => {
-    setTimeout(function () {
-      let production =
-        document.querySelector("#selectedProduction") ?? undefined;
-
-      if (production) production.scrollIntoView();
-    }, 1000);
-  };
-
-  function ScrollTop() {
-    const handleClick = (event: React.MouseEvent<HTMLDivElement>) => {
-      const anchor = (
-        (event.target as HTMLDivElement).ownerDocument || document
-      ).querySelector("#root");
-
-      if (anchor) {
-        anchor.scrollIntoView({
-          block: "center",
-        });
-      }
-    };
-
-    const trigger = useScrollTrigger({
-      target: window,
-      disableHysteresis: true,
-      threshold: 100,
-    });
-
-    return (
-      <Fade in={trigger}>
-        <Box
-          onClick={handleClick}
-          role="presentation"
-          sx={{
-            position: "fixed",
-            bottom: 16,
-            right: 16,
-            zIndex: 10,
-          }}
-        >
-          <Button color="primary" variant="contained">
-            {/* Back to Productions */}
-            <ExpandLessIcon />
-          </Button>
-        </Box>
-      </Fade>
-    );
-  }
 
   useEffect(() => {
     scrollToProduction();
@@ -118,6 +70,7 @@ const Productions = () => {
       </Helmet>
       <Loader title="Productions" />
       <ProductionsReelContainer
+        id="all-productions"
         sx={{
           flexGrow: SelectedProduction.length > 0 ? 0 : 1,
         }}
@@ -130,10 +83,6 @@ const Productions = () => {
           xs={12}
         >
           {ProductionData.map((item) => {
-            let styles = {
-              ...item.production.titleStyles.baseStyles,
-              ...item.production.titleStyles.reelButtonStyles,
-            };
             return (
               <Grid
                 sx={{
@@ -144,7 +93,6 @@ const Productions = () => {
                 md={3}
               >
                 <ReelItem
-                  sx={styles}
                   onClick={() => {
                     scrollToProduction();
                     setSelectProduction(item.production.id);
@@ -158,21 +106,29 @@ const Productions = () => {
                   }}
                   onMouseOut={() => setHoverImage("")}
                 >
-                  {item.production.title}
+                  {item.production.logo}
                 </ReelItem>
               </Grid>
             );
           })}
         </Reel>
+
+        {/* Hover image container */}
         <ProductionCoverImage
+          // className="hover-image"
           sx={{
+            // opacity: 0,
             background:
               selectProduction.length !== 1
                 ? hoverImage === white
                   ? hoverImage
-                  : `url("${hoverImage}") fixed`
-                : `url(${headerImage}) fixed`,
-            transition: "background .6s ease-in, opacity .6s ease-in",
+                  : `url("${hoverImage}") top center / cover fixed`
+                : `url(${headerImage}) top center / contain fixed`,
+            transition: "opacity 1s ease-in",
+            // marginTop:
+            //   hoverImage !== "#f9f9f9" && headerImage !== "Coming Soon"
+            //     ? theme.spacing(-20)
+            //     : 0,
           }}
         >
           {condition && (
@@ -182,6 +138,8 @@ const Productions = () => {
           )}
         </ProductionCoverImage>
       </ProductionsReelContainer>
+
+      {/* Show selected production */}
       {SelectedProduction &&
       SelectedProduction[0]?.production.status !== "In Development"
         ? SelectedProduction.map((production) => {

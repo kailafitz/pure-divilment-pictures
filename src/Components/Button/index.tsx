@@ -10,10 +10,8 @@ type ButtonProps = {
 
 const PureDivilmentButton = (props: ButtonProps) => {
   return (
-    <Box
-      className="border-animation"
-      sx={{ width: "git-content", m: "0 auto", ...props.styles }}
-    >
+    // <Box sx={{ width: "fit-content", m: "0 auto", ...props.styles }}>
+    <Box sx={{ minWidth: "90px", m: "0 auto", ...props.styles }}>
       <BrandButton href={props.href}>{props.label}</BrandButton>
     </Box>
   );

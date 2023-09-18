@@ -26,21 +26,25 @@ const TheCreatives = () => {
       </Helmet>
       <Grid
         container
-        spacing={{ xs: 2, md: 7 }}
+        rowSpacing={6}
         sx={{
           display: "flex",
           flexGrow: 1,
           justifyContent: "center",
-          width: "90%",
+          width: "100%",
           margin: (theme) => theme.spacing(0, "auto", 3, "auto"),
+          py: 5,
         }}
       >
         {CreativesData.map((member) => {
           return (
             <Grid
               xs={10}
-              md={4}
-              sx={{ pb: { xs: 3, sm: 0 } }}
+              sm={5}
+              md={3}
+              sx={{
+                pb: { xs: 3, sm: 0 },
+              }}
               key={member.creative.id}
             >
               <CompanyCreativeCard Creative={member.creative} />

@@ -1,41 +1,41 @@
 import React from "react";
-import { ProductionReelOne, ReelOneWrapper } from "./styles";
+import { ProductionImageReel, ReelWrapper } from "./styles";
 import Grid from "@mui/material/Unstable_Grid2/Grid2";
 import { ProductionItemInterface } from "../../Data/ProductionData";
 
 const Reel = (props: ProductionItemInterface) => {
   return (
-    <ProductionReelOne
+    <ProductionImageReel
       container
       columnSpacing={0.3}
       rowSpacing={{ xs: 4, md: 0 }}
       justifyContent={{ xs: "center", lg: "unset" }}
     >
-      {props.Production.reel_one?.map((reelImage, i) => {
+      {props.Production.image_reel?.map((image, i) => {
         return (
           <Grid
             key={i}
             sx={{
-              height: { xs: "250px", md: "inherit" },
+              height: { xs: 250, md: "inherit" },
               position: "relative",
             }}
             xs={10}
             sm={3}
             md={3}
           >
-            <ReelOneWrapper
+            <ReelWrapper
               sx={{
                 "&::before": {
-                  background: `url(${reelImage}) right center no-repeat`,
+                  background: `url(${image}) right center no-repeat`,
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                 },
               }}
-            ></ReelOneWrapper>
+            ></ReelWrapper>
           </Grid>
         );
       })}
-    </ProductionReelOne>
+    </ProductionImageReel>
   );
 };
 

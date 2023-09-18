@@ -1,17 +1,18 @@
 import { Box } from "@mui/material";
 import { styled } from "@mui/material/styles";
+const team = require("../../Assets/the-creatives-team.png");
 
 export const StyledAboutImage = styled(Box)(({ theme }) => ({
-  background:
-    "url('https://images.unsplash.com/photo-1573496130141-209d200cebd8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2938&q=80') no-repeat",
-  backgroundPosition: "center",
-  backgroundSize: "cover",
-  margin: theme.spacing(3, "auto"),
+  background: `url(${team}) center / cover no-repeat`,
+  // backgroundAttachment: "fixed",
   width: "100%",
-  minHeight: "500px",
+  minHeight: "300px",
 
-  [theme.breakpoints.up("md")]: {
-    width: "90%",
+  [theme.breakpoints.up("sm")]: {
+    minHeight: "500px",
+  },
+
+  [theme.breakpoints.up("lg")]: {
     minHeight: "700px",
   },
 }));

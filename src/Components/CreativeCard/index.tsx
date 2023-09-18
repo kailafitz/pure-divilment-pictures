@@ -1,23 +1,27 @@
 import React from "react";
-import { TeamMemberCardContainer, TeamImage, TeamMemberTitle } from "./styles";
-import { Box, Button } from "@mui/material";
+import {
+  CreativeMemberCardContainer,
+  CreativeImage,
+  CreativeMemberTitle,
+} from "./styles";
+import { Box, Button, useTheme } from "@mui/material";
 import { CreativeInterface } from "../../Data/CreativesData";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 
 const CompanyCreativeCard = (props: CreativeInterface) => {
-  let w = window.screen.width;
+  const theme = useTheme();
   return (
-    <TeamMemberCardContainer
+    <CreativeMemberCardContainer
       component={Button}
       color="primary"
       href={`/test/the-creatives/creative/${props.Creative.id}`}
     >
       <picture>
         <source
-          srcSet={`/creatives/${props.Creative.profile_image}.webp`}
+          srcSet={`/creatives/${props.Creative.profile_image}/${props.Creative.profile_image}.webp`}
           type="image/webp"
         ></source>
-        <TeamImage
+        <CreativeImage
           src={`/creatives/${props.Creative.profile_image}.png`}
           alt={props.Creative.name}
         />
@@ -25,27 +29,32 @@ const CompanyCreativeCard = (props: CreativeInterface) => {
       <Box
         sx={{
           width: "100%",
-          paddingLeft: (theme) => theme.spacing(1),
+          paddingLeft: theme.spacing(1),
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
+          color: {
+            xs: theme.palette.primary.main,
+          },
+          position: "relative",
+          zIndex: 1,
         }}
       >
         <div>
-          <TeamMemberTitle
+          <CreativeMemberTitle
             className="text"
             variant="body2"
             sx={{ fontWeight: 500 }}
           >
             {props.Creative.name}
-          </TeamMemberTitle>
-          <TeamMemberTitle className="text" variant="body2">
+          </CreativeMemberTitle>
+          <CreativeMemberTitle className="text" variant="body2">
             {props.Creative.role}
-          </TeamMemberTitle>
+          </CreativeMemberTitle>
         </div>
-        {w < 768 && <NavigateNextIcon />}
+        <NavigateNextIcon />
       </Box>
-    </TeamMemberCardContainer>
+    </CreativeMemberCardContainer>
   );
 };
 

@@ -15,14 +15,14 @@ import { useLocation } from "react-router-dom";
 import { Logo } from "../../Logo";
 
 const partners = [
-  "arts-council",
   "screen-ireland",
+  "rte",
+  "arts-council",
+  "tiff",
   "diff",
   "gff",
-  "rte",
   "ifl",
   "safe-to-create",
-  "screen-producers-ireland",
 ];
 
 const Affiliates = () => {
@@ -41,6 +41,9 @@ const Affiliates = () => {
           display: "flex",
           flexDirection: "row",
           flexWrap: "wrap",
+          "div:last-child img": {
+            height: "50px",
+          },
         }}
       >
         {partners.map((partner, i) => {
@@ -112,7 +115,10 @@ const Footer = () => {
             <Logo
               style={{
                 color: "white !important",
-                mb: 3,
+                svg: {
+                  margin: "0 auto 1.5rem auto",
+                  display: "block",
+                },
               }}
             />
             <Copyright>

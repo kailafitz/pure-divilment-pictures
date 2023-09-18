@@ -2,27 +2,18 @@ import { Box } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2/Grid2";
 import { styled } from "@mui/material/styles";
 
-export const Banner = styled("img")(({ theme }) => ({
-  width: "100%",
-  minHeight: "25vh",
-  objectFit: "cover",
-  [theme.breakpoints.up("sm")]: {
-    minHeight: "initial",
-  },
-}));
-
-export const ProductionReelOne = styled(Grid)(({ theme }) => ({
+export const ProductionImageReel = styled(Grid)(({ theme }) => ({
   marginTop: theme.spacing(2),
   marginBottom: theme.spacing(10),
   background: theme.palette.white.main,
 
   [theme.breakpoints.up("md")]: {
-    height: "250px",
+    height: 250,
     transform: "skewY(-3deg)",
   },
 }));
 
-export const ReelOneWrapper = styled(Box)(({ theme }) => ({
+export const ReelWrapper = styled(Box)(({ theme }) => ({
   height: "100%",
   width: "100%",
   margin: "0 auto",

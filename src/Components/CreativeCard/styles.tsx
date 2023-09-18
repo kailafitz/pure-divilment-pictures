@@ -1,13 +1,13 @@
 import { styled } from "@mui/material/styles";
 import { Typography, Box } from "@mui/material";
 
-export const TeamMemberCardContainer = styled(Box)(({ theme }) => ({
+export const CreativeMemberCardContainer = styled(Box)(({ theme }) => ({
   display: "flex",
   flexDirection: "column",
   svg: {
     opacity: 1,
   },
-  [theme.breakpoints.up("sm")]: {
+  [theme.breakpoints.up("md")]: {
     svg: {
       opacity: 0,
       transition: "opacity .8s ease",
@@ -22,22 +22,26 @@ export const TeamMemberCardContainer = styled(Box)(({ theme }) => ({
         opacity: 1,
         transition: "opacity .8s ease",
       },
+      ".overlay": {
+        width: "100%",
+        transition: "width .8s ease",
+      },
     },
   },
 })) as typeof Box;
 
-export const TeamMemberTitle = styled(Typography)(({ theme }) => ({
+export const CreativeMemberTitle = styled(Typography)(({ theme }) => ({
   width: "100%",
   textAlign: "left",
   textTransform: "uppercase",
   opacity: 1,
-  [theme.breakpoints.up("sm")]: {
+  [theme.breakpoints.up("md")]: {
     opacity: 0,
     transition: "opacity .8s ease",
   },
 })) as typeof Typography;
 
-export const TeamImage = styled("img")(({ theme }) => ({
+export const CreativeImage = styled("img")(({ theme }) => ({
   width: "100%",
   display: "block",
   marginBottom: `${theme.spacing(1)}`,

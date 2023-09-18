@@ -1,14 +1,15 @@
 import React from "react";
-import { useParams } from "react-router-dom";
 import { ProductionData } from "../../Data/ProductionData";
 import { Box } from "@mui/material";
 import ProductionContent from "../../Components/ProductionContent";
 
-const ProductionProfile = () => {
-  const id = useParams<{ id: string }>();
+type Props = {
+  id: String;
+};
 
+const ProductionProfile = (props: Props) => {
   const SelectedProduction = ProductionData.filter((production) => {
-    return production.production.id === id.id;
+    return production.production.id === props.id;
   });
 
   return (

@@ -56,11 +56,20 @@ export const ReelItem = styled(Button)(({ theme }) => ({
     color: theme.palette.primary.main,
     transition: "all .4s linear",
   },
+  svg: {
+    width: "60%",
+    margin: "0 auto",
+  },
 })) as typeof Button;
 
+interface RootProps {
+  textColor?: "primary" | "secondary";
+}
+
 export const ProductionCoverImage = styled(Box)(({ theme }) => ({
-  opacity: 1,
+  display: "none",
   [theme.breakpoints.up("md")]: {
+    marginTop: theme.spacing(-20),
     width: "100%",
     // backgroundPosition: "top center",
     backgroundSize: "cover",
@@ -70,7 +79,6 @@ export const ProductionCoverImage = styled(Box)(({ theme }) => ({
     flexDirection: "column",
     justifyContent: "center",
     textAlign: "center",
-    marginTop: theme.spacing(-20),
     flexGrow: 1,
   },
 })) as typeof Box;

@@ -10,20 +10,15 @@ const Bio = (props: ProductionItemInterface) => {
       id="selectedProduction"
       container
       sx={{
-        py: { xs: 10, md: 5 },
+        pt: { xs: 15, md: 15 },
+        pb: { xs: 6, md: 9 },
         justifyContent: "center",
       }}
       columnSpacing={0.3}
     >
-      <Grid xs={11} md={6}>
+      <Grid xs={11} md={5}>
         {/* Title */}
-        <ProductionTitle
-          variant="h4"
-          sx={props.Production.titleStyles.baseStyles}
-        >
-          {props.Production.title}
-        </ProductionTitle>
-
+        <ProductionTitle>{props.Production.logo}</ProductionTitle>
         {/* Type */}
         <Typography mb={2} sx={{ textAlign: "center" }}>
           <span
@@ -36,7 +31,6 @@ const Bio = (props: ProductionItemInterface) => {
           {" / "}
           <span>{props.Production.status}</span>
         </Typography>
-
         {/* Press Review */}
         <Typography
           mb={2}
@@ -49,13 +43,13 @@ const Bio = (props: ProductionItemInterface) => {
         >
           {props.Production.pressReview}
         </Typography>
-
         {/* Details */}
         <Grid container rowSpacing={1} justifyContent="center" mt={{ xs: 5 }}>
           {props.Production.details.map((deets) => {
+            const names = deets.fieldValue.split(",");
             return (
               <React.Fragment key={deets.fieldKey}>
-                <Grid xs={4} md={2}>
+                <Grid xs={4} md={6} textAlign="right">
                   <Typography
                     variant="body2"
                     sx={{
@@ -67,10 +61,14 @@ const Bio = (props: ProductionItemInterface) => {
                     {deets.fieldKey}
                   </Typography>
                 </Grid>
-                <Grid xs={7} md={9}>
-                  <Typography variant="body2" mb={{ xs: 3, md: 0 }}>
-                    {deets.fieldValue}
-                  </Typography>
+                <Grid xs={7} md={6}>
+                  {names.map((name, i) => {
+                    return (
+                      <Typography key={i} variant="body2" mb={{ xs: 3, md: 0 }}>
+                        {name}
+                      </Typography>
+                    );
+                  })}
                 </Grid>
               </React.Fragment>
             );

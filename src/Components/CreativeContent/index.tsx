@@ -9,7 +9,8 @@ import {
 import { BioTypography, ProfileImage } from "./styles";
 import { CreativeInterface, ListItemInterface } from "../../Data/CreativesData";
 import Grid from "@mui/material/Unstable_Grid2/Grid2";
-import { ProductionReelTwo, ReelTwoWrapper } from "../PageEndReel/styles";
+import PageEndReel from "../PageEndReel";
+import KeyboardDoubleArrowLeftIcon from "@mui/icons-material/KeyboardDoubleArrowLeft";
 
 const CreativeContent = (props: CreativeInterface) => {
   const BioBody = () => {
@@ -97,6 +98,17 @@ const CreativeContent = (props: CreativeInterface) => {
 
   return (
     <>
+      <Grid container pl={7}>
+        <Button
+          href="/test/the-creatives"
+          variant="contained"
+          color="dark"
+          sx={{ borderRadius: 0 }}
+          startIcon={<KeyboardDoubleArrowLeftIcon />}
+        >
+          Back
+        </Button>
+      </Grid>
       <Grid
         container
         justifyContent="center"
@@ -107,7 +119,7 @@ const CreativeContent = (props: CreativeInterface) => {
         <Grid xs={12} md={4}>
           <picture>
             <source
-              srcSet={`/creatives/${props.Creative.profile_image}.webp`}
+              srcSet={`/creatives/${props.Creative.profile_image}/${props.Creative.profile_image}.webp`}
               type="image/webp"
             ></source>
             <ProfileImage
@@ -128,41 +140,14 @@ const CreativeContent = (props: CreativeInterface) => {
           <CreditsBody />
         </Grid>
       </Grid>
-      <ProductionReelTwo
-        container
-        justifyContent={{ xs: "center", lg: "unset" }}
-        columnSpacing={0.3}
-        rowSpacing={{ xs: 4, lg: 0 }}
-      >
-        {[0, 1, 2, 3].map((i) => {
-          return (
-            <Grid
-              key={i}
-              sx={{
-                py: { lg: 0 },
-                position: "relative",
-                height: { xs: "250px", md: "inherit" },
-              }}
-              xs={10}
-              sm={6}
-              md={3}
-            >
-              <ReelTwoWrapper
-                sx={{
-                  "&::before": {
-                    background: `url(/creatives/${
-                      props.Creative.profile_image
-                    }-reel-${i + 1}.webp) no-repeat, url(/creatives/${
-                      props.Creative.profile_image
-                    }-reel-${i + 1}.png) no-repeat`,
-                    backgroundSize: "cover",
-                  },
-                }}
-              ></ReelTwoWrapper>
-            </Grid>
-          );
-        })}
-      </ProductionReelTwo>
+      <PageEndReel
+        images={[
+          `/creatives/${props.Creative.profile_image}/${props.Creative.profile_image}.webp`,
+          `/creatives/${props.Creative.profile_image}/${props.Creative.profile_image}.webp`,
+          `/creatives/${props.Creative.profile_image}/${props.Creative.profile_image}.webp`,
+          `/creatives/${props.Creative.profile_image}/${props.Creative.profile_image}.webp`,
+        ]}
+      />
       {props.Creative.reelURL && (
         <Grid
           container
@@ -220,7 +205,7 @@ const CreativeContent = (props: CreativeInterface) => {
         </Grid>
         <Grid xs={8} md={6} sx={{ p: { xs: 2, md: 5 } }}>
           <Button
-            href="/test/productions/"
+            href="/test/productions/0"
             variant="contained"
             color="white"
             sx={{

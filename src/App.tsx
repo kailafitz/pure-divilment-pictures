@@ -11,6 +11,7 @@ import Productions from "./Pages/Productions";
 import ReachOut from "./Pages/ReachOut";
 import { Logo } from "./Components/Logo";
 import { Box, Typography, useTheme } from "@mui/material";
+import Productions2 from "./Pages/Productions-2";
 
 function App() {
   const location = useLocation();
@@ -29,11 +30,12 @@ function App() {
           path="/test/the-creatives/creative/:id"
           element={<CompanyCreativeProfile />}
         />
+        <Route path="/test/productions2/" element={<Productions2 />} />
         <Route path="/test/productions/:id" element={<Productions />} />
-        <Route
+        {/* <Route
           path="/test/productions/production/:id"
           element={<ProductionProfile />}
-        />
+        /> */}
         <Route path="/test/reach-out" element={<ReachOut />} />
       </Routes>
       {current.includes("test") && <Footer />}
@@ -53,7 +55,17 @@ function App() {
             },
           }}
         >
-          <Logo color={theme.palette.white.main} />
+          <Logo
+            color={theme.palette.white.main}
+            style={{
+              margin: "0 auto",
+              display: "block",
+              svg: {
+                margin: "0 auto",
+                display: "block",
+              },
+            }}
+          />
           <Typography
             variant="body1"
             textAlign="center"

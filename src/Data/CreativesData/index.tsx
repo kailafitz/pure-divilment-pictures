@@ -27,8 +27,14 @@ export const CreativesData = [
       role: "Co-Founder | Creative Producer",
       profile_image: "claire",
       bio: [
-        "Claire is a creative producer from County Meath with a Masters in Creative Production and Screen Finance from the National Film School IADT.",
-        "While studying at IADT, Claire produced an animated short, PORK, under Screen Ireland’s prestigious Frameworks scheme. During this time, Claire was also the Senior Production Coordinator on Nora Twomey's recent release, My Father's Dragon, at Cartoon Saloon. Claire is currently the Development Production Supervisor at DNEG Animation, as well as overseeing the set up of production structures for new incoming shows for the studio. Claire helped in the development of Nell's short film, Try & Touch. Arts Council funded short film Baths was received to positive reviews due to its unconventional anthology writing development structure. Claire is dedicated to bringing female & non-binary voices & POV to the screen on an international scale.",
+        "Hailing from the picturesque County Meath, Claire Mooney is a creative force in the world of film production.",
+        "Armed with a Masters in Creative Production and Screen Finance from the esteemed National Film School IADT, Claire's journey through the realm of cinema has been nothing short of exciting.",
+        "During her time at IADT, Claire distinguished herself as a producer of exceptional talent. One of her standout achievements was the production of the animated short film 'PORK', which earned recognition under Screen Ireland's prestigious Frameworks scheme. This early success showcased Claire's innate ability to bring imaginative stories to life through the magic of animation.",
+        "Simultaneously, Claire assumed the role of Senior Production Coordinator for Nora Twomey's acclaimed release, 'My Father's Dragon', at the renowned Cartoon Saloon. Her contribution to this project further solidified her reputation as a producer of exceptional caliber.",
+        "Since then, Claire held the pivotal position of Development Production Supervisor at DNEG Animation, where she not only oversaw ongoing production efforts but also played a vital role in establishing production structures for new and exciting projects at the studio. Her dedication to fostering a creative and efficient production environment is a testament to her commitment to cinematic excellence. Claire's passion for nurturing emerging talent is evident in her work. She played an instrumental role in the development of Nell Hensey's short film, 'Try & Touch', showcasing her support for emerging voices in the industry.",
+        "One of Claire's most notable achievements is the Arts Council-funded short film, 'Baths', This film garnered positive reviews, thanks to its unconventional anthology-style writing development structure, which reflects Claire's innovative approach to storytelling.",
+        "Moreover, Claire is on a mission to bring underrepresented voices to the forefront of the international cinematic landscape. Her commitment to amplifying female and non-binary perspectives on screen reflects her dedication to inclusivity and diversity in filmmaking.",
+        "Claire Mooney's journey in film production is a testament to her unwavering dedication, creative prowess, and commitment to fostering an inclusive and vibrant cinematic world. With a track record of successful projects and a passion for championing diverse voices, Claire continues to make an indelible mark on the industry and is poised for even greater achievements in the years to come.",
       ],
       credits: [
         {
@@ -66,8 +72,9 @@ export const CreativesData = [
       profile_image: "nell",
       reelURL: "gu",
       bio: [
-        "Nell Hensey is a Filipino-Irish director and screenwriter from County Clare.",
-        " After studying at the National Film School IADT, Nell worked as a production assistant, writers room assistant and showrunner's assistant on TV series for Netflix, BBC and RTÉ. Her short films Try & Touch and Baths both premiered at the Galway Film Fleadh 2022. Nell's latest short film Good Chips premiered at the Dublin International Film Festival 2023 and was broadcast on Virgin Media One. Nell was nominated for the Dublin International Film Festival's prestigious Discovers Award 2023. She is especially drawn to stories that centre on women, explore themes of coming-of-age or give honest representation of minorities.",
+        "Nell Hensey is a Filipino-Irish writer-director from the west of Ireland.",
+        "After studying English Literature and Film Studies in UCD, Nell went on to complete a Masters in Creative Production and Screen Finance at the National Film School IADT. She has worked as a writers room assistant, showrunners assistant and television writer on shows for Netflix and Sky. She has directed work for Screen Ireland, RTÉ, Virgin Media Television, The Arts Council of Ireland, and more. Her latest short film, Good Chips, premiered at the 2023 Dublin International Film Festival and was piece in Irish cinema history to depict a majority Asian cast.",
+        "As a filmmaker, Nell holds a keen interest in female-centric narratives, coming-of-age themes, and stories that explore outsider identities. In 2023, Nell was one of ten international directors selected for the Toronto International Film Festival's prestigious Filmmaker Lab. It is through this programme that she is developing her highly anticipated debut feature film, Displacement.",
       ],
       credits: [
         {
@@ -114,83 +121,12 @@ export const CreativesData = [
       ],
     },
   },
-  // {
-  //   creative: {
-  //     id: "3",
-  //     name: "Emma Smith",
-  //     role: "Director",
-  //     profile_image: Emma,
-  //     bio: [
-  //       "Emma graduated from IADT Film and TV Production BA majoring in Direction. Her short film, Starry Night won Indie Cork's Best Short film award and was shortlisted for the Young Director Award at Cannes. She won a rising star award at Irish Screen America.",
-  //       "She directed Buymie's 'We Shop Like You do' TV Commercial early last year and has made a number of music videos for artists like Lucy McWilliams, Junior Brother and Nixer. She is excited to create honest depictions of lost or directionless female characters going through the struggles of modern day life.",
-  //     ],
-  //     credits: [
-  //       {
-  //         title: "What Feminism Is",
-  //         year: "(2023)",
-  //         heading: " | Short Drama | Director",
-  //         affiliates: "Arts Council of Ireland",
-  //       },
-  //       {
-  //         title: "Pleasure",
-  //         year: "(2022)",
-  //         heading: " | Music Video | Director",
-  //         affiliates: "NIXER",
-  //       },
-  //       {
-  //         title: "Bumblebee & Blue Skies",
-  //         year: "(2022)",
-  //         heading: " | Music Video | Director",
-  //         affiliates: "Lucy McWilliams",
-  //       },
-  //       {
-  //         title: "We Shop Like You Do",
-  //         year: "(2022)",
-  //         heading: " TV Commercial | Director",
-  //         affiliates: "Buymie",
-  //       },
-  //       {
-  //         title: "No Country For Young Men",
-  //         year: "(2021)",
-  //         heading: " | Music Video | Director",
-  //         affiliates: "Junior Brother",
-  //       },
-  //       {
-  //         title: "Starry Night",
-  //         year: "(2020)",
-  //         heading: " | Short Film | Director",
-  //       },
-  //     ],
-  //     accolades: [
-  //       {
-  //         title: "Shortlist",
-  //         heading: " | Young Directors Award",
-  //         affiliates: "Cannes Lions International Festival for Creativity 2020",
-  //       },
-  //       {
-  //         title: "Winner",
-  //         heading: " | Best Short Film",
-  //         affiliates: "Indie Cork Film Festival 2020",
-  //       },
-  //       {
-  //         title: "Winner",
-  //         heading: " | Rising Star Award",
-  //         affiliates: "Irish Screen America 2020",
-  //       },
-  //       {
-  //         title: "Winner",
-  //         heading: " | Best Student Film",
-  //         affiliates: "Emerging Directors Awards 2020",
-  //       },
-  //     ],
-  //   },
-  // },
   {
     creative: {
       id: "4",
       name: "Brigid Leahy",
-      role: "Co-Founder | Creative Producer",
-      profile_image: "claire",
+      role: "Talent & Development Executive",
+      profile_image: "brigid",
       bio: [
         "Claire is a creative producer from County Meath with a Masters in Creative Production and Screen Finance from the National Film School IADT.",
         "While studying at IADT, Claire produced an animated short, PORK, under Screen Ireland’s prestigious Frameworks scheme. During this time, Claire was also the Senior Production Coordinator on Nora Twomey's recent release, My Father's Dragon, at Cartoon Saloon. Claire is currently the Development Production Supervisor at DNEG Animation, as well as overseeing the set up of production structures for new incoming shows for the studio. Claire helped in the development of Nell's short film, Try & Touch. Arts Council funded short film Baths was received to positive reviews due to its unconventional anthology writing development structure. Claire is dedicated to bringing female & non-binary voices & POV to the screen on an international scale.",
@@ -227,8 +163,8 @@ export const CreativesData = [
     creative: {
       id: "5",
       name: "Lily Sweeney",
-      role: "Director",
-      profile_image: "emma",
+      role: "Associate Producer",
+      profile_image: "lily",
       bio: [
         "Emma graduated from IADT Film and TV Production BA majoring in Direction. Her short film, Starry Night won Indie Cork's Best Short film award and was shortlisted for the Young Director Award at Cannes. She won a rising star award at Irish Screen America.",
         "She directed Buymie's 'We Shop Like You do' TV Commercial early last year and has made a number of music videos for artists like Lucy McWilliams, Junior Brother and Nixer. She is excited to create honest depictions of lost or directionless female characters going through the struggles of modern day life.",

@@ -5,7 +5,7 @@ import { ProductionImage } from "./styles";
 const Poster = (props: ProductionItemInterface) => {
   return (
     <ProductionImage
-      src={props.Production.production_image}
+      src={props.Production.poster}
       alt="production poster"
       sx={{ mb: { xs: 6, lg: 10 } }}
     />

@@ -19,10 +19,13 @@ const theme = createTheme({
     white: {
       main: "#f9f9f9",
       dark: "#c9c9c9",
+      contrastText: "#000000",
     },
     dark: {
+      light: "darkgrey",
       main: "#0d0c0c",
       dark: "#000000",
+      contrastText: "#f9f9f9",
     },
   },
   components: {

@@ -3,13 +3,11 @@ import Grid from "@mui/material/Unstable_Grid2/Grid2";
 import { styled } from "@mui/material/styles";
 
 export const ProductionReelTwo = styled(Grid)(({ theme }) => ({
-  marginTop: theme.spacing(2),
-  marginBottom: theme.spacing(2),
   background: theme.palette.white.main,
 
   [theme.breakpoints.up("lg")]: {
     clipPath: "polygon(0 0, 100% 25%, 100% 100%, 0% 100%)",
-    height: "250px",
+    height: 250,
     margin: 0,
   },
 }));

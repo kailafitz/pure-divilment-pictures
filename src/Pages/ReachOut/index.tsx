@@ -130,7 +130,7 @@ const ReachOut = () => {
             }}
           >
             <Typography
-              variant="body2"
+              variant="h6"
               sx={{
                 textTransform: "uppercase",
                 fontWeight: 500,
@@ -140,7 +140,7 @@ const ReachOut = () => {
               Get in Touch
             </Typography>
             <Typography
-              variant="h6"
+              variant="body2"
               sx={{
                 mb: (theme) => theme.spacing(1),
               }}
@@ -156,7 +156,7 @@ const ReachOut = () => {
               materials.
             </Typography>
             <Typography
-              variant="body2"
+              variant="h6"
               sx={{
                 textTransform: "uppercase",
                 fontWeight: 500,
@@ -168,7 +168,7 @@ const ReachOut = () => {
             <Link
               display="block"
               color="primary"
-              variant="h6"
+              variant="body2"
               sx={{
                 fontWeight: 500,
                 // mb: (theme) => theme.spacing(1),
@@ -179,7 +179,7 @@ const ReachOut = () => {
             <Link
               display="block"
               color="primary"
-              variant="h6"
+              variant="body2"
               sx={{ fontWeight: 500 }}
             >
               Instagram

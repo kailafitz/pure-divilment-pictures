@@ -21,7 +21,7 @@ const Home = () => {
           content={"View some of our most recent productions."}
         />
       </Helmet>
-      <OpeningAnimation />
+      {/* <OpeningAnimation /> */}
       <HomeContainer>
         <VideoCarousel />
       </HomeContainer>

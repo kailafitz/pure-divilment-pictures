@@ -123,7 +123,7 @@ export const CreativesData = [
   },
   {
     creative: {
-      id: "4",
+      id: "3",
       name: "Brigid Leahy",
       role: "Talent & Development Executive",
       profile_image: "brigid",
@@ -133,35 +133,17 @@ export const CreativesData = [
       ],
       credits: [
         {
-          title: "Falling For Alex Whelan",
+          title: "Good Chips",
           year: "(2023)",
-          heading: " | Half Hour TV Drama | Producer",
-          affiliates: "RTÉ and Screen Ireland",
-        },
-        {
-          title: "What Feminism Is",
-          year: "(2023)",
-          heading: " | Short Drama | Producer",
-          affiliates: "Arts Council of Ireland",
-        },
-        {
-          title: "Baths",
-          year: "(2022)",
-          heading: " | Experimental Anthology | Producer",
-          affiliates: "Arts Council of Ireland",
-        },
-        {
-          title: "PORK",
-          year: "(2020)",
-          heading: " | Short Animation | Producer",
-          affiliates: "Screen Ireland",
+          heading: " | Short Drama | Co-Writer & Director",
+          affiliates: "Virgin Media Television and Screen Ireland",
         },
       ],
     },
   },
   {
     creative: {
-      id: "5",
+      id: "4",
       name: "Lily Sweeney",
       role: "Associate Producer",
       profile_image: "lily",
@@ -171,61 +153,10 @@ export const CreativesData = [
       ],
       credits: [
         {
-          title: "What Feminism Is",
+          title: "Falling For Alex Whelan",
           year: "(2023)",
-          heading: " | Short Drama | Director",
-          affiliates: "Arts Council of Ireland",
-        },
-        {
-          title: "Pleasure",
-          year: "(2022)",
-          heading: " | Music Video | Director",
-          affiliates: "NIXER",
-        },
-        {
-          title: "Bumblebee & Blue Skies",
-          year: "(2022)",
-          heading: " | Music Video | Director",
-          affiliates: "Lucy McWilliams",
-        },
-        {
-          title: "We Shop Like You Do",
-          year: "(2022)",
-          heading: " TV Commercial | Director",
-          affiliates: "Buymie",
-        },
-        {
-          title: "No Country For Young Men",
-          year: "(2021)",
-          heading: " | Music Video | Director",
-          affiliates: "Junior Brother",
-        },
-        {
-          title: "Starry Night",
-          year: "(2020)",
-          heading: " | Short Film | Director",
-        },
-      ],
-      accolades: [
-        {
-          title: "Shortlist",
-          heading: " | Young Directors Award",
-          affiliates: "Cannes Lions International Festival for Creativity 2020",
-        },
-        {
-          title: "Winner",
-          heading: " | Best Short Film",
-          affiliates: "Indie Cork Film Festival 2020",
-        },
-        {
-          title: "Winner",
-          heading: " | Rising Star Award",
-          affiliates: "Irish Screen America 2020",
-        },
-        {
-          title: "Winner",
-          heading: " | Best Student Film",
-          affiliates: "Emerging Directors Awards 2020",
+          heading: " | Half Hour TV Drama | Writer & Director",
+          affiliates: "RTÉ and Screen Ireland",
         },
       ],
     },

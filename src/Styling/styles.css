@@ -59,6 +59,10 @@ a:hover {
 .swiper-button-next::after {
   font-size: 20px;
 }
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  color: #c9c9c9 !important;
+}
 
 .swiper-pagination {
   background-color: #0d0c0c;

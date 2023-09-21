@@ -51,7 +51,13 @@ const Affiliates = () => {
             <LogoWrapper key={i}>
               <picture>
                 <source srcSet={`/partners/${partner}.webp`} />
-                <img src={`/partners/${partner}.png`} alt={`${partner}`} />
+                <img
+                  src={`/partners/${partner}.png`}
+                  alt={`${partner}`}
+                  loading="lazy"
+                  width={58}
+                  height={40}
+                />
               </picture>
             </LogoWrapper>
           );

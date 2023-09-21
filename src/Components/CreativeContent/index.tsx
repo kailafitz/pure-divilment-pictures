@@ -4,15 +4,14 @@ import {
   List,
   ListItem,
   ListItemText,
-  Stack,
   Typography,
 } from "@mui/material";
 import { ProfileImage, Stills } from "./styles";
 import { CreativeInterface, ListItemInterface } from "../../Data/CreativesData";
 import Grid from "@mui/material/Unstable_Grid2/Grid2";
-import PageEndReel from "../PageEndReel";
 import KeyboardDoubleArrowLeftIcon from "@mui/icons-material/KeyboardDoubleArrowLeft";
 import { Bio } from "./Bio";
+import { Accolades } from "./Accolades";
 
 const CreativeContent = (props: CreativeInterface) => {
   const CreditsBody = () => {
@@ -38,43 +37,6 @@ const CreativeContent = (props: CreativeInterface) => {
             return (
               <ListItem key={i} sx={{ py: 1, pl: 0 }}>
                 <ListItemText primary={<Credit />} />
-              </ListItem>
-            );
-          })}
-        </List>
-      </>
-    );
-  };
-
-  const AccoladesBody = () => {
-    return (
-      <>
-        <Typography textAlign="right" variant="h6">
-          Accolades
-        </Typography>
-        <List dense={true}>
-          {props.Creative.accolades?.map((accolade: ListItemInterface, i) => {
-            const Accolade = () => {
-              return (
-                <>
-                  <span
-                    style={{
-                      fontWeight: 700,
-                      textTransform: "uppercase",
-                    }}
-                  >
-                    {accolade.title}
-                  </span>
-                  <span>{accolade.heading}</span>
-                  <br />
-                  {accolade.affiliates}
-                </>
-              );
-            };
-
-            return (
-              <ListItem key={i} sx={{ py: 1, pr: 0, textAlign: "right" }}>
-                <ListItemText primary={<Accolade />} />
               </ListItem>
             );
           })}
@@ -125,7 +87,9 @@ const CreativeContent = (props: CreativeInterface) => {
       </Grid>
       <Grid container justifyContent="center" columnGap={5} pt={8} pb={8}>
         <Grid xs={11} md={5}>
-          {props.Creative.accolades && <AccoladesBody />}
+          {props.Creative.accolades && (
+            <Accolades accolades={props.Creative.accolades} />
+          )}
         </Grid>
         <Grid xs={11} md={5}>
           <CreditsBody />
@@ -145,7 +109,7 @@ const CreativeContent = (props: CreativeInterface) => {
               src={`/creatives/${props.Creative.profile_image}/stills/1.webp`}
             ></source>
             <Stills
-              alt="Nell Hensey on set"
+              alt={`${props.Creative.name} working on a project`}
               width={500}
               height="auto"
               src={`/creatives/${props.Creative.profile_image}/stills/1.png`}
@@ -158,7 +122,7 @@ const CreativeContent = (props: CreativeInterface) => {
               src={`/creatives/${props.Creative.profile_image}/stills/2.webp`}
             ></source>
             <Stills
-              alt="Nell Hensey on a panel talk"
+              alt={`${props.Creative.name} working on a project`}
               width={500}
               height="auto"
               src={`/creatives/${props.Creative.profile_image}/stills/2.png`}
@@ -167,14 +131,6 @@ const CreativeContent = (props: CreativeInterface) => {
         </Grid>
       </Grid>
 
-      {/* <PageEndReel
-        images={[
-          `/creatives/${props.Creative.profile_image}/${props.Creative.profile_image}.webp`,
-          `/creatives/${props.Creative.profile_image}/${props.Creative.profile_image}.webp`,
-          `/creatives/${props.Creative.profile_image}/${props.Creative.profile_image}.webp`,
-          `/creatives/${props.Creative.profile_image}/${props.Creative.profile_image}.webp`,
-        ]}
-      /> */}
       {props.Creative.reel_url && (
         <Grid
           container
@@ -202,6 +158,7 @@ const CreativeContent = (props: CreativeInterface) => {
               preload="none"
               controls={true}
               playsInline
+              poster="/creatives/nell/stills/1.png"
             >
               <source src={props.Creative.reel_url} type="video/mp4"></source>
             </video>

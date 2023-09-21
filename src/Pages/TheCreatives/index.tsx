@@ -26,6 +26,7 @@ const TheCreatives = () => {
       </Helmet>
       <Grid
         container
+        maxWidth="lg"
         rowSpacing={6}
         sx={{
           display: "flex",

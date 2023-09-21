@@ -1,6 +1,7 @@
 // variables
 $dark: #0d0c0c;
 $light: #f9f9f9;
+$light-hover: #c9c9c9;
 
 
 @font-face {
@@ -66,6 +67,10 @@ a {
 
     &::after {
         font-size: 20px;
+    }
+
+    &:hover {
+        color: $light-hover !important;
     }
 }
 

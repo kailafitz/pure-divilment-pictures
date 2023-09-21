@@ -5,11 +5,6 @@ import Grid from "@mui/material/Unstable_Grid2/Grid2";
 import { StyledAboutImage } from "./styles";
 import PageEndReel from "../../Components/PageEndReel";
 
-const image1 = require("../../Assets/about-picture-reel/1.png");
-const image2 = require("../../Assets/about-picture-reel/2.png");
-const image3 = require("../../Assets/about-picture-reel/3.png");
-const image4 = require("../../Assets/about-picture-reel/4.png");
-
 const About = () => {
   return (
     <>
@@ -159,6 +154,7 @@ const About = () => {
       <Typography variant="h6" textAlign="center">
         And we're only getting started.
       </Typography>
+
       <Stack
         direction={{ xs: "column", md: "row" }}
         justifyContent="center"
@@ -181,6 +177,9 @@ const About = () => {
             maxWidth: 200,
             width: { xs: "100%", md: "-webkit-fill-available" },
             mb: { xs: 5, md: 0 },
+            "&:hover": {
+              backgroundColor: (theme) => theme.palette.dark.light,
+            },
           }}
         >
           Go To Productions
@@ -196,6 +195,9 @@ const About = () => {
             maxWidth: 200,
             width: { xs: "100%", md: "-webkit-fill-available" },
             mb: { xs: 5, md: 0 },
+            "&:hover": {
+              backgroundColor: (theme) => theme.palette.dark.light,
+            },
           }}
         >
           Meet our Creatives
@@ -210,12 +212,22 @@ const About = () => {
             borderRadius: 0,
             maxWidth: 200,
             width: { xs: "100%", md: "-webkit-fill-available" },
+            "&:hover": {
+              backgroundColor: (theme) => theme.palette.dark.light,
+            },
           }}
         >
           Reach Out
         </Button>
       </Stack>
-      <PageEndReel images={[image1, image2, image3, image4]} />
+      <PageEndReel
+        images={[
+          "/about/image-reel/1.png",
+          "/about/image-reel/2.png",
+          "/about/image-reel/3.png",
+          "/about/image-reel/4.png",
+        ]}
+      />
     </>
   );
 };

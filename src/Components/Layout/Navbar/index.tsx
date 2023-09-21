@@ -42,7 +42,11 @@ export default function Navbar() {
           </Box>
           <HamburgerContainer>
             <Hamburger />
-            <Hamburger toggled={isOpen} toggle={setOpen} />
+            <Hamburger
+              toggled={isOpen}
+              toggle={setOpen}
+              aria-label="menu-button"
+            />
           </HamburgerContainer>
           <MobileDrawer open={isOpen} closeDrawer={() => setOpen(false)} />
           <Box

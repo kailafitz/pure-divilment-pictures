@@ -64,6 +64,12 @@ a:hover {
   color: #c9c9c9 !important;
 }
 
+.custom-bullet {
+  border-radius: 0;
+  width: 30px !important;
+  height: 5px !important;
+}
+
 .swiper-pagination {
   background-color: #0d0c0c;
   bottom: 0 !important;

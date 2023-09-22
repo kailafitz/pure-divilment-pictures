@@ -36,7 +36,11 @@ const VideoCarousel = () => {
       id="billboard-swiper"
       modules={[Autoplay, Pagination, Navigation]}
       noSwiping={true}
-      pagination={{ clickable: true }}
+      pagination={{
+        clickable: true,
+        // bulletElement: "div",
+        bulletClass: "swiper-pagination-bullet custom-bullet",
+      }}
       navigation={true}
       speed={1000}
       loop

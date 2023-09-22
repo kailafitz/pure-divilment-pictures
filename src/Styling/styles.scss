@@ -74,6 +74,12 @@ a {
     }
 }
 
+.custom-bullet {
+    border-radius: 0;
+    width: 30px !important;
+    height: 5px !important;
+}
+
 .swiper-pagination {
     background-color: $dark;
     bottom: 0 !important;

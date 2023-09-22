@@ -62,10 +62,6 @@ export const ReelItem = styled(Button)(({ theme }) => ({
   },
 })) as typeof Button;
 
-interface RootProps {
-  textColor?: "primary" | "secondary";
-}
-
 export const ProductionCoverImage = styled(Box)(({ theme }) => ({
   display: "none",
   [theme.breakpoints.up("md")]: {

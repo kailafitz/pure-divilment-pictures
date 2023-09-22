@@ -64,7 +64,11 @@ const Bio = (props: ProductionItemInterface) => {
                 <Grid xs={7} md={6}>
                   {names.map((name, i) => {
                     return (
-                      <Typography key={i} variant="body2" mb={{ xs: 3, md: 0 }}>
+                      <Typography
+                        key={i}
+                        variant="body2"
+                        mb={{ xs: 0.5, md: 0 }}
+                      >
                         {name}
                       </Typography>
                     );

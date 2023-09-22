@@ -40,32 +40,28 @@ const ReachOut = () => {
         <StyledReelImage
           sx={{
             "&::before": {
-              backgroundImage:
-                "url('https://images.unsplash.com/photo-1521075486433-bf4052bb37bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y3J5aW5nJTIwc2hvdHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=900&q=60')",
+              backgroundImage: "url('/reach/1.jpeg')",
             },
           }}
         ></StyledReelImage>
         <StyledReelImage
           sx={{
             "&::before": {
-              backgroundImage:
-                "url('https://images.unsplash.com/photo-1474164490978-9c265ac04f93?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80')",
+              backgroundImage: "url('/reach/2.jpeg')",
             },
           }}
         ></StyledReelImage>
         <StyledReelImage
           sx={{
             "&::before": {
-              backgroundImage:
-                "url('https://images.unsplash.com/photo-1508657794088-375f2f60c581?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2938&q=80')",
+              backgroundImage: "url('/reach/3.jpeg')",
             },
           }}
         ></StyledReelImage>
         <StyledReelImage
           sx={{
             "&::before": {
-              backgroundImage:
-                "url('https://images.unsplash.com/photo-1509884424292-74240c07aae2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3174&q=80')",
+              backgroundImage: "url('/reach/4.jpeg')",
             },
           }}
         ></StyledReelImage>
@@ -82,32 +78,28 @@ const ReachOut = () => {
         <StyledReelImage
           sx={{
             "&::before": {
-              backgroundImage:
-                "url('https://images.unsplash.com/photo-1509884424292-74240c07aae2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3174&q=80')",
+              backgroundImage: "url('/reach/2.jpeg')",
             },
           }}
         ></StyledReelImage>
         <StyledReelImage
           sx={{
             "&::before": {
-              backgroundImage:
-                "url('https://images.unsplash.com/photo-1616341590753-7840bdd2fb29?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2792&q=80')",
+              backgroundImage: "url('/reach/1.jpeg')",
             },
           }}
         ></StyledReelImage>
         <StyledReelImage
           sx={{
             "&::before": {
-              backgroundImage:
-                "url('https://images.unsplash.com/photo-1521075486433-bf4052bb37bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y3J5aW5nJTIwc2hvdHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=900&q=60')",
+              backgroundImage: "url('/reach/4.jpeg')",
             },
           }}
         ></StyledReelImage>
         <StyledReelImage
           sx={{
             "&::before": {
-              backgroundImage:
-                "url('https://images.unsplash.com/photo-1474164490978-9c265ac04f93?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80')",
+              backgroundImage: "url('/reach/3.jpeg')",
             },
           }}
         ></StyledReelImage>

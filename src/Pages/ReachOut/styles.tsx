@@ -17,7 +17,7 @@ export const StyledBackgroundImage = styled(Box)(({ theme }) => ({
 })) as typeof Box;
 
 export const StyledReelImage = styled(Box)(({ theme }) => ({
-  height: "153px",
+  minHeight: "20vh",
   width: "100%",
   zIndex: -1,
   borderTop: `${theme.palette.white.main} 10px solid`,

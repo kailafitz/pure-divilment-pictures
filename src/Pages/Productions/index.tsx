@@ -4,6 +4,7 @@ import Grid from "@mui/material/Unstable_Grid2";
 import {
   ProductionsReelContainer,
   Reel,
+  // ReelGridItem,
   ReelItem,
   ProductionCoverImage,
 } from "./styles";
@@ -91,6 +92,13 @@ const Productions = () => {
                 key={item.production.title}
                 xs={10}
                 md={3}
+                onMouseOver={() => {
+                  setSelectProduction("");
+                  item.production.coverImage !== "Coming Soon"
+                    ? setHoverImage(item.production.coverImage)
+                    : setHoverImage(white);
+                }}
+                onMouseOut={() => setHoverImage("")}
               >
                 <ReelItem
                   onClick={() => {
@@ -98,13 +106,6 @@ const Productions = () => {
                     setSelectProduction(item.production.id);
                     setHoverImage(item.production.coverImage);
                   }}
-                  onMouseOver={() => {
-                    setSelectProduction("");
-                    item.production.coverImage !== "Coming Soon"
-                      ? setHoverImage(item.production.coverImage)
-                      : setHoverImage(white);
-                  }}
-                  onMouseOut={() => setHoverImage("")}
                 >
                   {item.production.logo}
                 </ReelItem>
@@ -112,21 +113,18 @@ const Productions = () => {
             );
           })}
         </Reel>
-
         {/* Hover image container */}
         <ProductionCoverImage
-          // className="hover-image"
           sx={{
-            // opacity: 0,
             background:
               selectProduction.length !== 1
                 ? hoverImage === white
                   ? hoverImage
-                  : `url("${hoverImage}") top center / cover fixed`
-                : `url(${headerImage}) top center / contain fixed`,
-            transition: "opacity 1s ease-in",
+                  : `url("${hoverImage}") top center / contain`
+                : `url(${headerImage}) top center / contain`,
             // marginTop:
-            //   hoverImage !== "#f9f9f9" && headerImage !== "Coming Soon"
+            //   (headerImage !== "Coming Soon" && hoverImage !== "#f9f9f9") ||
+            //   (headerImage !== "Coming Soon" && hoverImage !== "Coming Soon")
             //     ? theme.spacing(-20)
             //     : 0,
           }}

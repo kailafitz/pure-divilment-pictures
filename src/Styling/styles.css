@@ -64,6 +64,11 @@ a:hover {
   color: #c9c9c9 !important;
 }
 
+.active-production {
+  background-color: #f9f9f9;
+  color: #0d0c0c;
+}
+
 .custom-bullet {
   border-radius: 0;
   width: 30px !important;

@@ -47,7 +47,7 @@ const CreativeContent = (props: CreativeInterface) => {
 
   return (
     <>
-      <Grid container pl={7}>
+      <Grid container pl={{ xs: 2, md: 7 }} mb={{ xs: 3, md: 0 }}>
         <Button
           href="/test/the-creatives"
           variant="contained"

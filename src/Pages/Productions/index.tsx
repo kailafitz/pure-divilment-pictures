@@ -83,7 +83,7 @@ const Productions = () => {
           rowSpacing={{ xs: 3, md: 0 }}
           xs={12}
         >
-          {ProductionData.map((item) => {
+          {ProductionData.map((item, index) => {
             return (
               <Grid
                 sx={{
@@ -101,6 +101,11 @@ const Productions = () => {
                 onMouseOut={() => setHoverImage("")}
               >
                 <ReelItem
+                  className={
+                    Number(selectProduction) === index + 1
+                      ? "active-production"
+                      : ""
+                  }
                   onClick={() => {
                     scrollToProduction();
                     setSelectProduction(item.production.id);

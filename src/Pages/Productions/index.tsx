@@ -46,6 +46,15 @@ const Productions = () => {
     return () => {};
   }, [selectProduction, SelectedProduction]);
 
+  // useEffect(() => {
+  //   if (hoverImage !== headerImage) {
+  //     setHeaderImage("");
+  //   }
+  // });
+
+  console.log("hoverImage", hoverImage);
+  console.log("headerImage", headerImage);
+
   let condition =
     hoverImage === white ||
     SelectedProduction[0]?.production.status === "In Development";

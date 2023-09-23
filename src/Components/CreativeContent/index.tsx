@@ -77,7 +77,7 @@ const CreativeContent = (props: CreativeInterface) => {
             />
           </picture>
         </Grid>
-        <Grid xs={11} md={6}>
+        <Grid xs={10} md={6}>
           <Bio
             name={props.Creative.name}
             role={props.Creative.role}
@@ -86,12 +86,12 @@ const CreativeContent = (props: CreativeInterface) => {
         </Grid>
       </Grid>
       <Grid container justifyContent="center" columnGap={5} pt={8} pb={8}>
-        <Grid xs={11} md={5}>
+        <Grid xs={10} md={5}>
           {props.Creative.accolades && (
             <Accolades accolades={props.Creative.accolades} />
           )}
         </Grid>
-        <Grid xs={11} md={5}>
+        <Grid xs={10} md={5}>
           <CreditsBody />
         </Grid>
       </Grid>
@@ -103,7 +103,7 @@ const CreativeContent = (props: CreativeInterface) => {
         rowGap={{ xs: 5, md: 0 }}
         mb={8}
       >
-        <Grid xs={11} md={5}>
+        <Grid xs={12} md={5}>
           <picture>
             <source
               src={`/creatives/${props.Creative.profile_image}/stills/1.webp`}
@@ -116,7 +116,7 @@ const CreativeContent = (props: CreativeInterface) => {
             />
           </picture>
         </Grid>
-        <Grid xs={11} md={5}>
+        <Grid xs={12} md={5}>
           <picture>
             <source
               src={`/creatives/${props.Creative.profile_image}/stills/2.webp`}
@@ -135,8 +135,8 @@ const CreativeContent = (props: CreativeInterface) => {
         <Grid
           container
           justifyContent="center"
-          py={7}
           sx={{
+            p: (theme) => theme.spacing(7, 0, 0, 4),
             display: "flex",
             background: (theme) => theme.palette.primary.main,
           }}

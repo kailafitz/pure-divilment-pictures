@@ -3,11 +3,11 @@ import { ProductionData } from "../../Data/ProductionData";
 import { Box } from "@mui/material";
 import ProductionContent from "../../Components/ProductionContent";
 
-type Props = {
+type ProductionProfileProps = {
   id: String;
 };
 
-const ProductionProfile = (props: Props) => {
+const ProductionProfile = (props: ProductionProfileProps) => {
   const SelectedProduction = ProductionData.filter((production) => {
     return production.production.id === props.id;
   });

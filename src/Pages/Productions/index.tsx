@@ -91,6 +91,7 @@ const Productions = () => {
                 }}
                 key={item.production.title}
                 xs={10}
+                sm={7}
                 md={3}
                 onMouseOver={() => {
                   if (Number(selectProduction) !== index + 1)

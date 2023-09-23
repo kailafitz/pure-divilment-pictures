@@ -10,8 +10,6 @@ import Productions from "./Pages/Productions";
 import ReachOut from "./Pages/ReachOut";
 import { Logo } from "./Components/Logo";
 import { Box, Container, Typography, useTheme } from "@mui/material";
-import Productions2 from "./Pages/Productions-2";
-
 function App() {
   const location = useLocation();
   const current = location.pathname;
@@ -30,7 +28,6 @@ function App() {
             path="/test/the-creatives/creative/:id"
             element={<CompanyCreativeProfile />}
           />
-          <Route path="/test/productions2/" element={<Productions2 />} />
           <Route path="/test/productions/:id" element={<Productions />} />
           <Route path="/test/reach-out" element={<ReachOut />} />
         </Routes>

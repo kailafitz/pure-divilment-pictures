@@ -9,7 +9,7 @@ type InfoSectionProps = {
 
 const InfoSection = (props: InfoSectionProps) => {
   return (
-    <Box sx={{ textAlign: { xs: "center", lg: props.alignment } }}>
+    <Box sx={{ textAlign: { xs: "center", md: props.alignment } }}>
       <Typography
         variant="body2"
         sx={{

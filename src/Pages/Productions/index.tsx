@@ -93,7 +93,8 @@ const Productions = () => {
                 xs={10}
                 md={3}
                 onMouseOver={() => {
-                  setSelectProduction("");
+                  if (Number(selectProduction) !== index + 1)
+                    setSelectProduction("");
                   item.production.coverImage !== "Coming Soon"
                     ? setHoverImage(item.production.coverImage)
                     : setHoverImage(white);

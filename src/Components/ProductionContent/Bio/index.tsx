@@ -16,7 +16,7 @@ const Bio = (props: ProductionItemInterface) => {
       }}
       columnSpacing={0.3}
     >
-      <Grid xs={11} md={5}>
+      <Grid xs={12} md={5}>
         {/* Title */}
         <ProductionTitle>{props.Production.logo}</ProductionTitle>
         {/* Type */}
@@ -39,6 +39,8 @@ const Bio = (props: ProductionItemInterface) => {
             fontStyle: "italic",
             fontFamily: "'Libre Baskerville', serif",
             textAlign: "center",
+            maxWidth: "80vw",
+            margin: "0 auto",
           }}
         >
           {props.Production.pressReview}
@@ -49,19 +51,18 @@ const Bio = (props: ProductionItemInterface) => {
             const names = deets.fieldValue.split(",");
             return (
               <React.Fragment key={deets.fieldKey}>
-                <Grid xs={4} md={6} textAlign="right">
+                <Grid xs={6} md={6} textAlign="right">
                   <Typography
                     variant="body2"
                     sx={{
                       fontWeight: 500,
-                      mr: (theme) => theme.spacing(3),
                       textTransform: "uppercase",
                     }}
                   >
                     {deets.fieldKey}
                   </Typography>
                 </Grid>
-                <Grid xs={7} md={6}>
+                <Grid xs={6} md={6} pl={{ xs: 1, md: 2 }}>
                   {names.map((name, i) => {
                     return (
                       <Typography

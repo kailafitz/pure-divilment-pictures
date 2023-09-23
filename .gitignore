@@ -28,3 +28,6 @@ yarn-error.log*
 # scss
 .css.map
 .scss
+
+# firebase
+.firebase

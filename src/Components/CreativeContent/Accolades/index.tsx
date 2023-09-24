@@ -38,7 +38,6 @@ export const Accolades = (props: ListItemInterfaces) => {
           );
         })}
       </List>
-      <br />
     </>
   );
 };

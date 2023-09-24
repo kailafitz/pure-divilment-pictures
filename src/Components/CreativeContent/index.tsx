@@ -48,12 +48,12 @@ const CreativeContent = (props: CreativeInterface) => {
             role={props.Creative.role}
             bio={props.Creative.bio}
           />
-          {props.Creative.accolades.length > 0 && (
-            <Accolades accolades={props.Creative.accolades} />
-          )}
-
           {props.Creative.credits.length > 0 && (
             <Credits credits={props.Creative.credits} />
+          )}
+
+          {props.Creative.accolades.length > 0 && (
+            <Accolades accolades={props.Creative.accolades} />
           )}
         </Grid>
       </Grid>

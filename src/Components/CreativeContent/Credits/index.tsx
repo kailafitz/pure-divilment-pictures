@@ -33,6 +33,7 @@ export const Credits = (props: CreditsInterface) => {
           );
         })}
       </List>
+      <br />
     </>
   );
 };

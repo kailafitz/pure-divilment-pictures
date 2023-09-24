@@ -138,11 +138,10 @@ const Productions = () => {
                   ? hoverImage
                   : `url("${hoverImage}") top center / contain`
                 : `url(${headerImage}) top center / contain`,
-            marginTop:
-              (headerImage !== "Coming Soon" && hoverImage !== "#f9f9f9") ||
-              (headerImage !== "Coming Soon" && hoverImage !== "Coming Soon")
-                ? theme.spacing(-20)
-                : 0,
+            // marginTop:
+            //   headerImage !== "Coming Soon" || hoverImage === "#f9f9f9"
+            //     ? theme.spacing(-20)
+            //     : 0,
           }}
         >
           {condition && (

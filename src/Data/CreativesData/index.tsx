@@ -28,12 +28,18 @@ export const CreativesData = [
       profile_image: "claire",
       bio: [
         "Claire Mooney is an Irish creative producer. She is the co-founder and leads the business end of Pure Divilment Pictures. She has experience across a wide variety of mediums from feature films to television content to animation and VFX.",
-        "Claire graduated from DCU with a bachelor’s in Digital Communication and Multimedia, before achieving a first class Masters in Creative Production and Screen Finance from the National Film School.",
+        "Claire graduated from DCU in Digital Communication and Multimedia, before achieving a first class Masters in Creative Production and Screen Finance from the National Film School.",
         "Claire worked as Senior Production Coordinator for Nora Twomey's acclaimed film, 'My Father's Dragon', at the academy award nominated production company Cartoon Saloon. She has also worked as Development Production Supervisor for several film and television projects at DNEG, one of the world’s leading animation and VFX studios.",
         "Under Screen Ireland’s Frameworks scheme, Claire produced the acclaimed animated short film Pork. She also produced the anthology film Baths, directed by Nell Hensey and supported by the Arts Council of Ireland. Most recently, Claire produced the live-action television film Falling For The Life Of Alex Whelan for RTÉ and Screen Ireland.",
         "Claire is committed to bringing fresh and exciting perspectives to the international landscape of television and film. With a track record of successful projects and a passion for championing new voices, Claire has become solidified as a producer to watch.",
       ],
       credits: [
+        {
+          title: "What Feminism Is",
+          year: "(2023 - TBC)",
+          heading: " | Short Film | Producer",
+          affiliates: "Arts Council of Ireland",
+        },
         {
           title: "Falling For Alex Whelan",
           year: "(2023)",
@@ -41,15 +47,9 @@ export const CreativesData = [
           affiliates: "RTÉ and Screen Ireland",
         },
         {
-          title: "What Feminism Is",
-          year: "(2023)",
-          heading: " | Short Drama | Producer",
-          affiliates: "Arts Council of Ireland",
-        },
-        {
           title: "Baths",
           year: "(2022)",
-          heading: " | Experimental Anthology | Producer",
+          heading: " | Anthology Film | Producer",
           affiliates: "Arts Council of Ireland",
         },
         {
@@ -90,7 +90,7 @@ export const CreativesData = [
         {
           title: "Baths",
           year: "(2022)",
-          heading: " | Experimental Anthology | Co-Writer & Director",
+          heading: " | Anthology Film | Co-Writer & Director",
           affiliates: "Arts Council of Ireland",
         },
         {

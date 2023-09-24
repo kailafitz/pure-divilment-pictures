@@ -65,7 +65,7 @@ export const ReelItem = styled(Button)(({ theme }) => ({
 export const ProductionCoverImage = styled(Box)(({ theme }) => ({
   display: "none",
   [theme.breakpoints.up("md")]: {
-    // marginTop: theme.spacing(-20),
+    marginTop: theme.spacing(-20),
     // clipPath: "polygon(0 0, 100% 21%, 100% 100%, 0% 100%)",
     width: "100%",
     // backgroundPosition: "top center",

@@ -94,7 +94,7 @@ const About = () => {
       >
         <Grid
           xs={12}
-          md={7}
+          md={8}
           p={5}
           sx={{
             background: (theme) => theme.palette.primary.main,
@@ -103,9 +103,9 @@ const About = () => {
         >
           <Typography
             color="white"
-            variant="h6"
+            variant="body1"
             fontWeight={100}
-            // sx={{ fontStyle: "italic", fontWeight: 400 }}
+            sx={{ fontStyle: "italic" }}
             mb={3}
             textAlign="justify"
           >
@@ -116,7 +116,7 @@ const About = () => {
           </Typography>
           <Typography
             color="white"
-            variant="h6"
+            variant="body1"
             textAlign="right"
             fontWeight={100}
           >
@@ -136,7 +136,7 @@ const About = () => {
       >
         <Grid
           xs={12}
-          md={7}
+          md={8}
           p={5}
           sx={{
             background: (theme) => theme.palette.primary.main,
@@ -145,9 +145,9 @@ const About = () => {
         >
           <Typography
             color="white"
-            variant="h6"
+            variant="body1"
             fontWeight={100}
-            // sx={{ fontStyle: "italic", fontWeight: 400 }}
+            sx={{ fontStyle: "italic" }}
             mb={3}
           >
             From literary screen adaptations to original character pieces, our
@@ -156,7 +156,7 @@ const About = () => {
           </Typography>
           <Typography
             color="white"
-            variant="h6"
+            variant="body1"
             textAlign="right"
             fontWeight={100}
           >

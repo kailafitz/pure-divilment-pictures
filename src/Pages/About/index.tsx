@@ -25,6 +25,7 @@ const About = () => {
           content={"How we started and where we're going!"}
         />
       </Helmet>
+
       <StyledAboutImage></StyledAboutImage>
 
       <Typography
@@ -50,16 +51,16 @@ const About = () => {
 
       <Grid
         container
+        pb={5}
         sx={{
           justifyContent: "center",
           position: "relative",
           background: (theme) => theme.palette.white.main,
         }}
       >
-        <Grid md={8} p={5}>
+        <Grid md={8}>
           <Typography
             variant="body1"
-            mb={2}
             textAlign="justify"
             sx={{
               span: {
@@ -84,15 +85,19 @@ const About = () => {
       </Grid>
 
       {/* Quote */}
-      <Grid container>
+      <Grid
+        container
+        sx={{
+          background: (theme) => theme.palette.white.main,
+        }}
+        pb={5}
+      >
         <Grid
           xs={12}
           md={7}
           p={5}
           sx={{
-            // background: (theme) => theme.palette.primary.main,
-            background: "#0d0c0cc4",
-            backdropFilter: "blur(4px)",
+            background: (theme) => theme.palette.primary.main,
             color: (theme) => theme.palette.white.main,
           }}
         >
@@ -120,53 +125,21 @@ const About = () => {
         </Grid>
       </Grid>
 
+      {/* Quote */}
       <Grid
+        pb={5}
         container
+        justifyContent="end"
         sx={{
-          justifyContent: "center",
-          position: "relative",
           background: (theme) => theme.palette.white.main,
         }}
       >
-        <Grid md={8} p={5}>
-          <Typography
-            variant="body1"
-            mb={2}
-            textAlign="justify"
-            sx={{
-              span: {
-                fontStyle: "italic",
-                marginRight: (theme) => theme.spacing(0.3),
-              },
-            }}
-          >
-            We deeply value representation and inclusivity. Community is very
-            important to us. We only work with the best, collaborating with
-            like-minded people on local and international projects. Our slate
-            features bold and exciting work that showcases Irish talent and
-            provides a window for our audiences to experience the world in a new
-            and exciting way.
-            <br />
-            <br />
-            In 2023, <span>P</span>ure <span>D</span>ivilment Pictures launched
-            its highly anticipated debut slate featuring an array of exciting
-            projects across television, independent film and short form content.
-            The company also expanded its creative team, adding positions across
-            development, production and marketing.
-          </Typography>
-        </Grid>
-      </Grid>
-
-      {/* Quote */}
-      <Grid container justifyContent="end">
         <Grid
           xs={12}
           md={7}
           p={5}
           sx={{
-            // background: (theme) => theme.palette.primary.main,
-            background: "#0d0c0cc4",
-            backdropFilter: "blur(4px)",
+            background: (theme) => theme.palette.primary.main,
             color: (theme) => theme.palette.white.main,
           }}
         >
@@ -192,10 +165,46 @@ const About = () => {
         </Grid>
       </Grid>
 
+      <Grid
+        container
+        pb={5}
+        sx={{
+          justifyContent: "center",
+          position: "relative",
+          background: (theme) => theme.palette.white.main,
+        }}
+      >
+        <Grid md={8}>
+          <Typography
+            variant="body1"
+            textAlign="justify"
+            sx={{
+              span: {
+                fontStyle: "italic",
+                marginRight: (theme) => theme.spacing(0.3),
+              },
+            }}
+          >
+            We deeply value representation and inclusivity. Community is very
+            important to us. We only work with the best, collaborating with
+            like-minded people on local and international projects. Our slate
+            features bold and exciting work that showcases Irish talent and
+            provides a window for our audiences to experience the world in a new
+            and exciting way.
+            <br />
+            <br />
+            In 2023, <span>P</span>ure <span>D</span>ivilment Pictures launched
+            its highly anticipated debut slate featuring an array of exciting
+            projects across television, independent film and short form content.
+            The company also expanded its creative team, adding positions across
+            development, production and marketing.
+          </Typography>
+        </Grid>
+      </Grid>
+
       <Typography
         variant="h6"
         textAlign="center"
-        pt={5}
         sx={{
           background: (theme) => theme.palette.white.main,
         }}
@@ -274,14 +283,14 @@ const About = () => {
         </Stack>
       </Box>
 
-      {/* <PageEndReel
+      <PageEndReel
         images={[
           "/about/image-reel/1.png",
           "/about/image-reel/2.png",
           "/about/image-reel/3.png",
           "/about/image-reel/4.png",
         ]}
-      /> */}
+      />
     </>
   );
 };

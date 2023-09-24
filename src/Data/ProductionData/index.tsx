@@ -73,15 +73,16 @@ export const ProductionData = [
         },
         {
           fieldKey: "Writer(s)",
-          fieldValue: "Nell Hensey",
+          fieldValue:
+            "Nell Hensey, S.J. Delaney, Ferdia MacAonghusa, Daragh Goan, Caoimhe Murphy, Nell Hensey, Fiadh Melina Brosnan",
         },
         {
           fieldKey: "Starring",
           fieldValue:
-            "Frank Blake, Venetia Bowe, Emmanuel Okoye, Mark Doherty, Hannah Mamalis, Jeanne Nicole Ní Áinle, Jess Kavanagh, Naoise Dunbar, James Stewart, Susie Lamb, Alessandra Diaz",
+            "Frank Blake, Venetia Bowe, Emmanuel Okoye, Mark Doherty, Hannah Mamalis, Jeanne Nicole Ní Áinle, Jess Kavanagh",
         },
         {
-          fieldKey: "Financiers",
+          fieldKey: "Supported By",
           fieldValue: "The Arts Council of Ireland",
         },
       ],
@@ -255,8 +256,8 @@ export const ProductionData = [
       videoMobile: fftloawTitleVideoMobile,
       type: "TV Drama Special",
       status: "Coming Soon on RTE",
-      blurb:
-        "A young Chinese woman meets the man of her dreams at a foreign language film club in Dublin. Based on the short story by Yan Ge.",
+      pressReview:
+        "Based on the short story by Yan Ge, Falling For The Life Of Alex Whelan blurs the lines between reality and fiction. Exploring loss, love and the rareness of human connection.",
       details: [
         {
           fieldKey: "Director",
@@ -267,12 +268,25 @@ export const ProductionData = [
           fieldValue: "Claire Mooney",
         },
         {
-          fieldKey: "Associate Producer",
-          fieldValue: "Lily Sweeney",
+          fieldKey: "Starring",
+          fieldValue:
+            "Lila Coleman, Chris Walley, David Rawle, Meadhbh Maxwell, Patrick Martins",
         },
         {
           fieldKey: "Adapted Screenplay",
           fieldValue: "Nell Hensey",
+        },
+        {
+          fieldKey: "Executive Producers",
+          fieldValue: "Frank Agnew, David Crean, Andrew Byrne",
+        },
+        {
+          fieldKey: "Associate Producer",
+          fieldValue: "Lily Sweeney",
+        },
+        {
+          fieldKey: "Development Executive",
+          fieldValue: "Brigid Leahy",
         },
         {
           fieldKey: "Director of Photography",
@@ -287,11 +301,6 @@ export const ProductionData = [
           fieldValue: "John Cutler",
         },
         {
-          fieldKey: "Starring",
-          fieldValue:
-            "Lila Coleman, Chris Walley, David Rawle, Meadhbh Maxwell, Patrick Martins, Peter Corboy, Oisín Robbins, Cillian Leneghan, Yang Zheng, Sabrina Zheng",
-        },
-        {
           fieldKey: "Broadcaster",
           fieldValue: "Radio Telefís Éireann (RTÉ)",
         },
@@ -299,13 +308,15 @@ export const ProductionData = [
           fieldKey: "Supported By",
           fieldValue: "Screen Ireland",
         },
-        {
-          fieldKey: "Executive Producers",
-          fieldValue: "Frank Agnew, David Crean, Andrew Byrne",
-        },
       ],
-      coverImage: "/productions/fftloaw/stills/1.jpg",
-      poster: "/productions/fftloaw/stills/2.jpg",
+      coverImage: "/productions/fftloaw/stills/2.jpg",
+      image_reel: [
+        "/productions/fftloaw/stills/3.jpeg",
+        "/productions/fftloaw/stills/4.jpeg",
+        "/productions/fftloaw/stills/5.jpeg",
+        "/productions/fftloaw/stills/6.png",
+      ],
+      poster: "/productions/fftloaw/stills/1.jpg",
     },
   },
   {

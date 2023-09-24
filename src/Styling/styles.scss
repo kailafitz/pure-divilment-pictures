@@ -1,4 +1,4 @@
-// variables
+// Variables
 $dark: #0d0c0c;
 $light: #f9f9f9;
 $light-hover: #c9c9c9;
@@ -35,50 +35,13 @@ body {
     justify-content: space-between;
 }
 
-.active span {
-    font-weight: 500 !important;
-
-    &:nth-of-type(1) {
-        transform: skewX(-15deg);
-        font-weight: 700 !important;
-    }
-}
-
-a:nth-of-type(1).active span:last-child {
-    margin-left: -0.5px;
-}
-
-a:not(:nth-of-type(1)).active span:last-child,
-li:not(:nth-of-type(1)) a.active span:last-child {
-    margin-left: 1.55px;
-}
-
-a {
-    text-decoration: none;
-
-    &:hover {
-        cursor: pointer;
-    }
-}
-
-.swiper-button-prev,
-.swiper-button-next {
-    color: $light !important;
-
-    &::after {
-        font-size: 20px;
-    }
-
-    &:hover {
-        color: $light-hover !important;
-    }
-}
-
+// Productions page -> active grid reel
 .active-production {
     background-color: $light;
     color: $dark;
 }
 
+// Home page -> Swiper
 .custom-bullet {
     border-radius: 0;
     width: 30px !important;
@@ -98,31 +61,26 @@ a {
     margin: 0 13px !important;
 }
 
-.display-on-mobile {
-    display: block;
-}
+.swiper-button-prev,
+.swiper-button-next {
+    color: $light !important;
 
-@media only screen and (max-width: 600px) {
-
-    .display-on-mobile {
-        display: none;
+    &::after {
+        font-size: 20px;
     }
 
-    .display-on-desktop {
-        display: block;
+    &:hover {
+        color: $light-hover !important;
     }
 }
 
+// React Loading component
 .react-loading {
     margin: 0 auto;
     animation: visible 1s linear forwards;
 }
 
-// .swiper-wrapper {
-//     transition-timing-function: linear;
-// }
-
-// home page slider text animation
+// Home page -> Swiper slide text animation
 @keyframes text-in {
     0% {
         opacity: 0;
@@ -179,6 +137,7 @@ a {
     }
 }
 
+// Home page -> Opening animation text style
 .text-1,
 .text-3,
 .text-5,
@@ -189,24 +148,7 @@ a {
     -webkit-text-stroke: 1px $light;
 }
 
-@keyframes blink {
-    0% {
-        opacity: 0%;
-    }
-
-    1% {
-        opacity: 100%;
-    }
-
-    99% {
-        opacity: 100%;
-    }
-
-    100% {
-        opacity: 0%;
-    }
-}
-
+// Home page -> Opening animation on last text to leave screen
 @keyframes visible {
     0% {
         opacity: 1;
@@ -226,6 +168,7 @@ a {
     }
 }
 
+// Home page -> Opening animation container sliding animation
 @keyframes slide-out-container {
     0% {
         height: 100vh;
@@ -240,6 +183,24 @@ a {
     }
 }
 
+// Home page -> Opening animation text blinking animation
+@keyframes blink {
+    0% {
+        opacity: 0%;
+    }
+
+    1% {
+        opacity: 100%;
+    }
+
+    99% {
+        opacity: 100%;
+    }
+
+    100% {
+        opacity: 0%;
+    }
+}
 
 .text-1 {
     animation: blink 0.8s linear 0.4s;
@@ -294,4 +255,46 @@ a {
 .text-11 {
     animation: blink 0.8s linear 0.4s;
     opacity: 0;
+}
+
+// General styls
+.active span {
+    font-weight: 500 !important;
+
+    &:nth-of-type(1) {
+        transform: skewX(-15deg);
+        font-weight: 700 !important;
+    }
+}
+
+a:nth-of-type(1).active span:last-child {
+    margin-left: -0.5px;
+}
+
+a:not(:nth-of-type(1)).active span:last-child,
+li:not(:nth-of-type(1)) a.active span:last-child {
+    margin-left: 1.55px;
+}
+
+a {
+    text-decoration: none;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.display-on-mobile {
+    display: block;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .display-on-mobile {
+        display: none;
+    }
+
+    .display-on-desktop {
+        display: block;
+    }
 }

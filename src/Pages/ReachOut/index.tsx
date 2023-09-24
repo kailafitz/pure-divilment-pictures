@@ -28,82 +28,6 @@ const ReachOut = () => {
         />
       </Helmet>
       {/* <StyledBackgroundImage></StyledBackgroundImage> */}
-      <Stack
-        sx={{
-          position: "absolute",
-          minHeight: "100vh",
-          width: "290px",
-          right: 0,
-          top: 0,
-        }}
-      >
-        <StyledReelImage
-          sx={{
-            "&::before": {
-              backgroundImage: "url('/reach/1.jpeg')",
-            },
-          }}
-        ></StyledReelImage>
-        <StyledReelImage
-          sx={{
-            "&::before": {
-              backgroundImage: "url('/reach/2.jpeg')",
-            },
-          }}
-        ></StyledReelImage>
-        <StyledReelImage
-          sx={{
-            "&::before": {
-              backgroundImage: "url('/reach/3.jpeg')",
-            },
-          }}
-        ></StyledReelImage>
-        <StyledReelImage
-          sx={{
-            "&::before": {
-              backgroundImage: "url('/reach/4.jpeg')",
-            },
-          }}
-        ></StyledReelImage>
-      </Stack>
-      <Stack
-        sx={{
-          position: "absolute",
-          minHeight: "100vh",
-          width: "290px",
-          right: 300,
-          top: -21,
-        }}
-      >
-        <StyledReelImage
-          sx={{
-            "&::before": {
-              backgroundImage: "url('/reach/2.jpeg')",
-            },
-          }}
-        ></StyledReelImage>
-        <StyledReelImage
-          sx={{
-            "&::before": {
-              backgroundImage: "url('/reach/1.jpeg')",
-            },
-          }}
-        ></StyledReelImage>
-        <StyledReelImage
-          sx={{
-            "&::before": {
-              backgroundImage: "url('/reach/4.jpeg')",
-            },
-          }}
-        ></StyledReelImage>
-        <StyledReelImage
-          sx={{
-            "&::before": {
-              backgroundImage: "url('/reach/3.jpeg')",
-            },
-          }}
-        ></StyledReelImage>
-      </Stack>
       <Container
         sx={{
           height: "100%",
@@ -119,6 +43,9 @@ const ReachOut = () => {
             sx={{
               p: { xs: 2 },
               backgroundColor: theme.palette.white.main,
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
             }}
           >
             <Typography
@@ -176,6 +103,9 @@ const ReachOut = () => {
             >
               Instagram
             </Link>
+          </Grid>
+          <Grid xs={10} md={6} sx={{ img: { width: "100%" } }}>
+            <img src={"/reach/1.png"} width={700} />
           </Grid>
         </Grid>
       </Container>

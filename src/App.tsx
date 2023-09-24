@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import Navbar from "./Components/Layout/Navbar";
 import Footer from "./Components/Layout/Footer";
@@ -10,7 +10,15 @@ import Productions from "./Pages/Productions";
 import ReachOut from "./Pages/ReachOut";
 import { Logo } from "./Components/Logo";
 import { Box, Container, Typography, useTheme } from "@mui/material";
+import OpeningAnimation from "./Components/Home/OpeningAnimation";
+
 function App() {
+  // const [disabled, setDisabled] = useState(false);
+
+  // setTimeout(() => {
+  //   setDisabled(true);
+  // }, 5500);
+
   const location = useLocation();
   const current = location.pathname;
 
@@ -19,6 +27,7 @@ function App() {
   return (
     <>
       {current.includes("test") && <Navbar />}
+      {/* {!disabled && <OpeningAnimation />} */}
       <Container maxWidth="xl" disableGutters={true}>
         <Routes>
           <Route path="/test" element={<Home />} />

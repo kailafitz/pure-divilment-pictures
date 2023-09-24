@@ -1,6 +1,7 @@
 import React from "react";
-import { ProductionReelTwo, ReelTwoWrapper } from "./styles";
+import { ProductionReelContainer, ReelWrapper } from "./styles";
 import Grid from "@mui/material/Unstable_Grid2/Grid2";
+import { Box } from "@mui/material";
 
 interface PageEndReelProps {
   images: string[];
@@ -8,35 +9,37 @@ interface PageEndReelProps {
 
 const PageEndReel = (props: PageEndReelProps) => {
   return (
-    <ProductionReelTwo
-      container
-      justifyContent={{ xs: "center", lg: "unset" }}
-      columnSpacing={0.3}
-    >
-      {props.images.map((image: string, i) => {
-        return (
-          <Grid
-            key={i}
-            sx={{
-              py: { lg: 0 },
-              position: "relative",
-              height: { xs: 350, md: "inherit" },
-            }}
-            xs={12}
-            sm={3}
-            md={3}
-          >
-            <ReelTwoWrapper
+    <Box sx={{ background: (theme) => theme.palette.white.main }}>
+      <ProductionReelContainer
+        container
+        justifyContent={{ xs: "center", lg: "unset" }}
+        columnSpacing={0.3}
+      >
+        {props.images.map((image: string, i) => {
+          return (
+            <Grid
+              key={i}
               sx={{
-                "&::before": {
-                  background: `url(${image}) top center / cover no-repeat`,
-                },
+                py: { lg: 0 },
+                position: "relative",
+                height: { xs: 350, md: "inherit" },
               }}
-            ></ReelTwoWrapper>
-          </Grid>
-        );
-      })}
-    </ProductionReelTwo>
+              xs={12}
+              sm={3}
+              md={3}
+            >
+              <ReelWrapper
+                sx={{
+                  "&::before": {
+                    background: `url(${image}) top center / cover no-repeat`,
+                  },
+                }}
+              ></ReelWrapper>
+            </Grid>
+          );
+        })}
+      </ProductionReelContainer>
+    </Box>
   );
 };
 

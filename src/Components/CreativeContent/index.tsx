@@ -1,50 +1,14 @@
 import React from "react";
-import {
-  Button,
-  List,
-  ListItem,
-  ListItemText,
-  Typography,
-} from "@mui/material";
-import { ProfileImage, Stills } from "./styles";
-import { CreativeInterface, ListItemInterface } from "../../Data/CreativesData";
+import { Button } from "@mui/material";
+import { ProfileImage } from "./styles";
+import { CreativeInterface } from "../../Data/CreativesData";
 import Grid from "@mui/material/Unstable_Grid2/Grid2";
 import KeyboardDoubleArrowLeftIcon from "@mui/icons-material/KeyboardDoubleArrowLeft";
 import { Bio } from "./Bio";
 import { Accolades } from "./Accolades";
+import { Credits } from "./Credits";
 
 const CreativeContent = (props: CreativeInterface) => {
-  const CreditsBody = () => {
-    return (
-      <>
-        <Typography variant="h6">Credits</Typography>
-        <List dense={true}>
-          {props.Creative.credits.map((credit: ListItemInterface, i) => {
-            const Credit = () => {
-              return (
-                <>
-                  <span style={{ fontWeight: 700, fontStyle: "italic" }}>
-                    {credit.title}
-                  </span>
-                  <span style={{ fontWeight: 700 }}> {credit.year}</span>
-                  <span>{credit.heading}</span>
-                  <br />
-                  {credit.affiliates}
-                </>
-              );
-            };
-
-            return (
-              <ListItem key={i} sx={{ py: 1, pl: 0 }}>
-                <ListItemText primary={<Credit />} />
-              </ListItem>
-            );
-          })}
-        </List>
-      </>
-    );
-  };
-
   return (
     <>
       <Grid container pl={{ xs: 2, md: 7 }} mb={{ xs: 3, md: 0 }}>
@@ -63,7 +27,8 @@ const CreativeContent = (props: CreativeInterface) => {
         justifyContent="center"
         columnGap={5}
         rowGap={{ xs: 5, md: 0 }}
-        pt={{ sm: 6 }}
+        pt={{ sm: 5 }}
+        pb={5}
       >
         <Grid xs={12} md={4}>
           <picture>
@@ -85,18 +50,24 @@ const CreativeContent = (props: CreativeInterface) => {
           />
         </Grid>
       </Grid>
-      <Grid container justifyContent="center" columnGap={5} pt={8} pb={8}>
-        <Grid xs={10} md={5}>
-          {props.Creative.accolades && (
-            <Accolades accolades={props.Creative.accolades} />
-          )}
-        </Grid>
-        <Grid xs={10} md={5}>
-          <CreditsBody />
-        </Grid>
-      </Grid>
 
-      <Grid
+      {(props.Creative.accolades.length > 0 ||
+        props.Creative.credits.length > 0) && (
+        <Grid container justifyContent="center" columnGap={5} pb={5}>
+          <Grid xs={10} md={5}>
+            {props.Creative.accolades.length > 0 && (
+              <Accolades accolades={props.Creative.accolades} />
+            )}
+          </Grid>
+          <Grid xs={10} md={5}>
+            {props.Creative.credits.length > 0 && (
+              <Credits credits={props.Creative.credits} />
+            )}
+          </Grid>
+        </Grid>
+      )}
+
+      {/* <Grid
         container
         justifyContent="center"
         columnGap={5}
@@ -129,7 +100,7 @@ const CreativeContent = (props: CreativeInterface) => {
             />
           </picture>
         </Grid>
-      </Grid>
+      </Grid> */}
 
       {props.Creative.reel_url && (
         <Grid
@@ -158,17 +129,17 @@ const CreativeContent = (props: CreativeInterface) => {
               preload="none"
               controls={true}
               playsInline
-              poster="/creatives/nell/stills/1.png"
+              poster={`/creatives/${props.Creative.profile_image}/reel-poster.png`}
             >
               <source src={props.Creative.reel_url} type="video/mp4"></source>
             </video>
           </Grid>
         </Grid>
       )}
+
       <Grid
         container
         justifyContent="center"
-        py={3}
         sx={{ background: (theme) => theme.palette.primary.main }}
       >
         <Grid

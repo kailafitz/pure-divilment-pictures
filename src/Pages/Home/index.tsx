@@ -1,6 +1,5 @@
 import React from "react";
 import { HomeContainer } from "./styles";
-import OpeningAnimation from "../../Components/Home/OpeningAnimation";
 import VideoCarousel from "../../Components/VideoCarousel";
 import { Helmet } from "react-helmet";
 
@@ -21,7 +20,6 @@ const Home = () => {
           content={"View some of our most recent productions."}
         />
       </Helmet>
-      {/* <OpeningAnimation /> */}
       <HomeContainer>
         <VideoCarousel />
       </HomeContainer>

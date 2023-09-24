@@ -12,7 +12,7 @@ export const Accolades = (props: ListItemInterfaces) => {
         Accolades
       </Typography>
       <List dense={true}>
-        {props.accolades?.map((accolade: ListItemInterface, i) => {
+        {props.accolades.map((accolade: ListItemInterface, i) => {
           const Accolade = () => {
             return (
               <>

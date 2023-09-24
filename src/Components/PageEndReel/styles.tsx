@@ -2,7 +2,7 @@ import { Box } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2/Grid2";
 import { styled } from "@mui/material/styles";
 
-export const ProductionReelTwo = styled(Grid)(({ theme }) => ({
+export const ProductionReelContainer = styled(Grid)(({ theme }) => ({
   background: theme.palette.white.main,
 
   [theme.breakpoints.up("lg")]: {
@@ -12,7 +12,7 @@ export const ProductionReelTwo = styled(Grid)(({ theme }) => ({
   },
 }));
 
-export const ReelTwoWrapper = styled(Box)(({ theme }) => ({
+export const ReelWrapper = styled(Box)(({ theme }) => ({
   height: "100%",
   width: "100%",
   overflow: "hidden",

@@ -4,7 +4,7 @@ import { styled } from "@mui/material/styles";
 export const AnimationContainer = styled("div")(({ theme }) => ({
   position: "fixed",
   height: "100%",
-  zIndex: 101,
+  zIndex: 999,
   width: "100%",
   margin: "0px auto",
   display: "flex",

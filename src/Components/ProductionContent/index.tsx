@@ -5,13 +5,15 @@ import Grid from "@mui/material/Unstable_Grid2/Grid2";
 import Poster from "./Poster";
 import InfoSection from "./InfoSection";
 import Bio from "./Bio";
-import Reel from "../Reel";
+import ImageReel from "../ImageReel";
 
 const ProductionContent = (props: ProductionItemInterface) => {
   return (
     <>
       <Bio Production={props.Production} />
-      {props.Production.image_reel && <Reel Production={props.Production} />}
+      {props.Production.image_reel && (
+        <ImageReel Production={props.Production} />
+      )}
       {(props.Production.accolades || props.Production.festivals) && (
         <Grid
           container

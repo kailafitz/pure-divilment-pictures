@@ -28,8 +28,7 @@ const scrollToProduction = () => {
 const Productions = () => {
   const theme = useTheme();
   const id = useParams<{ id: string }>();
-  const [hoverImage, setHoverImage] = useState("");
-  const [headerImage, setHeaderImage] = useState("");
+  const [heroImage, setHeroImage] = useState("");
   const [selectProduction, setSelectProduction] = useState(id.id ? id.id : "0");
 
   const white = theme.palette.white.main;
@@ -42,21 +41,17 @@ const Productions = () => {
     scrollToProduction();
 
     if (SelectedProduction.length > 0) {
-      setHeaderImage(SelectedProduction[0].production.coverImage);
+      setHeroImage(SelectedProduction[0].production.coverImage);
     }
   }, [selectProduction, SelectedProduction]);
 
-  // useEffect(() => {
-  //   if () {
-  //     setHeaderImage("");
-  //   }
-  // });
-
   // console.log("hoverImage", hoverImage);
-  console.log("headerImage", headerImage);
+  // console.log("headerImage", headerImage);
+  console.log("heroImage", heroImage);
+  console.log("selectProduction", selectProduction);
 
   let condition =
-    hoverImage === white ||
+    heroImage === white ||
     SelectedProduction[0]?.production.status === "In Development";
 
   return (
@@ -106,11 +101,11 @@ const Productions = () => {
                 onMouseOver={() => {
                   if (Number(selectProduction) !== index + 1)
                     setSelectProduction("");
-                  item.production.coverImage !== "Coming Soon"
-                    ? setHoverImage(item.production.coverImage)
-                    : setHoverImage(white);
+                  item.production.coverImage !== ""
+                    ? setHeroImage(item.production.coverImage)
+                    : setHeroImage(white);
                 }}
-                onMouseOut={() => setHoverImage("")}
+                onMouseOut={() => setHeroImage("")}
               >
                 <ReelItem
                   disabled={
@@ -129,7 +124,7 @@ const Productions = () => {
                   onClick={() => {
                     scrollToProduction();
                     setSelectProduction(item.production.id);
-                    setHoverImage(item.production.coverImage);
+                    setHeroImage(item.production.coverImage);
                   }}
                 >
                   {item.production.logo}
@@ -144,16 +139,15 @@ const Productions = () => {
           sx={{
             background:
               selectProduction.length !== 1
-                ? hoverImage === white
-                  ? hoverImage
-                  : `url("${hoverImage}") top center / contain`
-                : `url(${headerImage}) top center / contain`,
-            // flexGrow:
-            // height: { lg: "700px" },
+                ? heroImage === white
+                  ? heroImage
+                  : `url("${heroImage}") top center / contain`
+                : `url(${heroImage}) top center / contain`,
+            height: SelectedProduction.length > 0 ? { md: "700px" } : 0,
             marginTop:
-              hoverImage === "Coming Soon" ||
-              hoverImage === white ||
-              (headerImage === "Coming Soon" && hoverImage === "Coming Soon")
+              heroImage === "Coming Soon" ||
+              heroImage === white ||
+              (heroImage === "Coming Soon" && heroImage === "Coming Soon")
                 ? "unset"
                 : theme.spacing(-20),
           }}

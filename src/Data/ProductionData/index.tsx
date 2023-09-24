@@ -382,7 +382,7 @@ export const ProductionData = [
       type: "",
       status: "In Development",
       details: [],
-      coverImage: "Coming Soon",
+      coverImage: "",
     },
   },
   {
@@ -448,7 +448,7 @@ export const ProductionData = [
       type: "",
       status: "In Development",
       details: [],
-      coverImage: "Coming Soon",
+      coverImage: "",
     },
   },
 ];

@@ -103,7 +103,6 @@ const About = () => {
           <Typography
             color="white"
             variant="body1"
-            fontWeight={700}
             sx={{ fontStyle: "italic" }}
             mb={1}
             textAlign="justify"
@@ -145,7 +144,6 @@ const About = () => {
           <Typography
             color="white"
             variant="body1"
-            fontWeight={700}
             sx={{ fontStyle: "italic" }}
             mb={1}
           >

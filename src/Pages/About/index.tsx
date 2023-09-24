@@ -57,7 +57,7 @@ const About = () => {
           background: (theme) => theme.palette.white.main,
         }}
       >
-        <Grid md={8}>
+        <Grid xs={10} md={8}>
           <Typography
             variant="body1"
             textAlign="justify"
@@ -105,19 +105,13 @@ const About = () => {
             variant="body1"
             sx={{ fontStyle: "italic" }}
             mb={1}
-            textAlign="justify"
           >
             With each new project, we strive for the highest level of creativity
             and technical excellence. Our slate is carefully curated with select
             pieces that focus on compelling characters, new perspectives, and
             demonstrate international appeal.
           </Typography>
-          <Typography
-            color="white"
-            variant="body1"
-            textAlign="right"
-            fontWeight={700}
-          >
+          <Typography color="white" variant="body1" textAlign="right">
             - Claire Mooney
           </Typography>
         </Grid>
@@ -151,12 +145,7 @@ const About = () => {
             goal is to tell important stories. Stories that haven't been told on
             screen before. Work that entertains, captivates and inspires.
           </Typography>
-          <Typography
-            color="white"
-            variant="body1"
-            textAlign="right"
-            fontWeight={700}
-          >
+          <Typography color="white" variant="body1" textAlign="right">
             - Nell Hensey
           </Typography>
         </Grid>
@@ -171,7 +160,7 @@ const About = () => {
           background: (theme) => theme.palette.white.main,
         }}
       >
-        <Grid md={8}>
+        <Grid xs={10} md={8}>
           <Typography
             variant="body1"
             textAlign="justify"

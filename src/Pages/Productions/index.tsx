@@ -4,7 +4,6 @@ import Grid from "@mui/material/Unstable_Grid2";
 import {
   ProductionsReelContainer,
   Reel,
-  // ReelGridItem,
   ReelItem,
   ProductionHeroImage,
 } from "./styles";
@@ -44,11 +43,6 @@ const Productions = () => {
       setHeroImage(SelectedProduction[0].production.coverImage);
     }
   }, [selectProduction, SelectedProduction]);
-
-  // console.log("hoverImage", hoverImage);
-  // console.log("headerImage", headerImage);
-  console.log("heroImage", heroImage);
-  console.log("selectProduction", selectProduction);
 
   let condition =
     heroImage === white ||

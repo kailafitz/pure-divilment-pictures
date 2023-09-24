@@ -72,14 +72,14 @@ export const ProductionData = [
           fieldValue: "Claire Mooney",
         },
         {
-          fieldKey: "Writer(s)",
-          fieldValue:
-            "Nell Hensey, S.J. Delaney, Ferdia MacAonghusa, Daragh Goan, Caoimhe Murphy, Nell Hensey, Fiadh Melina Brosnan",
-        },
-        {
           fieldKey: "Starring",
           fieldValue:
             "Frank Blake, Venetia Bowe, Emmanuel Okoye, Mark Doherty, Hannah Mamalis, Jeanne Nicole Ní Áinle, Jess Kavanagh",
+        },
+        {
+          fieldKey: "Writers",
+          fieldValue:
+            "Nell Hensey, S.J. Delaney, Ferdia MacAonghusa, Daragh Goan, Caoimhe Murphy, Nell Hensey, Fiadh Melina Brosnan",
         },
         {
           fieldKey: "Supported By",
@@ -291,14 +291,6 @@ export const ProductionData = [
         {
           fieldKey: "Director of Photography",
           fieldValue: "Robin Whenary",
-        },
-        {
-          fieldKey: "Original Score",
-          fieldValue: "HK Ní Shioradáin",
-        },
-        {
-          fieldKey: "Editor",
-          fieldValue: "John Cutler",
         },
         {
           fieldKey: "Broadcaster",

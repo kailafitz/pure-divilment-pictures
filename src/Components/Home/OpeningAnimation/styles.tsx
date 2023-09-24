@@ -7,7 +7,7 @@ export const AnimationContainer = styled("div")(({ theme }) => ({
   zIndex: 999,
   width: "100%",
   margin: "0px auto",
-  display: "flex",
+  display: "none",
   justifyContent: "center",
   alignItems: "center",
   background: theme.palette.primary.main,

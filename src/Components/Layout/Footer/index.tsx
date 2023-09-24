@@ -19,9 +19,9 @@ const partners = [
   "rte",
   "arts-council",
   "tiff",
+  "ifl",
   "diff",
   "gff",
-  "ifl",
   "safe-to-create",
 ];
 

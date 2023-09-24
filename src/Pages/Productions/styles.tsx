@@ -10,7 +10,7 @@ export const ProductionsReelContainer = styled(Box)(({ theme }) => ({
   minHeight: "unset",
   [theme.breakpoints.up("md")]: {
     paddingBottom: "0",
-    minHeight: "calc(100vh - 97.5px)",
+    minHeight: "calc(100vh - (96px + 148px))",
   },
   [theme.breakpoints.up("lg")]: {
     height: "100%",

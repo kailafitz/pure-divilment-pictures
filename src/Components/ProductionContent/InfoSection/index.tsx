@@ -13,8 +13,8 @@ const InfoSection = (props: InfoSectionProps) => {
       <Typography
         variant="body2"
         sx={{
-          fontWeight: 500,
-          mb: 3,
+          fontWeight: 700,
+          mb: 1.5,
           textTransform: "uppercase",
         }}
       >

@@ -13,12 +13,6 @@ import { Box, Container, Typography, useTheme } from "@mui/material";
 import OpeningAnimation from "./Components/Home/OpeningAnimation";
 
 function App() {
-  // const [disabled, setDisabled] = useState(false);
-
-  // setTimeout(() => {
-  //   setDisabled(true);
-  // }, 5500);
-
   const location = useLocation();
   const current = location.pathname;
 
@@ -27,8 +21,12 @@ function App() {
   return (
     <>
       {current.includes("test") && <Navbar />}
-      {/* {!disabled && <OpeningAnimation />} */}
-      <Container maxWidth="xl" disableGutters={true}>
+      {/* <OpeningAnimation /> */}
+      <Container
+        maxWidth="xl"
+        disableGutters={true}
+        sx={{ display: "flex", flexDirection: "column", flexGrow: 1 }}
+      >
         <Routes>
           <Route path="/test" element={<Home />} />
           <Route path="/test/about" element={<About />} />

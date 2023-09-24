@@ -137,6 +137,11 @@ body {
     }
 }
 
+// Show animation
+.start .opening-animation {
+    display: flex;
+}
+
 // Home page -> Opening animation text style
 .text-1,
 .text-3,

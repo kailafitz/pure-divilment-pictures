@@ -3,7 +3,7 @@ import { AnimationContainer, TextWrapper, AnimationText } from "./styles";
 
 const OpeningAnimation = () => {
   return (
-    <AnimationContainer>
+    <AnimationContainer className="opening-animation">
       <TextWrapper>
         {Array(11)
           .fill(null)

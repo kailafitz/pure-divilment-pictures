@@ -13,18 +13,15 @@ export const CreativeMemberCardContainer = styled(Box)(({ theme }) => ({
       transition: "opacity .8s ease",
     },
     "&:hover": {
-      backgroundColor: "transparent",
+      background: "transparent",
       img: {
-        filter: "grayscale(100%)",
+        filter: "grayscale(1) saturate(0)",
         cursor: "pointer",
+        transition: "all .7s ease",
       },
       "p, svg": {
         opacity: 1,
         transition: "opacity .8s ease",
-      },
-      ".overlay": {
-        width: "100%",
-        transition: "width .8s ease",
       },
     },
   },
@@ -46,4 +43,5 @@ export const CreativeImage = styled("img")(({ theme }) => ({
   display: "block",
   marginBottom: `${theme.spacing(1)}`,
   transition: "all .7s ease",
+  filter: "saturate(1.15) greyscale(0)",
 }));

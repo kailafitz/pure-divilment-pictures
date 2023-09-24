@@ -1,8 +1,8 @@
 import React from "react";
-import { Container, Link, Stack, Typography, useTheme } from "@mui/material";
+import { Link, Stack, Typography, useTheme } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2"; // Grid version 2
 import { Helmet } from "react-helmet";
-import { StyledBackgroundImage, StyledReelImage } from "./styles";
+import { FixedImage } from "./styles";
 
 const ReachOut = () => {
   const theme = useTheme();
@@ -27,27 +27,24 @@ const ReachOut = () => {
           }
         />
       </Helmet>
-      {/* <StyledBackgroundImage></StyledBackgroundImage> */}
-      <Container
-        sx={{
-          height: "100%",
-          display: "flex",
-          justifyContent: "center",
-          flexDirection: "column",
-        }}
+
+      <FixedImage></FixedImage>
+      <Stack
+        direction="column"
+        justifyContent={{ xs: "center", lg: "flex-end" }}
+        sx={{ minHeight: { xs: "100%", lg: "calc(100vh - 96px)" } }}
       >
-        <Grid container mb="5">
-          <Grid
-            xs={8}
-            sm={6}
-            sx={{
-              p: { xs: 2 },
-              backgroundColor: theme.palette.white.main,
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-            }}
-          >
+        <Grid
+          container
+          justifyContent="center"
+          sx={{
+            backgroundColor: theme.palette.white.main,
+            width: "100%",
+            py: { xs: 2, lg: 4 },
+          }}
+          rowGap={{ xs: 4, lg: 0 }}
+        >
+          <Grid xs={10} sm={7} lg={4}>
             <Typography
               variant="h6"
               sx={{
@@ -69,11 +66,13 @@ const ReachOut = () => {
             </Typography>
             <Typography
               variant="body1"
-              sx={{ fontStyle: "italic", fontSize: "13px", mb: 8 }}
+              sx={{ fontStyle: "italic", fontSize: "13px" }}
             >
               Please note that we cannot accept unsolicited scripts or
               materials.
             </Typography>
+          </Grid>
+          <Grid xs={10} sm={7} lg={2} xl={1}>
             <Typography
               variant="h6"
               sx={{
@@ -104,11 +103,8 @@ const ReachOut = () => {
               Instagram
             </Link>
           </Grid>
-          <Grid xs={10} md={6} sx={{ img: { width: "100%" } }}>
-            <img src={"/reach/1.png"} width={700} />
-          </Grid>
         </Grid>
-      </Container>
+      </Stack>
     </>
   );
 };

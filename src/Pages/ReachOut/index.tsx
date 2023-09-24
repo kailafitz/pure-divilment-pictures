@@ -2,7 +2,7 @@ import React from "react";
 import { Link, Stack, Typography, useTheme } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2"; // Grid version 2
 import { Helmet } from "react-helmet";
-import { FixedImage } from "./styles";
+import { ReachOutHero } from "./styles";
 
 const ReachOut = () => {
   const theme = useTheme();
@@ -28,12 +28,7 @@ const ReachOut = () => {
         />
       </Helmet>
 
-      <FixedImage></FixedImage>
-      <Stack
-        direction="column"
-        justifyContent={{ xs: "center", lg: "flex-end" }}
-        sx={{ minHeight: { xs: "100%", lg: "calc(100vh - 96px)" } }}
-      >
+      <Stack direction="column">
         <Grid
           container
           justifyContent="center"
@@ -44,7 +39,7 @@ const ReachOut = () => {
           }}
           rowGap={{ xs: 4, lg: 0 }}
         >
-          <Grid xs={10} sm={7} lg={4}>
+          <Grid xs={10} sm={7} md={4}>
             <Typography
               variant="h6"
               sx={{
@@ -72,7 +67,7 @@ const ReachOut = () => {
               materials.
             </Typography>
           </Grid>
-          <Grid xs={10} sm={7} lg={2} xl={1}>
+          <Grid xs={10} sm={7} md={2} xl={1}>
             <Typography
               variant="h6"
               sx={{
@@ -104,6 +99,9 @@ const ReachOut = () => {
             </Link>
           </Grid>
         </Grid>
+        <picture>
+          <ReachOutHero src="/reach/1.png" />
+        </picture>
       </Stack>
     </>
   );

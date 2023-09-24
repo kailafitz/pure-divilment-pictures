@@ -27,7 +27,7 @@ export const Credits = (props: CreditsInterface) => {
           };
 
           return (
-            <ListItem key={i} sx={{ py: 1, pl: 0 }}>
+            <ListItem key={i} sx={{ py: 1, pl: 3 }}>
               <ListItemText primary={<Credit />} />
             </ListItem>
           );

@@ -8,7 +8,7 @@ export interface ListItemInterfaces {
 export const Accolades = (props: ListItemInterfaces) => {
   return (
     <>
-      <Typography textAlign="right" variant="h6">
+      <Typography textAlign="left" variant="h6">
         Accolades
       </Typography>
       <List dense={true}>
@@ -32,12 +32,13 @@ export const Accolades = (props: ListItemInterfaces) => {
           };
 
           return (
-            <ListItem key={i} sx={{ py: 1, pr: 0, textAlign: "right" }}>
+            <ListItem key={i} sx={{ py: 1, pl: 3, textAlign: "left" }}>
               <ListItemText primary={<Accolade />} />
             </ListItem>
           );
         })}
       </List>
+      <br />
     </>
   );
 };

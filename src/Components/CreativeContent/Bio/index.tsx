@@ -16,6 +16,7 @@ export const Bio = (props: BioProps) => {
       {props.bio.map((paragraph, i) => {
         return <BioTypography key={i}>{paragraph}</BioTypography>;
       })}
+      <br />
     </>
   );
 };

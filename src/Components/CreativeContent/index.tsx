@@ -48,10 +48,17 @@ const CreativeContent = (props: CreativeInterface) => {
             role={props.Creative.role}
             bio={props.Creative.bio}
           />
+          {props.Creative.accolades.length > 0 && (
+            <Accolades accolades={props.Creative.accolades} />
+          )}
+
+          {props.Creative.credits.length > 0 && (
+            <Credits credits={props.Creative.credits} />
+          )}
         </Grid>
       </Grid>
 
-      {(props.Creative.accolades.length > 0 ||
+      {/* {(props.Creative.accolades.length > 0 ||
         props.Creative.credits.length > 0) && (
         <Grid container justifyContent="center" columnGap={5} pb={5}>
           <Grid xs={10} md={5}>
@@ -65,7 +72,7 @@ const CreativeContent = (props: CreativeInterface) => {
             )}
           </Grid>
         </Grid>
-      )}
+      )} */}
 
       {/* <Grid
         container
@@ -107,7 +114,7 @@ const CreativeContent = (props: CreativeInterface) => {
           container
           justifyContent="center"
           sx={{
-            p: (theme) => theme.spacing(7, 0, 0, 4),
+            p: (theme) => theme.spacing(7, 0, 4, 0),
             display: "flex",
             background: (theme) => theme.palette.primary.main,
           }}

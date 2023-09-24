@@ -1,25 +1,45 @@
 import React from "react";
-import { Button } from "@mui/material";
+import { Box, Button } from "@mui/material";
 import { ProfileImage } from "./styles";
 import { CreativeInterface } from "../../Data/CreativesData";
 import Grid from "@mui/material/Unstable_Grid2/Grid2";
 import KeyboardDoubleArrowLeftIcon from "@mui/icons-material/KeyboardDoubleArrowLeft";
+import KeyboardDoubleArrowRightIcon from "@mui/icons-material/KeyboardDoubleArrowRight";
 import { Bio } from "./Bio";
 import { Accolades } from "./Accolades";
 import { Credits } from "./Credits";
+import { CreativesData } from "../../Data/CreativesData";
 
 const CreativeContent = (props: CreativeInterface) => {
   return (
     <>
-      <Grid container pl={{ xs: 2, md: 7 }} mb={{ xs: 3, md: 0 }}>
+      <Grid
+        container
+        px={{ xs: 2, md: 7 }}
+        mb={{ xs: 3, md: 0 }}
+        justifyContent="space-between"
+      >
         <Button
-          href="/test/the-creatives"
+          href={`/test/the-creatives/creative/${Number(props.Creative.id) - 1}`}
           variant="contained"
           color="dark"
           sx={{ borderRadius: 0 }}
           startIcon={<KeyboardDoubleArrowLeftIcon />}
+          disabled={Number(props.Creative.id) < 2 ? true : false}
         >
-          Back
+          Previous
+        </Button>
+        <Button
+          href={`/test/the-creatives/creative/${Number(props.Creative.id) + 1}`}
+          variant="contained"
+          color="dark"
+          sx={{ borderRadius: 0, marginLeft: 3 }}
+          endIcon={<KeyboardDoubleArrowRightIcon />}
+          disabled={
+            Number(props.Creative.id) === CreativesData.length ? true : false
+          }
+        >
+          Next
         </Button>
       </Grid>
       <Grid

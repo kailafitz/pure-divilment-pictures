@@ -2,7 +2,7 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import { Box, Button, Stack, Typography } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2/Grid2";
-import { StyledAboutImage } from "./styles";
+import { AboutImage } from "./styles";
 import PageEndReel from "../../Components/PageEndReel";
 
 const About = () => {
@@ -26,16 +26,15 @@ const About = () => {
         />
       </Helmet>
 
-      <StyledAboutImage></StyledAboutImage>
+      <AboutImage src="/about/1.png" />
 
       <Typography
         variant="h4"
         sx={{
-          marginTop: { xs: "300px", sm: "500px", lg: "700px" },
           background: (theme) => theme.palette.white.main,
           fontWeight: 400,
           textAlign: "center",
-          padding: (theme) => theme.spacing(3, 0),
+          padding: (theme) => theme.spacing(6, 0),
           textTransform: "unset",
           span: {
             fontStyle: "italic",
@@ -95,7 +94,7 @@ const About = () => {
         <Grid
           xs={12}
           md={8}
-          p={5}
+          p={3}
           sx={{
             background: (theme) => theme.palette.primary.main,
             color: (theme) => theme.palette.white.main,
@@ -104,9 +103,9 @@ const About = () => {
           <Typography
             color="white"
             variant="body1"
-            fontWeight={100}
+            fontWeight={700}
             sx={{ fontStyle: "italic" }}
-            mb={3}
+            mb={1}
             textAlign="justify"
           >
             With each new project, we strive for the highest level of creativity
@@ -118,7 +117,7 @@ const About = () => {
             color="white"
             variant="body1"
             textAlign="right"
-            fontWeight={100}
+            fontWeight={700}
           >
             - Claire Mooney
           </Typography>
@@ -137,7 +136,7 @@ const About = () => {
         <Grid
           xs={12}
           md={8}
-          p={5}
+          p={3}
           sx={{
             background: (theme) => theme.palette.primary.main,
             color: (theme) => theme.palette.white.main,
@@ -146,9 +145,9 @@ const About = () => {
           <Typography
             color="white"
             variant="body1"
-            fontWeight={100}
+            fontWeight={700}
             sx={{ fontStyle: "italic" }}
-            mb={3}
+            mb={1}
           >
             From literary screen adaptations to original character pieces, our
             goal is to tell important stories. Stories that haven't been told on
@@ -158,7 +157,7 @@ const About = () => {
             color="white"
             variant="body1"
             textAlign="right"
-            fontWeight={100}
+            fontWeight={700}
           >
             - Nell Hensey
           </Typography>

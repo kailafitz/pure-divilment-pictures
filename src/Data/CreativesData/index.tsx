@@ -129,7 +129,7 @@ export const CreativesData = [
         "Brigid Leahy is a Vietnamese-Irish-American actor, writer and producer. She holds a B.A. in History from University of California, Los Angeles, where she was the recipient of the Mary Ritter Beard Writing Award.  She also holds an M.Phil in Public History and Cultural Heritage from Trinity College Dublin.",
         "An actor herself, Brigid’s television & film credits include Silver (Amazon Studios), Disney’s Disenchanted, As Luck Would Have It (Hallmark Channel), Smother (Treasure Entertainment/BBC Studios), Avenue 5 (HBO), Familiar (Fremantle), and Can’t Cope Won’t Cope (Deadpan Pictures). She is also the voice of ‘Seigiri’ in Nintendo’s Xenoblade Chronicles 3. ",
         "As a writer, Brigid was the recipient of the 2022 Virgin Media Discovers Award. So co-wrote and co-produced the award winning short film Good Chips - the first piece of mainstream Irish cinema to depict a majority Asian cast. Brigid is an alumni of Dublin Fringe Festival’s Weft Studio, an artist collective and creative initiative for artists of colour.",
-        "Brigid is excited by diverse, niche stories that bring fresh new perspectives to the screen. She looks forward to working in script development and discovering exciting acting and creative talent.",
+        "Brigid is excited by diverse, niche stories that bring fresh new perspectives to the screen. She looks forward to developing more stories as well as discovering exciting acting and creative talent.",
       ],
       credits: [],
       accolades: [],

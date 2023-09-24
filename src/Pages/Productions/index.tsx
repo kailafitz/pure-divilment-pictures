@@ -6,7 +6,7 @@ import {
   Reel,
   // ReelGridItem,
   ReelItem,
-  ProductionCoverImage,
+  ProductionHeroImage,
 } from "./styles";
 import { ProductionData } from "../../Data/ProductionData";
 import ProductionContentLayout from "../../Components/ProductionContent";
@@ -40,19 +40,19 @@ const Productions = () => {
 
   useEffect(() => {
     scrollToProduction();
+
     if (SelectedProduction.length > 0) {
       setHeaderImage(SelectedProduction[0].production.coverImage);
     }
-    return () => {};
   }, [selectProduction, SelectedProduction]);
 
   // useEffect(() => {
-  //   if (hoverImage !== headerImage) {
+  //   if () {
   //     setHeaderImage("");
   //   }
   // });
 
-  console.log("hoverImage", hoverImage);
+  // console.log("hoverImage", hoverImage);
   console.log("headerImage", headerImage);
 
   let condition =
@@ -79,6 +79,7 @@ const Productions = () => {
         />
       </Helmet>
       <Loader title="Productions" />
+
       <ProductionsReelContainer
         id="all-productions"
         sx={{
@@ -112,11 +113,19 @@ const Productions = () => {
                 onMouseOut={() => setHoverImage("")}
               >
                 <ReelItem
+                  disabled={
+                    item.production.status === "In Development" ? true : false
+                  }
                   className={
                     Number(selectProduction) === index + 1
                       ? "active-production"
                       : ""
                   }
+                  sx={{
+                    "&.Mui-disabled": {
+                      color: white,
+                    },
+                  }}
                   onClick={() => {
                     scrollToProduction();
                     setSelectProduction(item.production.id);
@@ -129,8 +138,9 @@ const Productions = () => {
             );
           })}
         </Reel>
+
         {/* Hover image container */}
-        <ProductionCoverImage
+        <ProductionHeroImage
           sx={{
             background:
               selectProduction.length !== 1
@@ -138,10 +148,14 @@ const Productions = () => {
                   ? hoverImage
                   : `url("${hoverImage}") top center / contain`
                 : `url(${headerImage}) top center / contain`,
-            // marginTop:
-            //   headerImage !== "Coming Soon" || hoverImage === "#f9f9f9"
-            //     ? theme.spacing(-20)
-            //     : 0,
+            // flexGrow:
+            // height: { lg: "700px" },
+            marginTop:
+              hoverImage === "Coming Soon" ||
+              hoverImage === white ||
+              (headerImage === "Coming Soon" && hoverImage === "Coming Soon")
+                ? "unset"
+                : theme.spacing(-20),
           }}
         >
           {condition && (
@@ -149,7 +163,7 @@ const Productions = () => {
               Coming Soon
             </Typography>
           )}
-        </ProductionCoverImage>
+        </ProductionHeroImage>
       </ProductionsReelContainer>
 
       {/* Show selected production */}

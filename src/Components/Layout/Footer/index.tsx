@@ -96,7 +96,7 @@ const Footer = () => {
               color="common.white"
               sx={{ textTransform: "uppercase" }}
               target="_blank"
-              href="https://www.instagram.com/fizzydesigns/"
+              href="https://www.instagram.com/puredivilmentpictures/"
             >
               Instagram
             </Link>

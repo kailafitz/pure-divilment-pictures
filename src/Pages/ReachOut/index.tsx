@@ -2,7 +2,7 @@ import React from "react";
 import { Link, Stack, Typography, useTheme } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2"; // Grid version 2
 import { Helmet } from "react-helmet";
-import { ReachOutHero } from "./styles";
+import PageEndReel from "../../Components/PageEndReel";
 
 const ReachOut = () => {
   const theme = useTheme();
@@ -28,7 +28,7 @@ const ReachOut = () => {
         />
       </Helmet>
 
-      <Stack direction="column">
+      <Stack direction="column" flexGrow={1} justifyContent="center">
         <Grid
           container
           justifyContent="center"
@@ -45,19 +45,21 @@ const ReachOut = () => {
               sx={{
                 textTransform: "uppercase",
                 fontWeight: 500,
-                mb: 3,
+                mb: 1.5,
               }}
             >
-              Contact Us
+              Contact
             </Typography>
             <Typography
+              component={Link}
+              href="mailto:info@puredivilmentpictures.com"
               variant="body2"
               sx={{
-                mb: (theme) => theme.spacing(1),
+                display: "block",
+                mb: (theme) => theme.spacing(0.5),
               }}
             >
-              {/* <span style={{ fontWeight: 500 }}>EMAIL:</span>{" "} */}
-              info@puredivilment.ie
+              info@puredivilmentpictures.ie
             </Typography>
             <Typography
               variant="body1"
@@ -73,7 +75,7 @@ const ReachOut = () => {
               sx={{
                 textTransform: "uppercase",
                 fontWeight: 500,
-                mb: 3,
+                mb: 1.5,
               }}
             >
               Follow Us
@@ -84,7 +86,7 @@ const ReachOut = () => {
               variant="body2"
               sx={{
                 fontWeight: 500,
-                // mb: (theme) => theme.spacing(1),
+                mb: (theme) => theme.spacing(0.5),
               }}
             >
               IMDB
@@ -99,10 +101,15 @@ const ReachOut = () => {
             </Link>
           </Grid>
         </Grid>
-        <picture>
-          <ReachOutHero src="/reach/1.png" />
-        </picture>
       </Stack>
+      <PageEndReel
+        images={[
+          "/reach/1.png",
+          "/reach/2.png",
+          "/reach/3.png",
+          "/reach/4.png",
+        ]}
+      />
     </>
   );
 };

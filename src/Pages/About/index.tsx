@@ -42,7 +42,7 @@ const About = () => {
           },
         }}
       >
-        <div>We Tell Stories</div>
+        <div style={{ fontSize: "3.4rem" }}>We Tell Stories</div>
         <div>
           out of <span>pure divilment</span>
         </div>
@@ -93,11 +93,13 @@ const About = () => {
       >
         <Grid
           xs={12}
-          md={8}
+          md={9}
           p={3}
+          pr={{ lg: "5rem" }}
           sx={{
             background: (theme) => theme.palette.primary.main,
             color: (theme) => theme.palette.white.main,
+            clipPath: { lg: "polygon(0 0, 100% 0, 90% 100%, 0% 100%)" },
           }}
         >
           <Typography
@@ -111,7 +113,7 @@ const About = () => {
             pieces that focus on compelling characters, new perspectives, and
             demonstrate international appeal.
           </Typography>
-          <Typography color="white" variant="body1" textAlign="right">
+          <Typography mr={5} color="white" variant="body1" textAlign="right">
             - Claire Mooney
           </Typography>
         </Grid>
@@ -128,11 +130,13 @@ const About = () => {
       >
         <Grid
           xs={12}
-          md={8}
+          md={9}
           p={3}
+          pl={{ lg: "8rem" }}
           sx={{
             background: (theme) => theme.palette.primary.main,
             color: (theme) => theme.palette.white.main,
+            clipPath: { lg: "polygon(10% 0, 100% 0, 100% 100%, 0 100%)" },
           }}
         >
           <Typography
@@ -145,7 +149,7 @@ const About = () => {
             goal is to tell important stories. Stories that haven't been told on
             screen before. Work that entertains, captivates and inspires.
           </Typography>
-          <Typography color="white" variant="body1" textAlign="right">
+          <Typography mr={5} color="white" variant="body1" textAlign="right">
             - Nell Hensey
           </Typography>
         </Grid>

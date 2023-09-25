@@ -16,7 +16,7 @@ const SlideText = (props: textProps) => {
         color: (theme) => theme.palette.white.main,
         svg: {
           maxWidth: "70%",
-          margin: (theme) => theme.spacing(0, "auto", 8, "auto"),
+          margin: (theme) => theme.spacing(0, "auto", 5, "auto"),
         },
       }}
     >
@@ -27,7 +27,7 @@ const SlideText = (props: textProps) => {
         sx={{
           textTransform: "uppercase",
           fontWeight: 700,
-          mb: 2,
+          mb: 2.5,
           letterSpacing: "2px",
         }}
       >

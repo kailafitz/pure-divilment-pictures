@@ -3,7 +3,7 @@ import Grid from "@mui/material/Unstable_Grid2/Grid2";
 import { styled } from "@mui/material/styles";
 
 export const ProductionImageReel = styled(Grid)(({ theme }) => ({
-  marginBottom: theme.spacing(12),
+  marginBottom: theme.spacing(9),
   background: theme.palette.white.main,
 
   [theme.breakpoints.up("md")]: {

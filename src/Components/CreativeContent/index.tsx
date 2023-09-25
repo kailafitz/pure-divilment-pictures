@@ -89,7 +89,7 @@ const CreativeContent = (props: CreativeInterface) => {
           container
           justifyContent="center"
           sx={{
-            p: (theme) => theme.spacing(7, 0, 4, 0),
+            pt: 5,
             display: "flex",
             background: (theme) => theme.palette.primary.main,
           }}

@@ -135,8 +135,8 @@ const Productions = () => {
               selectProduction.length !== 1
                 ? heroImage === white
                   ? heroImage
-                  : `url("${heroImage}") top center / contain`
-                : `url(${heroImage}) top center / contain`,
+                  : `url("${heroImage}") top center / cover`
+                : `url(${heroImage}) top center / cover`,
             height: SelectedProduction.length > 0 ? { md: "700px" } : 0,
             marginTop:
               heroImage === "Coming Soon" ||

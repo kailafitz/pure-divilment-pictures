@@ -69,7 +69,6 @@ export const ProductionHeroImage = styled(Box)(({ theme }) => ({
     // clipPath: "polygon(0 0, 100% 21%, 100% 100%, 0% 100%)",
     width: "100%",
     // backgroundPosition: "top center",
-    backgroundSize: "cover",
     // backgroundPosition: "100% 100%",
     backgroundRepeat: "no-repeat",
     display: "flex",

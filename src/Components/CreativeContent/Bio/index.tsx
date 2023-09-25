@@ -1,10 +1,11 @@
 import { Typography } from "@mui/material";
 import { BioTypography } from "./styles";
+import { ReactNode } from "react";
 
 type BioProps = {
   name: string;
   role: string;
-  bio: string[];
+  bio: ReactNode[];
 };
 
 export const Bio = (props: BioProps) => {

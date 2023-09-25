@@ -39,7 +39,7 @@ const ProductionContent = (props: ProductionItemInterface) => {
               sx={{
                 display: "flex",
                 flexDirection: "column",
-                "> div:not(:last-child)": { mb: 3 },
+                "> div:not(:last-child)": { mb: 5 },
               }}
             >
               <InfoSection title="Accolades" alignment="left">
@@ -78,6 +78,55 @@ const ProductionContent = (props: ProductionItemInterface) => {
           )}
         </Grid>
       )}
+
+      {props.Production.pressItems &&
+        props.Production.pressItems.length > 0 && (
+          <Grid
+            container
+            columnGap={5}
+            rowSpacing={{ xs: 8, lg: 0 }}
+            justifyContent="center"
+            mb={6}
+          >
+            <Grid
+              xs={11}
+              md={5}
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+                "> div:not(:last-child)": { mb: 5 },
+              }}
+            >
+              <InfoSection title="Press" alignment="center">
+                {props.Production.pressItems?.map((press, i) => {
+                  return (
+                    <Box key={i}>
+                      <Typography
+                        variant="body1"
+                        sx={{
+                          display: { xs: "block", lg: "inline" },
+                          fontWeight: { xs: 500, lg: 400 },
+                        }}
+                      >
+                        {press.fieldKey}
+                      </Typography>
+                      <Typography
+                        variant="body1"
+                        sx={{
+                          display: { xs: "block", lg: "inline" },
+                          mb: { xs: 2, lg: 0 },
+                          pl: { lg: 0.5 },
+                        }}
+                      >
+                        {press.fieldValue}
+                      </Typography>
+                    </Box>
+                  );
+                })}
+              </InfoSection>
+            </Grid>
+          </Grid>
+        )}
       <Poster Production={props.Production} />
     </>
   );

@@ -27,6 +27,7 @@ export interface ProductionItemInterface {
     type?: string;
     status?: string;
     pressReview?: string;
+    pressItems?: ProductionDetails[];
     details: ProductionDetails[];
     primary_still_src?: string;
     secondary_still_src?: string;
@@ -79,7 +80,11 @@ export const ProductionData = [
         {
           fieldKey: "Writers",
           fieldValue:
-            "Nell Hensey, S.J. Delaney, Ferdia MacAonghusa, Daragh Goan, Caoimhe Murphy, Nell Hensey, Fiadh Melina Brosnan",
+            "Nell Hensey, S.J. Delaney, Ferdia MacAonghusa, Daragh Goan, Caoimhe Murphy, Fiadh Melina Brosnan",
+        },
+        {
+          fieldKey: "Director of Photography",
+          fieldValue: "Ronan Cooper",
         },
         {
           fieldKey: "Supported By",
@@ -89,12 +94,12 @@ export const ProductionData = [
       primary_still_src: "/productions/baths/stills/1.png",
       secondary_still_src: "/productions/baths/stills/2.png",
       image_reel: [
-        "/productions/baths/stills/1.png",
-        "/productions/baths/stills/2.png",
-        "/productions/baths/stills/1.png",
-        "/productions/baths/stills/2.png",
+        "/productions/baths/stills/1.jpg",
+        "/productions/baths/stills/2.jpg",
+        "/productions/baths/stills/3.jpg",
+        "/productions/baths/stills/4.jpg",
       ],
-      coverImage: "/productions/baths/cover-image.png",
+      coverImage: "/productions/baths/cover-image.jpeg",
       festivals: [
         "Galway Film Fleadh",
         "Dublin International Film Festival",
@@ -105,6 +110,7 @@ export const ProductionData = [
         "Kerry Film Festival",
         "St. Brigid's Film Festival London",
         "First Cut! Youth Film Festival",
+        "Fragments Festival London",
       ],
       accolades: [
         {
@@ -126,7 +132,7 @@ export const ProductionData = [
   {
     production: {
       id: "2",
-      title: "Falling for the Life of Alex Whelan",
+      title: "Falling For The Life Of Alex Whelan",
       homeSlideText: "Coming Soon",
       logo: (
         <svg
@@ -258,6 +264,7 @@ export const ProductionData = [
       status: "Coming Soon on RTE",
       pressReview:
         "Based on the short story by Yan Ge, Falling For The Life Of Alex Whelan blurs the lines between reality and fiction. Exploring loss, love and the rareness of human connection.",
+      pressItems: [{ fieldKey: "Coming Soon", fieldValue: "" }],
       details: [
         {
           fieldKey: "Director",
@@ -301,14 +308,14 @@ export const ProductionData = [
           fieldValue: "Screen Ireland",
         },
       ],
-      coverImage: "/productions/fftloaw/stills/2.jpg",
+      coverImage: "/productions/fftloaw/stills/1.jpg",
       image_reel: [
         "/productions/fftloaw/stills/3.jpeg",
         "/productions/fftloaw/stills/4.jpeg",
         "/productions/fftloaw/stills/5.jpeg",
         "/productions/fftloaw/stills/6.png",
       ],
-      poster: "/productions/fftloaw/stills/1.jpg",
+      poster: "/productions/fftloaw/stills/2.jpg",
     },
   },
   {

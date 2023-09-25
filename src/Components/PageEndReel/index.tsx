@@ -22,11 +22,11 @@ const PageEndReel = (props: PageEndReelProps) => {
               sx={{
                 py: { lg: 0 },
                 position: "relative",
-                height: { xs: 350, md: "inherit" },
+                // height: { xs: 350, md: "inherit" },
+                height: { xs: 350 },
               }}
               xs={12}
               sm={3}
-              md={3}
             >
               <ReelWrapper
                 sx={{

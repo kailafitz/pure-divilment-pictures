@@ -48,7 +48,7 @@ const ReachOut = () => {
                 mb: 3,
               }}
             >
-              Get in Touch
+              Contact Us
             </Typography>
             <Typography
               variant="body2"

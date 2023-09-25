@@ -36,14 +36,14 @@ export const CreativesData = [
       credits: [
         {
           title: "What Feminism Is",
-          year: "(2023 - TBC)",
+          year: "(2023)",
           heading: " | Short Film | Producer",
           affiliates: "Arts Council of Ireland",
         },
         {
-          title: "Falling For Alex Whelan",
+          title: "Falling for the Life of Alex Whelan",
           year: "(2023)",
-          heading: " | Half Hour TV Drama | Producer",
+          heading: " | TV Drama Special | Producer",
           affiliates: "RTÉ and Screen Ireland",
         },
         {
@@ -76,9 +76,9 @@ export const CreativesData = [
       ],
       credits: [
         {
-          title: "Falling For Alex Whelan",
+          title: "Falling for the Life of Alex Whelan",
           year: "(2023)",
-          heading: " | Half Hour TV Drama | Writer & Director",
+          heading: " | TV Drama Special | Writer & Director",
           affiliates: "RTÉ and Screen Ireland",
         },
         {
@@ -142,8 +142,10 @@ export const CreativesData = [
       role: "Associate Producer",
       profile_image: "lily",
       bio: [
-        "Emma graduated from IADT Film and TV Production BA majoring in Direction. Her short film, Starry Night won Indie Cork's Best Short film award and was shortlisted for the Young Director Award at Cannes. She won a rising star award at Irish Screen America.",
-        "She directed Buymie's 'We Shop Like You do' TV Commercial early last year and has made a number of music videos for artists like Lucy McWilliams, Junior Brother and Nixer. She is excited to create honest depictions of lost or directionless female characters going through the struggles of modern day life.",
+        "Lily Sweeney is a graduate of Irish music and dance from the University of Limerick. Lily entered the world of film through her knowledge of Irish music and culture when asked to work on feature film “Sprachlos in Irland” (2020) for Ard 1 in her home county, Clare.",
+        "Throughout her 3 years working in production, Lily has worked on a number of feature films, shorts, and TV series including Smother (Treasure Entertainment/BBC Studios), Fate the Winx Saga (Archery Pictures/Netflix) and As Luck Would Have It (Hallmark Channel). Lily has gained wide experience working on a variety of roles on high end productions for the likes of Universal Pictures, Netflix and Apple TV, allowing her to meet producers and directors from all over the world.",
+        "Lily has worked with Pure Divilment on both Baths and Falling For The Life Of Alex Whelan, as associate producer and line producer. She is currently based between Ireland and Vancouver, Canada.",
+        "Aspiring to further her career as a producer, Lily’s work is underpinned by her Irish heritage and love of storytelling, culture and the power of music in visual narratives. She also has a passion for automobiles and is always on the hunt for a script with a good car chase! ",
       ],
       credits: [],
       accolades: [],

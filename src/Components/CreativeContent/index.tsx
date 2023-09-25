@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Button } from "@mui/material";
+import { Button } from "@mui/material";
 import { ProfileImage } from "./styles";
 import { CreativeInterface } from "../../Data/CreativesData";
 import Grid from "@mui/material/Unstable_Grid2/Grid2";
@@ -23,9 +23,11 @@ const CreativeContent = (props: CreativeInterface) => {
           href={`/test/the-creatives/creative/${Number(props.Creative.id) - 1}`}
           variant="contained"
           color="dark"
-          sx={{ borderRadius: 0 }}
+          sx={{
+            borderRadius: 0,
+            visibility: Number(props.Creative.id) < 2 ? "hidden" : "visible",
+          }}
           startIcon={<KeyboardDoubleArrowLeftIcon />}
-          disabled={Number(props.Creative.id) < 2 ? true : false}
         >
           Previous
         </Button>
@@ -33,15 +35,19 @@ const CreativeContent = (props: CreativeInterface) => {
           href={`/test/the-creatives/creative/${Number(props.Creative.id) + 1}`}
           variant="contained"
           color="dark"
-          sx={{ borderRadius: 0, marginLeft: 3 }}
+          sx={{
+            borderRadius: 0,
+            visibility:
+              Number(props.Creative.id) === CreativesData.length
+                ? "hidden"
+                : "visible",
+          }}
           endIcon={<KeyboardDoubleArrowRightIcon />}
-          disabled={
-            Number(props.Creative.id) === CreativesData.length ? true : false
-          }
         >
           Next
         </Button>
       </Grid>
+
       <Grid
         container
         justifyContent="center"
@@ -77,57 +83,6 @@ const CreativeContent = (props: CreativeInterface) => {
           )}
         </Grid>
       </Grid>
-
-      {/* {(props.Creative.accolades.length > 0 ||
-        props.Creative.credits.length > 0) && (
-        <Grid container justifyContent="center" columnGap={5} pb={5}>
-          <Grid xs={10} md={5}>
-            {props.Creative.accolades.length > 0 && (
-              <Accolades accolades={props.Creative.accolades} />
-            )}
-          </Grid>
-          <Grid xs={10} md={5}>
-            {props.Creative.credits.length > 0 && (
-              <Credits credits={props.Creative.credits} />
-            )}
-          </Grid>
-        </Grid>
-      )} */}
-
-      {/* <Grid
-        container
-        justifyContent="center"
-        columnGap={5}
-        rowGap={{ xs: 5, md: 0 }}
-        mb={8}
-      >
-        <Grid xs={12} md={5}>
-          <picture>
-            <source
-              src={`/creatives/${props.Creative.profile_image}/stills/1.webp`}
-            ></source>
-            <Stills
-              alt={`${props.Creative.name} working on a project`}
-              width={500}
-              height="auto"
-              src={`/creatives/${props.Creative.profile_image}/stills/1.png`}
-            />
-          </picture>
-        </Grid>
-        <Grid xs={12} md={5}>
-          <picture>
-            <source
-              src={`/creatives/${props.Creative.profile_image}/stills/2.webp`}
-            ></source>
-            <Stills
-              alt={`${props.Creative.name} working on a project`}
-              width={500}
-              height="auto"
-              src={`/creatives/${props.Creative.profile_image}/stills/2.png`}
-            />
-          </picture>
-        </Grid>
-      </Grid> */}
 
       {props.Creative.reel_url && (
         <Grid
@@ -167,7 +122,10 @@ const CreativeContent = (props: CreativeInterface) => {
       <Grid
         container
         justifyContent="center"
-        sx={{ background: (theme) => theme.palette.primary.main }}
+        sx={{
+          background: (theme) => theme.palette.primary.main,
+          pt: { xs: 2, md: 0 },
+        }}
       >
         <Grid
           xs={8}

@@ -58,7 +58,7 @@ export const ProductionData = [
       ),
       videoDesktop: bathsTitleVideoDesktop,
       videoMobile: bathsTitleVideoMobile,
-      type: "Short Anthology",
+      type: "Anthology Film",
       status: "In Distribution",
       pressReview:
         "'A uniquely conceived and memorably intimate anthology short from acclaimed director Nell Hensey, with each chapter thematically linked and told from the perspective of someone taking a bath.'",
@@ -388,7 +388,7 @@ export const ProductionData = [
   {
     production: {
       id: "4",
-      title: "Musical",
+      title: "Displacement",
       logo: (
         <svg
           viewBox="0 0 499 44"

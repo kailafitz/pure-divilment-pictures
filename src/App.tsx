@@ -21,7 +21,7 @@ function App() {
   return (
     <>
       {current.includes("test") && <Navbar />}
-      {current === "/" && <OpeningAnimation />}
+      {current === "/test" && <OpeningAnimation />}
       <Container
         maxWidth="xl"
         disableGutters={true}

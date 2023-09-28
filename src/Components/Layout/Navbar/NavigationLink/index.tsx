@@ -3,7 +3,7 @@ import { LinkProps } from "@mui/material/Link";
 import { NavLink as ReactRouterLink } from "react-router-dom";
 import { StyledLink, StyledSpan, StyledFirstLetter } from "./styles";
 
-const MyNavLink = React.forwardRef<any, any>((props, ref) => (
+export const MyNavLink = React.forwardRef<any, any>((props, ref) => (
   <ReactRouterLink
     ref={ref}
     to={props.to}

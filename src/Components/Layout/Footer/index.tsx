@@ -9,7 +9,7 @@ import {
   FooterDetails,
   LogoWrapper,
 } from "./styles";
-import { Box, Link, Typography } from "@mui/material";
+import { Box, Link, Typography, useTheme } from "@mui/material";
 import CopyrightIcon from "@mui/icons-material/Copyright";
 import { useLocation } from "react-router-dom";
 import { Logo } from "../../Logo";
@@ -69,6 +69,7 @@ const Affiliates = () => {
 
 const Footer = () => {
   const location = useLocation();
+  const theme = useTheme();
   return (
     <StyledFooter>
       <Wrapper>
@@ -119,7 +120,7 @@ const Footer = () => {
           >
             <Logo
               style={{
-                color: "white !important",
+                color: theme.palette.white.main,
                 svg: {
                   margin: "0 auto 1.5rem auto",
                   display: "block",

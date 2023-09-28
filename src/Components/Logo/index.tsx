@@ -1,8 +1,9 @@
 import React from "react";
 import { LogoContainer } from "./styles";
-import { Link } from "@mui/material";
+import Link, { LinkProps } from "@mui/material/Link";
+import { MyNavLink } from "../Layout/Navbar/NavigationLink";
 
-interface LogoProps {
+interface LogoProps extends LinkProps {
   color?: string;
   style?: object;
 }
@@ -10,7 +11,8 @@ interface LogoProps {
 export const Logo = (props: LogoProps) => {
   return (
     <Link
-      href="/test"
+      component={MyNavLink}
+      to="/test"
       color={props.color}
       sx={props.style}
       className="logo"

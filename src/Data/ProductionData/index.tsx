@@ -38,6 +38,7 @@ export interface ProductionItemInterface {
     accolades?: AccoladeDetails[];
     screenings?: string[];
     poster?: string;
+    fileHandle?: string;
   };
 }
 
@@ -134,6 +135,7 @@ export const ProductionData = [
         "Directed By HER, The GALPAL Collective",
       ],
       poster: "/productions/baths/poster.png",
+      fileHandle: "baths",
     },
   },
   {
@@ -341,6 +343,7 @@ export const ProductionData = [
         "/productions/fftloaw/stills/4.png",
       ],
       poster: "/productions/fftloaw/main.png",
+      fileHandle: "fftloaw",
     },
   },
   {

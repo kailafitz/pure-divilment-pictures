@@ -76,6 +76,7 @@ const VideoCarousel = () => {
                       loop
                       muted
                       playsInline
+                      poster={`/productions/${product.production.fileHandle}/reel-poster.png`}
                     >
                       {window?.innerWidth < 768 ? (
                         <source

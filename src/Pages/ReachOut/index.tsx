@@ -28,18 +28,14 @@ const ReachOut = () => {
         />
       </Helmet>
 
-      <Stack direction="column" flexGrow={1} justifyContent="center">
-        <Grid
-          container
-          justifyContent="center"
-          sx={{
-            backgroundColor: theme.palette.white.main,
-            width: "100%",
-            py: { xs: 2, lg: 4 },
-          }}
-          rowGap={{ xs: 4, lg: 0 }}
-        >
-          <Grid xs={10} sm={7} md={4}>
+      <Stack
+        direction="column"
+        flexGrow={1}
+        justifyContent="center"
+        mb={{ xs: 2, lg: 0 }}
+      >
+        <Grid container justifyContent="center" mb={2}>
+          <Grid xs={10} sm={7} md={5} lg={4}>
             <Typography
               variant="h6"
               sx={{
@@ -69,7 +65,9 @@ const ReachOut = () => {
               materials.
             </Typography>
           </Grid>
-          <Grid xs={10} sm={7} md={2} xl={1}>
+        </Grid>
+        <Grid container justifyContent="center">
+          <Grid xs={10} sm={7} md={5} lg={4}>
             <Typography
               variant="h6"
               sx={{
@@ -81,6 +79,7 @@ const ReachOut = () => {
               Follow Us
             </Typography>
             <Link
+              href="https://www.imdb.com/search/title/?companies=co1021516"
               display="block"
               color="primary"
               variant="body2"
@@ -105,9 +104,9 @@ const ReachOut = () => {
       </Stack>
       <PageEndReel
         images={[
-          "/reach/1.png",
-          "/reach/2.png",
-          "/reach/3.png",
+          "/reach/1.jpeg",
+          "/reach/2.jpeg",
+          "/reach/3.jpeg",
           "/reach/4.png",
         ]}
       />

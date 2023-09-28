@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 // Baths Media
 const bathsTitleVideoDesktop = require("../../Assets/productions/baths/reels/reel.mp4");
 const bathsTitleVideoMobile = require("../../Assets/productions/baths/reels/mobile-reel.mp4");
@@ -25,8 +27,8 @@ export interface ProductionItemInterface {
     coverImage?: string;
     blurb?: string;
     type?: string;
-    status?: string;
-    pressReview?: string;
+    status?: ReactNode;
+    logLine?: ReactNode;
     pressItems?: ProductionDetails[];
     details: ProductionDetails[];
     primary_still_src?: string;
@@ -61,8 +63,13 @@ export const ProductionData = [
       videoMobile: bathsTitleVideoMobile,
       type: "Anthology Film",
       status: "In Distribution",
-      pressReview:
-        "'A uniquely conceived and memorably intimate anthology short from acclaimed director Nell Hensey, with each chapter thematically linked and told from the perspective of someone taking a bath.'",
+      logLine: (
+        <>
+          'A uniquely conceived and memorably intimate anthology short from
+          acclaimed director Nell Hensey, with each chapter thematically linked
+          and told from the perspective of someone taking a bath.'
+        </>
+      ),
       details: [
         {
           fieldKey: "Director",
@@ -94,7 +101,7 @@ export const ProductionData = [
       primary_still_src: "/productions/baths/stills/1.png",
       secondary_still_src: "/productions/baths/stills/2.png",
       image_reel: [
-        "/productions/baths/stills/1.jpg",
+        "/productions/baths/stills/1.jpeg",
         "/productions/baths/stills/2.jpg",
         "/productions/baths/stills/3.jpg",
         "/productions/baths/stills/4.jpg",
@@ -124,7 +131,7 @@ export const ProductionData = [
       ],
       screenings: [
         "Galway Film Society Spring Programme",
-        "Directed By HER Women's Day Film Event",
+        "Directed By HER, The GALPAL Collective",
       ],
       poster: "/productions/baths/poster.png",
     },
@@ -261,9 +268,27 @@ export const ProductionData = [
       videoDesktop: fftloawTitleVideoDesktop,
       videoMobile: fftloawTitleVideoMobile,
       type: "TV Drama Special",
-      status: "Coming Soon on RTE",
-      pressReview:
-        "Based on the short story by Yan Ge, Falling For The Life Of Alex Whelan blurs the lines between reality and fiction. Exploring loss, love and the rareness of human connection.",
+      status: (
+        <>
+          Coming Soon on{" "}
+          <img
+            src="/rte.png"
+            alt="rte"
+            width="32"
+            height="10"
+            loading="lazy"
+            style={{ marginLeft: "4px", height: "auto" }}
+          />
+        </>
+      ),
+      logLine: (
+        <>
+          Based on the short story by Yan Ge,{" "}
+          <span>Falling For The Life Of Alex Whelan</span> blurs the lines
+          between reality and fiction. Exploring loss, love and the rareness of
+          a real connection.
+        </>
+      ),
       pressItems: [{ fieldKey: "Coming Soon", fieldValue: "" }],
       details: [
         {
@@ -308,14 +333,14 @@ export const ProductionData = [
           fieldValue: "Screen Ireland",
         },
       ],
-      coverImage: "/productions/fftloaw/stills/1.jpg",
+      coverImage: "/productions/fftloaw/cover.jpg",
       image_reel: [
-        "/productions/fftloaw/stills/3.jpeg",
-        "/productions/fftloaw/stills/4.jpeg",
-        "/productions/fftloaw/stills/5.jpeg",
-        "/productions/fftloaw/stills/6.png",
+        "/productions/fftloaw/stills/1.png",
+        "/productions/fftloaw/stills/2.png",
+        "/productions/fftloaw/stills/3.png",
+        "/productions/fftloaw/stills/4.png",
       ],
-      poster: "/productions/fftloaw/stills/2.jpg",
+      poster: "/productions/fftloaw/main.png",
     },
   },
   {

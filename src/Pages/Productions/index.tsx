@@ -67,7 +67,7 @@ const Productions = () => {
           content={"Have a look through our work and see for yourself!"}
         />
       </Helmet>
-      <Loader title="Productions" />
+      {/* <Loader title="Productions" /> */}
 
       <ProductionsReelContainer
         id="all-productions"
@@ -87,6 +87,7 @@ const Productions = () => {
               <Grid
                 sx={{
                   py: { lg: 0 },
+                  position: "relative",
                 }}
                 key={item.production.title}
                 xs={10}
@@ -102,9 +103,6 @@ const Productions = () => {
                 onMouseOut={() => setHeroImage("")}
               >
                 <ReelItem
-                  disabled={
-                    item.production.status === "In Development" ? true : false
-                  }
                   className={
                     Number(selectProduction) === index + 1
                       ? "active-production"
@@ -122,6 +120,23 @@ const Productions = () => {
                   }}
                 >
                   {item.production.logo}
+
+                  {item.production.status === "In Development" && (
+                    <Typography
+                      variant="body2"
+                      sx={{
+                        position: "absolute",
+                        top: "70%",
+                        display: {
+                          xs: "block",
+                          lg: "none",
+                          color: theme.palette.primary.main,
+                        },
+                      }}
+                    >
+                      Coming Soon
+                    </Typography>
+                  )}
                 </ReelItem>
               </Grid>
             );
@@ -137,11 +152,16 @@ const Productions = () => {
                   ? heroImage
                   : `url("${heroImage}") top center / cover`
                 : `url(${heroImage}) top center / cover`,
-            height: SelectedProduction.length > 0 ? { md: "700px" } : 0,
+            height:
+              SelectedProduction.length > 0 &&
+              SelectedProduction[0]?.production.status !== "In Development"
+                ? { md: "700px" }
+                : 0,
             marginTop:
               heroImage === "Coming Soon" ||
               heroImage === white ||
-              (heroImage === "Coming Soon" && heroImage === "Coming Soon")
+              (heroImage === "Coming Soon" && heroImage === "Coming Soon") ||
+              SelectedProduction[0]?.production.status === "In Development"
                 ? "unset"
                 : theme.spacing(-20),
           }}

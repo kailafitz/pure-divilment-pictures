@@ -33,4 +33,9 @@ export const ReelWrapper = styled(Box)(({ theme }) => ({
       transform: "skew(3deg) translateX(-1rem)",
     },
   },
+  [theme.breakpoints.up("md")]: {
+    "&::before": {
+      filter: "grayscale(0%)",
+    },
+  },
 }));

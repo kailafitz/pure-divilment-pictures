@@ -104,7 +104,7 @@ const Footer = () => {
               color="common.white"
               sx={{ textTransform: "uppercase" }}
               target="_blank"
-              href="https://www.vision-net.ie/Company-Info/Pure-Divilment-Pictures-Limited-724854"
+              href="https://www.imdb.com/search/title/?companies=co1021516"
             >
               IMDB
             </Link>

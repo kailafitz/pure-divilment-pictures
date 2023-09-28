@@ -42,7 +42,9 @@ const About = () => {
           },
         }}
       >
-        <div style={{ fontSize: "3.4rem" }}>We Tell Stories</div>
+        <Box sx={{ fontSize: { xs: "2.8rem", md: "3.4rem" } }}>
+          We Tell Stories
+        </Box>
         <div>
           out of <span>pure divilment</span>
         </div>
@@ -70,7 +72,7 @@ const About = () => {
           >
             <span>P</span>ure <span>D</span>ivilment Pictures is a women-led
             Irish film and television production company. Our purpose is to
-            empower and create opportunity, empower and showcase exceptional
+            empower new voices, create opportunity and showcase exceptional
             industry talent.
             <br />
             <br />
@@ -278,7 +280,7 @@ const About = () => {
           "/about/image-reel/1.png",
           "/about/image-reel/2.png",
           "/about/image-reel/3.png",
-          "/about/image-reel/4.png",
+          "/about/image-reel/4.jpeg",
         ]}
       />
     </>

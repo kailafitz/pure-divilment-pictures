@@ -31,19 +31,22 @@ const Bio = (props: ProductionItemInterface) => {
           {" / "}
           <span>{props.Production.status}</span>
         </Typography>
-        {/* Press Review */}
+        {/* Log line */}
         <Typography
           mb={2}
-          variant="body2"
+          variant="body1"
           sx={{
             fontStyle: "italic",
             fontFamily: "'Libre Baskerville', serif",
             textAlign: "center",
             maxWidth: "80vw",
             margin: "0 auto",
+            span: {
+              fontStyle: "normal",
+            },
           }}
         >
-          {props.Production.pressReview}
+          {props.Production.logLine}
         </Typography>
         {/* Details */}
         <Grid container rowSpacing={1} justifyContent="center" mt={{ xs: 5 }}>

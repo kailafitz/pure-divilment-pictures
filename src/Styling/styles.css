@@ -1,5 +1,6 @@
 @font-face {
   font-family: "DM Sans";
+  font-display: swap;
   src: local("DM_Sans"), url("./Fonts/DefaultFonts/DM_Sans/DMSans-VariableFont_opsz,wght.ttf") format("truetype");
 }
 html,

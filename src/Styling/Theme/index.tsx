@@ -11,6 +11,9 @@ const theme = createTheme({
       fontSize: "9px",
       fontFamily: "DM Sans",
     },
+    h1: {
+      fontSize: "3.4rem",
+    },
   },
   palette: {
     primary: {

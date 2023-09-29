@@ -25,7 +25,7 @@ const PageEndReel = (props: PageEndReelProps) => {
                 py: { lg: 0 },
                 position: "relative",
                 height: { xs: 350 },
-                "&:not(:first-child)": {
+                "&:not(:first-of-type)": {
                   display: { xs: "none", sm: "flex" },
                 },
               }}

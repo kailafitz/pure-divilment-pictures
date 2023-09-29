@@ -11,7 +11,7 @@ type BioProps = {
 export const Bio = (props: BioProps) => {
   return (
     <>
-      <Typography variant="h4">{props.name}</Typography>
+      <Typography variant="h1">{props.name}</Typography>
       <Typography>{props.role}</Typography>
       <br />
       {props.bio.map((paragraph, i) => {

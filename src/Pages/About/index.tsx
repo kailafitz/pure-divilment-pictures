@@ -26,28 +26,42 @@ const About = () => {
         />
       </Helmet>
 
-      <AboutImage width={1000} height={720} src="/about/1.png" />
+      <picture>
+        <source srcSet="/about/1.webp"></source>
+        <AboutImage
+          width={1000}
+          height={720}
+          src="/about/1.png"
+          alt="Picture of the team at Pure Divilment Pictures"
+        />
+      </picture>
 
       <Typography
-        variant="h4"
+        variant="h1"
         sx={{
-          background: (theme) => theme.palette.white.main,
+          fontSize: { xs: "2.8rem", md: "3.4rem" },
           fontWeight: 400,
           textAlign: "center",
-          padding: (theme) => theme.spacing(6, 0),
+          padding: (theme) => theme.spacing(6, 0, 0, 0),
           textTransform: "unset",
+        }}
+      >
+        We Tell Stories
+      </Typography>
+      <Typography
+        variant="h2"
+        sx={{
+          fontSize: { xs: "1.5rem", md: "2rem" },
+          fontWeight: 400,
+          textAlign: "center",
+          padding: (theme) => theme.spacing(0, 0, 6, 0),
           span: {
             fontStyle: "italic",
             letterSpacing: "2px",
           },
         }}
       >
-        <Box sx={{ fontSize: { xs: "2.8rem", md: "3.4rem" } }}>
-          We Tell Stories
-        </Box>
-        <div>
-          out of <span>pure divilment</span>
-        </div>
+        out of <span>pure divilment</span>
       </Typography>
 
       <Grid
@@ -195,10 +209,10 @@ const About = () => {
       </Grid>
 
       <Typography
-        variant="h6"
+        variant="body1"
         textAlign="center"
         sx={{
-          background: (theme) => theme.palette.white.main,
+          fontSize: "1.2rem",
         }}
       >
         And we're only getting started.
@@ -223,6 +237,7 @@ const About = () => {
           <Button
             href="/productions/0"
             variant="contained"
+            aria-label="Go to Productions page"
             color="dark"
             sx={{
               p: 2,
@@ -240,6 +255,7 @@ const About = () => {
 
           <Button
             href="/the-creatives"
+            aria-label="Go to The Creatives page"
             variant="contained"
             color="dark"
             sx={{
@@ -258,6 +274,7 @@ const About = () => {
 
           <Button
             href="/reach-out"
+            aria-label="Go to Reach Out page"
             variant="contained"
             color="dark"
             sx={{

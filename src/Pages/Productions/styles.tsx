@@ -35,6 +35,7 @@ export const Reel = styled(Grid)(({ theme }) => ({
 
   [theme.breakpoints.up("md")]: {
     height: "300px",
+    margin: "0 -1px",
     transform: "skewY(4deg)",
     paddingTop: "calc(100px)",
     div: {
@@ -59,6 +60,7 @@ export const ReelItem = styled(Button)(({ theme }) => ({
   svg: {
     width: "60%",
     margin: "0 auto",
+    padding: "0 2px",
   },
 })) as typeof Button;
 

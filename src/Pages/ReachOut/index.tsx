@@ -33,6 +33,7 @@ const ReachOut = () => {
         flexGrow={1}
         justifyContent="center"
         mb={{ xs: 2, lg: 0 }}
+        mt={{ xs: 3, md: 0 }}
       >
         <Grid container justifyContent="center" mb={2}>
           <Grid xs={10} sm={7} md={5} lg={4}>
@@ -83,6 +84,7 @@ const ReachOut = () => {
               display="block"
               color="primary"
               variant="body2"
+              target="_blank"
               sx={{
                 fontWeight: 500,
                 mb: (theme) => theme.spacing(0.5),
@@ -94,6 +96,7 @@ const ReachOut = () => {
               href="https://www.instagram.com/puredivilmentpictures/"
               display="block"
               color="primary"
+              target="_blank"
               variant="body2"
               sx={{ fontWeight: 500 }}
             >

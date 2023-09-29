@@ -26,7 +26,7 @@ const About = () => {
         />
       </Helmet>
 
-      <AboutImage src="/about/1.png" />
+      <AboutImage width={1000} height={720} src="/about/1.png" />
 
       <Typography
         variant="h4"

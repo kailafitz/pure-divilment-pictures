@@ -26,7 +26,7 @@ const PageEndReel = (props: PageEndReelProps) => {
                 position: "relative",
                 height: { xs: 350 },
                 "&:not(:first-child)": {
-                  display: { xs: "none", md: "flex" },
+                  display: { xs: "none", sm: "flex" },
                 },
               }}
               xs={12}

@@ -1,0 +1,13 @@
+{
+  "short_name": "Pure Divilment",
+  "name": "Pure Divilment Pictures",
+  "icons": [
+    {
+      "src": "/images/favicon.ico",
+      "type": "image/x-icon",
+      "sizes": "16x16"
+    }
+  ],
+  "background_color": "#0d0c0c",
+  "start_url": "/"
+}

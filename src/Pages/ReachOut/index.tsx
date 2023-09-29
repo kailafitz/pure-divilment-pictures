@@ -1,11 +1,10 @@
 import React from "react";
-import { Link, Stack, Typography, useTheme } from "@mui/material";
+import { Link, Stack, Typography } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2"; // Grid version 2
 import { Helmet } from "react-helmet";
 import PageEndReel from "../../Components/PageEndReel";
 
 const ReachOut = () => {
-  const theme = useTheme();
   return (
     <>
       <Helmet>
@@ -49,14 +48,14 @@ const ReachOut = () => {
             </Typography>
             <Typography
               component={Link}
-              href="mailto:info@puredivilmentpictures.com"
+              href="mailto:info@puredivilmentpictures.com?subject=Enquiry"
               variant="body2"
               sx={{
                 display: "block",
                 mb: (theme) => theme.spacing(0.5),
               }}
             >
-              info@puredivilmentpictures.ie
+              info@puredivilmentpictures.com
             </Typography>
             <Typography
               variant="body1"

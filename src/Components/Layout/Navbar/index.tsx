@@ -45,7 +45,7 @@ export default function Navbar() {
             <Hamburger
               toggled={isOpen}
               toggle={setOpen}
-              aria-label="menu-button"
+              label="Mobile menu button to open website navigation links"
             />
           </HamburgerContainer>
           <MobileDrawer open={isOpen} closeDrawer={() => setOpen(false)} />

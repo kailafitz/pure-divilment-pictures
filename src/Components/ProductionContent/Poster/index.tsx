@@ -4,11 +4,16 @@ import { ProductionImage } from "./styles";
 
 const Poster = (props: ProductionItemInterface) => {
   return (
-    <ProductionImage
-      src={props.Production.poster}
-      alt="production poster"
-      sx={{ mb: { xs: 6, lg: 10 } }}
-    />
+    <picture>
+      <source
+        srcSet={`/productions/${props.Production.fileHandle}/poster.webp`}
+      ></source>
+      <ProductionImage
+        src={`/productions/${props.Production.fileHandle}/poster.png`}
+        alt="production poster"
+        sx={{ mb: { xs: 6, lg: 10 } }}
+      />
+    </picture>
   );
 };
 

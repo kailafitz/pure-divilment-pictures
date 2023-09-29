@@ -10,6 +10,7 @@ export const MyNavLink = React.forwardRef<any, any>((props, ref) => (
     className={({ isActive }) =>
       `${props.className} ${isActive ? "active" : ""}`
     }
+    aria-label={props.ariaLabel}
   >
     {props.children}
   </ReactRouterLink>
@@ -19,6 +20,7 @@ export interface CustomLinkProps extends LinkProps {
   linkObject: {
     linkLabel: string;
     link: string;
+    ariaLabel?: string;
   };
 }
 
@@ -28,7 +30,7 @@ const NavigationLink = (props: CustomLinkProps) => {
     <StyledLink
       component={MyNavLink}
       to={props.linkObject.link}
-      aria-label={props.linkObject.linkLabel}
+      aria-label={props.linkObject.ariaLabel}
       className="nav-link"
     >
       {props.linkObject.linkLabel}

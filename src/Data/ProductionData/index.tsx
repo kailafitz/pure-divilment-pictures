@@ -37,7 +37,7 @@ export interface ProductionItemInterface {
     festivals?: string[];
     accolades?: AccoladeDetails[];
     screenings?: string[];
-    poster?: string;
+    poster?: boolean;
     fileHandle?: string;
   };
 }
@@ -134,7 +134,7 @@ export const ProductionData = [
         "Galway Film Society Spring Programme",
         "Directed By HER, The GALPAL Collective",
       ],
-      poster: "/productions/baths/poster.png",
+      poster: true,
       fileHandle: "baths",
     },
   },
@@ -337,12 +337,12 @@ export const ProductionData = [
       ],
       coverImage: "/productions/fftloaw/cover.jpg",
       image_reel: [
-        "/productions/fftloaw/stills/1.png",
-        "/productions/fftloaw/stills/2.png",
-        "/productions/fftloaw/stills/3.png",
-        "/productions/fftloaw/stills/4.png",
+        "/productions/fftloaw/image-reel/1.png",
+        "/productions/fftloaw/image-reel/2.png",
+        "/productions/fftloaw/image-reel/3.png",
+        "/productions/fftloaw/image-reel/4.png",
       ],
-      poster: "/productions/fftloaw/main.png",
+      poster: true,
       fileHandle: "fftloaw",
     },
   },

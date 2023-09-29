@@ -10,7 +10,6 @@ import {
 import { ProductionData } from "../../Data/ProductionData";
 import ProductionContentLayout from "../../Components/ProductionContent";
 import { useParams } from "react-router-dom";
-import Loader from "../../Components/Loader";
 import { Helmet } from "react-helmet";
 import { ScrollTop } from "../../Components/ScrollTop";
 
@@ -48,8 +47,6 @@ const Productions = () => {
     heroImage === white ||
     SelectedProduction[0]?.production.status === "In Development";
 
-  console.log(heroImage);
-
   return (
     <>
       <Helmet>
@@ -69,7 +66,6 @@ const Productions = () => {
           content={"Have a look through our work and see for yourself!"}
         />
       </Helmet>
-      {/* <Loader title="Productions" /> */}
 
       <ProductionsReelContainer
         id="all-productions"
@@ -105,6 +101,7 @@ const Productions = () => {
                 onMouseOut={() => setHeroImage("")}
               >
                 <ReelItem
+                  aria-label={`Link to view the production, ${item.production.title}}`}
                   className={
                     Number(selectProduction) === index + 1
                       ? "active-production"

@@ -12,11 +12,11 @@ export const Logo = (props: LogoProps) => {
   return (
     <Link
       component={MyNavLink}
+      ariaLabel="Logo link to Home page"
       to="/"
       color={props.color}
       sx={props.style}
       className="logo"
-      aria-label="Pure Divilment Pictures"
     >
       <LogoContainer>
         <svg

@@ -89,7 +89,7 @@ const Footer = () => {
             <Link
               color="common.white"
               sx={{ textTransform: "uppercase" }}
-              href="mailto:info@puredivilmentpictures.com"
+              href="mailto:info@puredivilmentpictures.com?subject=Enquiry"
             >
               E-mail
             </Link>

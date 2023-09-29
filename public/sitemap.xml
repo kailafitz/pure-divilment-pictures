@@ -3,55 +3,55 @@
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <url>
-    <loc>puredivilmentpictures.com</loc>
+    <loc>https://www.puredivilmentpictures.com</loc>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>puredivilmentpictures.com/about</loc>
+    <loc>https://www.puredivilmentpictures.com/about</loc>
     <changefreq>never</changefreq>
   </url>
   <url>
-    <loc>puredivilmentpictures.com/creatives</loc>
+    <loc>https://www.puredivilmentpictures.com/creatives</loc>
     <changefreq>yearly</changefreq>
   </url>
   <url>
-    <loc>puredivilmentpictures.com/the-creatives/creative/1</loc>
+    <loc>https://www.puredivilmentpictures.com/the-creatives/creative/1</loc>
     <changefreq>yearly</changefreq>
   </url>
   <url>
-    <loc>puredivilmentpictures.com/the-creatives/creative/2</loc>
+    <loc>https://www.puredivilmentpictures.com/the-creatives/creative/2</loc>
     <changefreq>yearly</changefreq>
   </url>
   <url>
-    <loc>puredivilmentpictures.com/the-creatives/creative/3</loc>
+    <loc>https://www.puredivilmentpictures.com/the-creatives/creative/3</loc>
     <changefreq>yearly</changefreq>
   </url>
   <url>
-    <loc>puredivilmentpictures.com/the-creatives/creative/4</loc>
+    <loc>https://www.puredivilmentpictures.com/the-creatives/creative/4</loc>
     <changefreq>yearly</changefreq>
   </url>
   <url>
-    <loc>puredivilmentpictures.com/productions/0</loc>
+    <loc>https://www.puredivilmentpictures.com/productions/0</loc>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>puredivilmentpictures.com/productions/1</loc>
+    <loc>https://www.puredivilmentpictures.com/productions/1</loc>
     <changefreq>yearly</changefreq>
   </url>
   <url>
-    <loc>puredivilmentpictures.com/productions/2</loc>
+    <loc>https://www.puredivilmentpictures.com/productions/2</loc>
     <changefreq>yearly</changefreq>
   </url>
   <url>
-    <loc>puredivilmentpictures.com/productions/3</loc>
+    <loc>https://www.puredivilmentpictures.com/productions/3</loc>
     <changefreq>yearly</changefreq>
   </url>
   <url>
-    <loc>puredivilmentpictures.com/productions/4</loc>
+    <loc>https://www.puredivilmentpictures.com/productions/4</loc>
     <changefreq>yearly</changefreq>
   </url>
   <url>
-    <loc>puredivilmentpictures.com/reach-out</loc>
+    <loc>https://www.puredivilmentpictures.com/reach-out</loc>
     <changefreq>yearly</changefreq>
   </url>
 </urlset>

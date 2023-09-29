@@ -57,7 +57,7 @@ export const Copyright = styled("div")(({ theme }) => ({
   justifyContent: "center",
   svg: {
     fontSize: "11px",
-    marginRight: theme.spacing(1),
+    marginRight: theme.spacing(0.5),
   },
   span: {
     margin: theme.spacing(0, 1),

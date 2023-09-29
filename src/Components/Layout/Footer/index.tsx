@@ -137,8 +137,8 @@ const Footer = () => {
                 }}
               >
                 <CopyrightIcon />
-                Pure Divilment Pictures<span> | </span>Website by Mikhaila
-                Fitzpatrick
+                Pure Divilment Pictures {new Date().getFullYear()}
+                <span> | </span>Website by Mikhaila Fitzpatrick
               </Typography>
             </Copyright>
           </Box>

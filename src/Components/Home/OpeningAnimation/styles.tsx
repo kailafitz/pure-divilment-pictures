@@ -39,10 +39,22 @@ export const AnimationText = styled("div")(({ theme }) => ({
     letterSpacing: "4px",
     "&::first-letter": {
       fontStyle: "italic",
-      marginRight: "9px",
+      marginRight: "3px",
     },
     "&:first-of-type": {
-      marginRight: "1rem",
+      marginRight: "3px",
+    },
+  },
+  [theme.breakpoints.up("md")]: {
+    p: {
+      display: "inline-block",
+      "&::first-letter": {
+        fontStyle: "italic",
+        marginRight: "9px",
+      },
+      "&:first-of-type": {
+        marginRight: "1rem",
+      },
     },
   },
 }));

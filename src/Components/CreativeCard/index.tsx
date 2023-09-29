@@ -14,7 +14,7 @@ const CompanyCreativeCard = (props: CreativeInterface) => {
     <CreativeMemberCardContainer
       component={Button}
       color="primary"
-      href={`/test/the-creatives/creative/${props.Creative.id}`}
+      href={`/the-creatives/creative/${props.Creative.id}`}
     >
       <picture>
         <source

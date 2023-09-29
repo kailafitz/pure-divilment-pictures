@@ -9,7 +9,9 @@ interface PageEndReelProps {
 
 const PageEndReel = (props: PageEndReelProps) => {
   return (
-    <Box sx={{ background: (theme) => theme.palette.white.main }}>
+    <Box
+      sx={{ background: (theme) => theme.palette.white.main, margin: "0 -1px" }}
+    >
       <ProductionReelContainer
         container
         justifyContent={{ xs: "center", lg: "unset" }}

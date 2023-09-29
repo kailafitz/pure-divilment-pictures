@@ -67,7 +67,7 @@ export const CreativesData = [
           Claire is committed to bringing fresh and exciting perspectives to the
           international landscape of television and film. With a track record of
           successful projects and a passion for championing new voices, Claire
-          has become solidified as a producer to watch.
+          has emerged as a producer to watch.
         </>,
       ],
       credits: [
@@ -237,7 +237,7 @@ export const CreativesData = [
           between Ireland and Vancouver, Canada.
         </>,
         <>
-          Lily is graduate of Irish music and dance from the University of
+          Lily is a graduate of Irish music and dance from the University of
           Limerick. She first entered the world of film through her knowledge of
           Irish music and culture when asked to work on German Irish
           co-production <i>Sprachlos in Irland</i> (2020) in her home county,

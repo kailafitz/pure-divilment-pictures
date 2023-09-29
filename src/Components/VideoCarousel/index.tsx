@@ -38,7 +38,6 @@ const VideoCarousel = () => {
       noSwiping={true}
       pagination={{
         clickable: true,
-        // bulletElement: "div",
         bulletClass: "swiper-pagination-bullet custom-bullet",
       }}
       navigation={true}
@@ -76,7 +75,7 @@ const VideoCarousel = () => {
                       loop
                       muted
                       playsInline
-                      poster={`/productions/${product.production.fileHandle}/reel-poster.png`}
+                      // poster={`/productions/${product.production.fileHandle}/reel-poster.png`}
                     >
                       {window?.innerWidth < 768 ? (
                         <source

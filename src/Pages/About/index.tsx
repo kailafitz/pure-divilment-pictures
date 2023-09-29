@@ -77,9 +77,9 @@ const About = () => {
             <br />
             <br />
             At the helm of the company are Co-Founders, Claire Mooney and Nell
-            Hensey. The pair met in 2019 while studying a Masters in Creative
-            Production and Screen Finance at the National Film School IADT.
-            Together, they are championing a new generation of great
+            Hensey. The pair met in 2019 while studying for a Masters in
+            Creative Production and Screen Finance at the National Film School
+            IADT. Together, they are championing a new generation of great
             storytellers, both in Ireland and abroad.
           </Typography>
         </Grid>
@@ -178,7 +178,7 @@ const About = () => {
             }}
           >
             We deeply value representation and inclusivity. Community is very
-            important to us. We only work with the best, collaborating with
+            important to us. We strive to work with the best, collaborating with
             like-minded people on local and international projects. Our slate
             features bold and exciting work that showcases Irish talent and
             provides a window for our audiences to experience the world in a new
@@ -221,7 +221,7 @@ const About = () => {
           }}
         >
           <Button
-            href="/test/productions"
+            href="/productions/0"
             variant="contained"
             color="dark"
             sx={{
@@ -239,7 +239,7 @@ const About = () => {
           </Button>
 
           <Button
-            href="/test/the-creatives"
+            href="/the-creatives"
             variant="contained"
             color="dark"
             sx={{
@@ -257,7 +257,7 @@ const About = () => {
           </Button>
 
           <Button
-            href="/test/reach-out"
+            href="/reach-out"
             variant="contained"
             color="dark"
             sx={{

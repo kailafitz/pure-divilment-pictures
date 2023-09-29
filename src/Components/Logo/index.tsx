@@ -12,7 +12,7 @@ export const Logo = (props: LogoProps) => {
   return (
     <Link
       component={MyNavLink}
-      to="/test"
+      to="/"
       color={props.color}
       sx={props.style}
       className="logo"

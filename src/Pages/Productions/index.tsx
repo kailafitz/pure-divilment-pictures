@@ -48,6 +48,8 @@ const Productions = () => {
     heroImage === white ||
     SelectedProduction[0]?.production.status === "In Development";
 
+  console.log(heroImage);
+
   return (
     <>
       <Helmet>
@@ -72,7 +74,7 @@ const Productions = () => {
       <ProductionsReelContainer
         id="all-productions"
         sx={{
-          flexGrow: SelectedProduction.length > 0 ? 0 : 1,
+          flexGrow: 1,
         }}
       >
         <Reel
@@ -129,7 +131,7 @@ const Productions = () => {
                         top: "70%",
                         display: {
                           xs: "block",
-                          lg: "none",
+                          md: "none",
                           color: theme.palette.primary.main,
                         },
                       }}
@@ -158,9 +160,8 @@ const Productions = () => {
                 ? { md: "700px" }
                 : 0,
             marginTop:
-              heroImage === "Coming Soon" ||
+              (heroImage === " " && SelectedProduction.length === 0) ||
               heroImage === white ||
-              (heroImage === "Coming Soon" && heroImage === "Coming Soon") ||
               SelectedProduction[0]?.production.status === "In Development"
                 ? "unset"
                 : theme.spacing(-20),

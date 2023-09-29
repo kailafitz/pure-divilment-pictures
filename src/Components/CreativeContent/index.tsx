@@ -20,7 +20,7 @@ const CreativeContent = (props: CreativeInterface) => {
         justifyContent="space-between"
       >
         <Button
-          href={`/test/the-creatives/creative/${Number(props.Creative.id) - 1}`}
+          href={`/the-creatives/creative/${Number(props.Creative.id) - 1}`}
           variant="contained"
           color="dark"
           sx={{
@@ -32,7 +32,7 @@ const CreativeContent = (props: CreativeInterface) => {
           Previous
         </Button>
         <Button
-          href={`/test/the-creatives/creative/${Number(props.Creative.id) + 1}`}
+          href={`/the-creatives/creative/${Number(props.Creative.id) + 1}`}
           variant="contained"
           color="dark"
           sx={{
@@ -138,7 +138,7 @@ const CreativeContent = (props: CreativeInterface) => {
           }}
         >
           <Button
-            href="/test/the-creatives/"
+            href="/the-creatives/"
             variant="contained"
             color="white"
             sx={{
@@ -152,7 +152,7 @@ const CreativeContent = (props: CreativeInterface) => {
         </Grid>
         <Grid xs={8} sm={7} md={6} sx={{ p: { xs: 2, md: 5 } }}>
           <Button
-            href="/test/productions/0"
+            href="/productions/0"
             variant="contained"
             color="white"
             sx={{

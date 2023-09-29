@@ -16,20 +16,40 @@ const Bio = (props: ProductionItemInterface) => {
       }}
       columnSpacing={0.3}
     >
-      <Grid xs={12} md={5}>
+      <Grid xs={12} md={7}>
         {/* Title */}
         <ProductionTitle>{props.Production.logo}</ProductionTitle>
         {/* Type */}
-        <Typography mb={2} sx={{ textAlign: "center" }}>
+        <Typography
+          mb={2}
+          sx={{
+            textAlign: "center",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            "span img": {
+              marginBottom: "2px",
+            },
+          }}
+        >
           <span
             style={{
               fontWeight: 500,
+              marginRight: "5px",
             }}
           >
             {props.Production.type}
           </span>
           {" / "}
-          <span>{props.Production.status}</span>
+          <span
+            style={{
+              display: "flex",
+              alignItems: "center",
+              marginLeft: "5px",
+            }}
+          >
+            {props.Production.status}
+          </span>
         </Typography>
         {/* Log line */}
         <Typography

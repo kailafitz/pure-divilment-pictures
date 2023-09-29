@@ -1,15 +1,15 @@
 export const NavigationItems = [
   {
     linkLabel: "About",
-    link: "/test/about",
+    link: "/about",
   },
   {
     linkLabel: "The Creatives",
-    link: "/test/the-creatives",
+    link: "/the-creatives",
   },
   {
     linkLabel: "Productions",
-    link: "/test/productions/0",
+    link: "/productions/0",
   },
   // {
   //   linkLabel: "Press",
@@ -17,6 +17,6 @@ export const NavigationItems = [
   // },
   {
     linkLabel: "Reach Out",
-    link: "/test/reach-out",
+    link: "/reach-out",
   },
 ];

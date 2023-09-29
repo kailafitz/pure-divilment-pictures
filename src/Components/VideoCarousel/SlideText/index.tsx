@@ -36,7 +36,7 @@ const SlideText = (props: textProps) => {
       <Button
         color="white"
         variant="contained"
-        href={`/test/productions/${props.id}`}
+        href={`/productions/${props.id}`}
         sx={{ width: "fit-content", m: "0 auto", borderRadius: 0 }}
       >
         Find out more

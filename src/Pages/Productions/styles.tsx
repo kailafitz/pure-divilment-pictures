@@ -35,7 +35,6 @@ export const Reel = styled(Grid)(({ theme }) => ({
 
   [theme.breakpoints.up("md")]: {
     height: "300px",
-    margin: "0 -1px",
     transform: "skewY(4deg)",
     paddingTop: "calc(100px)",
     div: {

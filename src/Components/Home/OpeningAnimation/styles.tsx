@@ -42,7 +42,7 @@ export const AnimationText = styled("div")(({ theme }) => ({
       marginRight: "3px",
     },
     "&:first-of-type": {
-      marginRight: "3px",
+      marginRight: "9px",
     },
   },
   [theme.breakpoints.up("md")]: {

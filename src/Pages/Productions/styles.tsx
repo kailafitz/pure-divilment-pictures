@@ -51,12 +51,10 @@ export const ReelItem = styled(Button)(({ theme }) => ({
   borderRadius: 0,
   padding: theme.spacing(3),
   lineHeight: 1,
-  [theme.breakpoints.up("md")]: {
-    ":hover": {
-      background: theme.palette.white.main,
-      color: theme.palette.primary.main,
-      transition: "all .4s linear",
-    },
+  ":hover": {
+    background: theme.palette.white.main,
+    color: theme.palette.primary.main,
+    transition: "all .4s linear",
   },
   svg: {
     width: "60%",

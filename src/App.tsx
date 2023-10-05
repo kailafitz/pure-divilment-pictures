@@ -10,6 +10,7 @@ import Productions from "./Pages/Productions";
 import ReachOut from "./Pages/ReachOut";
 import { Container } from "@mui/material";
 import OpeningAnimation from "./Components/Home/OpeningAnimation";
+import PrivacyPolicy from "./Components/CookiesInfo";
 
 function App() {
   const location = useLocation();
@@ -17,26 +18,33 @@ function App() {
 
   return (
     <>
-      <Navbar />
       {current === "/" && <OpeningAnimation />}
       <Container
         maxWidth="xl"
         disableGutters={true}
         sx={{ display: "flex", flexDirection: "column", flexGrow: 1 }}
       >
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/the-creatives" element={<TheCreatives />} />
-          <Route
-            path="/the-creatives/creative/:id"
-            element={<CompanyCreativeProfile />}
-          />
-          <Route path="/productions/:id" element={<Productions />} />
-          <Route path="/reach-out" element={<ReachOut />} />
-        </Routes>
+        <Navbar />
+        <Container
+          maxWidth="xl"
+          disableGutters={true}
+          sx={{ display: "flex", flexDirection: "column", flexGrow: 1 }}
+        >
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/the-creatives" element={<TheCreatives />} />
+            <Route
+              path="/the-creatives/creative/:id"
+              element={<CompanyCreativeProfile />}
+            />
+            <Route path="/productions/:id" element={<Productions />} />
+            <Route path="/reach-out" element={<ReachOut />} />
+          </Routes>
+        </Container>
+        <Footer />
+        <PrivacyPolicy />
       </Container>
-      <Footer />
     </>
   );
 }

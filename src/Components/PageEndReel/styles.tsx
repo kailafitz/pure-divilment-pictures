@@ -4,6 +4,7 @@ import { styled } from "@mui/material/styles";
 
 export const ProductionReelContainer = styled(Grid)(({ theme }) => ({
   background: theme.palette.white.main,
+  overflow: "hidden",
 
   [theme.breakpoints.up("sm")]: {
     clipPath: "polygon(0 0, 100% 25%, 100% 100%, 0% 100%)",

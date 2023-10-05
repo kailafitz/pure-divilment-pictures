@@ -17,7 +17,7 @@ const MobileDrawer = (props: MobileDrawerProps) => {
       PaperProps={{
         sx: { backgroundColor: (theme) => theme.palette.white.main },
       }}
-      sx={{ zIndex: 1 }}
+      sx={{ zIndex: 0 }}
     >
       <List sx={{ pt: (theme) => theme.spacing(12) }}>
         {NavigationItems.map((navObj, i) => (

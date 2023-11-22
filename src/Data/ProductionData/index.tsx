@@ -296,6 +296,7 @@ export const ProductionData = [
       trailer: (
         <>
           <iframe
+            className="border-0"
             src="https://player.vimeo.com/video/879134084?h=5380550a21"
             width="640"
             height="360"

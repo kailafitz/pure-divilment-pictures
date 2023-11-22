@@ -17,25 +17,23 @@ export const MyNavLink = React.forwardRef<any, any>((props, ref) => (
 ));
 
 export interface CustomLinkProps extends LinkProps {
-  linkObject: {
-    linkLabel: string;
-    link: string;
-    ariaLabel?: string;
-  };
+  label: string;
+  link: string;
+  ariaLabel?: string;
 }
 
 const NavigationLink = (props: CustomLinkProps) => {
-  let firstLetter = props.linkObject.linkLabel.charAt(0);
+  let firstLetter = props.label.charAt(0);
   return (
     <StyledLink
       component={MyNavLink}
-      to={props.linkObject.link}
-      aria-label={props.linkObject.ariaLabel}
+      to={props.link}
+      aria-label={props.ariaLabel}
       className="nav-link"
     >
-      {props.linkObject.linkLabel}
+      {props.label}
       <StyledFirstLetter>{firstLetter}</StyledFirstLetter>
-      <StyledSpan>{props.linkObject.linkLabel}</StyledSpan>
+      <StyledSpan>{props.label}</StyledSpan>
     </StyledLink>
   );
 };

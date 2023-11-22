@@ -1,5 +1,4 @@
 import React from "react";
-import { Button } from "@mui/material";
 import { ProfileImage } from "./styles";
 import { CreativeInterface } from "../../Data/CreativesData";
 import Grid from "@mui/material/Unstable_Grid2/Grid2";
@@ -9,6 +8,7 @@ import { Bio } from "./Bio";
 import { Accolades } from "./Accolades";
 import { Credits } from "./Credits";
 import { CreativesData } from "../../Data/CreativesData";
+import LinkButton from "../LinkButton";
 
 const CreativeContent = (props: CreativeInterface) => {
   return (
@@ -19,23 +19,20 @@ const CreativeContent = (props: CreativeInterface) => {
         mb={{ xs: 3, md: 0 }}
         justifyContent="space-between"
       >
-        <Button
-          href={`/the-creatives/creative/${Number(props.Creative.id) - 1}`}
-          variant="contained"
-          color="dark"
-          sx={{
+        <LinkButton
+          path={`/the-creatives/creative/${Number(props.Creative.id) - 1}`}
+          color="primary"
+          styles={{
             borderRadius: 0,
             visibility: Number(props.Creative.id) < 2 ? "hidden" : "visible",
           }}
           startIcon={<KeyboardDoubleArrowLeftIcon />}
-        >
-          Previous
-        </Button>
-        <Button
-          href={`/the-creatives/creative/${Number(props.Creative.id) + 1}`}
-          variant="contained"
-          color="dark"
-          sx={{
+          label="Previous"
+        />
+        <LinkButton
+          path={`/the-creatives/creative/${Number(props.Creative.id) + 1}`}
+          color="primary"
+          styles={{
             borderRadius: 0,
             visibility:
               Number(props.Creative.id) === CreativesData.length
@@ -43,9 +40,8 @@ const CreativeContent = (props: CreativeInterface) => {
                 : "visible",
           }}
           endIcon={<KeyboardDoubleArrowRightIcon />}
-        >
-          Next
-        </Button>
+          label="Next"
+        />
       </Grid>
 
       <Grid
@@ -137,32 +133,28 @@ const CreativeContent = (props: CreativeInterface) => {
             justifyContent: { md: "flex-end" },
           }}
         >
-          <Button
-            href="/the-creatives/"
-            variant="contained"
+          <LinkButton
+            path="/the-creatives/"
             color="white"
-            sx={{
+            styles={{
               p: 2,
               borderRadius: 0,
               width: { xs: "100%", md: "fit-content" },
             }}
-          >
-            Back to Creatives
-          </Button>
+            label="Back to Creatives"
+          />
         </Grid>
         <Grid xs={8} sm={7} md={6} sx={{ p: { xs: 2, md: 5 } }}>
-          <Button
-            href="/productions/0"
-            variant="contained"
+          <LinkButton
+            path="/productions/0"
             color="white"
-            sx={{
+            styles={{
               p: 2,
               borderRadius: 0,
               width: { xs: "100%", md: "fit-content" },
             }}
-          >
-            Go to Productions
-          </Button>
+            label="Go to Productions"
+          />
         </Grid>
       </Grid>
     </>

@@ -30,6 +30,7 @@ export interface ProductionItemInterface {
     status?: ReactNode;
     logLine?: ReactNode;
     pressItems?: ProductionDetails[];
+    trailer?: ReactNode;
     details: ProductionDetails[];
     primary_still_src?: string;
     secondary_still_src?: string;
@@ -142,7 +143,7 @@ export const ProductionData = [
     production: {
       id: "2",
       title: "Falling For The Life Of Alex Whelan",
-      homeSlideText: "Coming Soon",
+      homeSlideText: "Now Streaming",
       logo: (
         <svg
           viewBox="0 0 719 291"
@@ -272,7 +273,7 @@ export const ProductionData = [
       type: "TV Drama Special",
       status: (
         <>
-          Coming Soon on{" "}
+          Now Streaming on{"  "}
           <img
             src="/rte.png"
             alt="rte"
@@ -291,7 +292,18 @@ export const ProductionData = [
           a real connection.
         </>
       ),
-      pressItems: [{ fieldKey: "Coming Soon", fieldValue: "" }],
+      pressItems: [],
+      trailer: (
+        <>
+          <iframe
+            src="https://player.vimeo.com/video/879134084?h=5380550a21"
+            width="640"
+            height="360"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+        </>
+      ),
       details: [
         {
           fieldKey: "Director",
@@ -342,7 +354,7 @@ export const ProductionData = [
         "/productions/fftloaw/image-reel/3.png",
         "/productions/fftloaw/image-reel/4.png",
       ],
-      poster: true,
+      // poster: true,
       fileHandle: "fftloaw",
     },
   },

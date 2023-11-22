@@ -10,7 +10,8 @@ import Productions from "./Pages/Productions";
 import ReachOut from "./Pages/ReachOut";
 import { Container } from "@mui/material";
 import OpeningAnimation from "./Components/Home/OpeningAnimation";
-import PrivacyPolicy from "./Components/CookiesInfo";
+// import ConsentBanner from "./Components/ConsentBanner";
+import PrivacyPolicy from "./Pages/PrivacyPolicy";
 
 function App() {
   const location = useLocation();
@@ -40,10 +41,11 @@ function App() {
             />
             <Route path="/productions/:id" element={<Productions />} />
             <Route path="/reach-out" element={<ReachOut />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           </Routes>
         </Container>
         <Footer />
-        <PrivacyPolicy />
+        {/* <ConsentBanner /> */}
       </Container>
     </>
   );

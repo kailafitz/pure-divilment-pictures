@@ -9,10 +9,11 @@ import {
   FooterDetails,
   LogoWrapper,
 } from "./styles";
-import { Box, Link, Typography, useTheme } from "@mui/material";
+import { Box, Stack, Typography, Link, useTheme } from "@mui/material";
 import CopyrightIcon from "@mui/icons-material/Copyright";
 import { useLocation } from "react-router-dom";
 import { Logo } from "../../Logo";
+import { MyNavLink } from "../Navbar/NavigationLink";
 
 const partners = [
   "screen-ireland",
@@ -87,25 +88,28 @@ const Footer = () => {
             }}
           >
             <Link
-              color="common.white"
+              component={MyNavLink}
+              color="inherit"
               sx={{ textTransform: "uppercase" }}
-              href="mailto:info@puredivilmentpictures.com?subject=Enquiry"
+              to="mailto:info@puredivilmentpictures.com?subject=Enquiry"
             >
               E-mail
             </Link>
             <Link
-              color="common.white"
+              component={MyNavLink}
+              color="inherit"
               sx={{ textTransform: "uppercase" }}
               target="_blank"
-              href="https://www.instagram.com/puredivilmentpictures/"
+              to="https://www.instagram.com/puredivilmentpictures/"
             >
               Instagram
             </Link>
             <Link
-              color="common.white"
+              component={MyNavLink}
+              color="inherit"
               sx={{ textTransform: "uppercase" }}
               target="_blank"
-              href="https://www.imdb.com/search/title/?companies=co1021516"
+              to="https://www.imdb.com/search/title/?companies=co1021516"
             >
               IMDB
             </Link>
@@ -127,20 +131,45 @@ const Footer = () => {
                 },
               }}
             />
-            <Copyright>
+            <Stack direction={{ xs: "column", sm: "row" }}>
               <Typography
+                textAlign="center"
                 variant="copyright"
                 sx={{
-                  textTransform: "uppercase",
-                  display: "flex",
-                  alignItems: "center",
+                  mb: { xs: 2, sm: 0 },
+                  span: {
+                    display: { xs: "none", sm: "inline" },
+                    marginLeft: theme.spacing(1),
+                  },
                 }}
               >
-                <CopyrightIcon />
-                Pure Divilment Pictures {new Date().getFullYear()}
-                <span> | </span>Website by Mikhaila Fitzpatrick
+                {/* <Link
+                  underline="hover"
+                  component={MyNavLink}
+                  to="/privacy-policy"
+                  color="inherit"
+                  sx={{ textTransform: "uppercase" }}
+                >
+                  Privacy
+                </Link>
+
+                <span> | </span> */}
               </Typography>
-            </Copyright>
+              <Copyright>
+                <Typography
+                  variant="copyright"
+                  sx={{
+                    textTransform: "uppercase",
+                    display: "flex",
+                    alignItems: "center",
+                  }}
+                >
+                  <CopyrightIcon />
+                  Pure Divilment Pictures {new Date().getFullYear()}
+                  <span> | </span>Website by Mikhaila Fitzpatrick
+                </Typography>
+              </Copyright>
+            </Stack>
           </Box>
         </FooterDetails>
       </Wrapper>

@@ -127,7 +127,21 @@ const ProductionContent = (props: ProductionItemInterface) => {
             </Grid>
           </Grid>
         )}
-      <Poster Production={props.Production} />
+
+      {props.Production.trailer && (
+        <Grid
+          container
+          justifyContent="center"
+          sx={{
+            py: 5,
+            display: "flex",
+          }}
+        >
+          {props.Production.trailer}
+        </Grid>
+      )}
+
+      {props.Production.poster && <Poster Production={props.Production} />}
     </>
   );
 };

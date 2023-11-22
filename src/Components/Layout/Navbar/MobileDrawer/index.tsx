@@ -22,7 +22,11 @@ const MobileDrawer = (props: MobileDrawerProps) => {
       <List sx={{ pt: (theme) => theme.spacing(12) }}>
         {NavigationItems.map((navObj, i) => (
           <ListItem key={i} sx={{ py: 2 }} onClick={props.closeDrawer}>
-            <NavigationLink linkObject={navObj} key={navObj.linkLabel} />
+            <NavigationLink
+              link={navObj.link}
+              label={navObj.label}
+              key={navObj.label}
+            />
           </ListItem>
         ))}
       </List>

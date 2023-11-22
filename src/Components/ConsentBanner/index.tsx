@@ -2,9 +2,9 @@ import * as React from "react";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { StyledDialog } from "./styles";
-import { Stack } from "@mui/material";
+import { Link, Stack } from "@mui/material";
 
-export default function PrivacyPolicy() {
+export default function ConsentBanner() {
   const [open, setOpen] = React.useState(true);
 
   const handleClose = () => {
@@ -33,31 +33,29 @@ export default function PrivacyPolicy() {
         alignItems="center"
       >
         <Typography sx={{ fontSize: ".8rem" }}>
-          This website uses Google Analytics for performance measures to ensure
-          a positive user experience in the following ways:
-          <ul>
-            <li>Records the device type of the user</li>
-            <li>Records the browser type of the user</li>
-            <li>Records the activity of the user</li>
-            <li>Records the demographics of a user</li>
-          </ul>
-          This website ensures that users are <b>completely</b> anonymized.
+          We value your privacy. Cookies are used only to monitor traffic so
+          that we may provide the best experience possible on our website.{" "}
+          <Link href="/privacy-policy">Read our cookie policy here.</Link>
         </Typography>
-        <Stack>
-          <Button
+        <Stack direction={{ xs: "column", md: "row" }}>
+          {/* <Button
             sx={{
-              mb: 1,
+              mb: { xs: 1, md: 0 },
+              mr: {
+                xs: 0,
+                md: 1,
+              },
               borderRadius: 0,
               "&:hover": {
                 background: (theme) => theme.palette.primary.light,
               },
             }}
             variant="contained"
-            color="dark"
+            color="primary"
             onClick={handleClose}
           >
             Deny
-          </Button>
+          </Button> */}
           <Button
             sx={{
               borderRadius: 0,
@@ -66,10 +64,10 @@ export default function PrivacyPolicy() {
               },
             }}
             variant="contained"
-            color="dark"
+            color="primary"
             onClick={handleClose}
           >
-            Accept
+            Continue
           </Button>
         </Stack>
       </Stack>

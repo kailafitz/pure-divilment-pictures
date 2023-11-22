@@ -1,11 +1,13 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import { Box, Button, Stack, Typography } from "@mui/material";
+import { Box, Stack, Typography, useTheme } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2/Grid2";
 import { AboutImage } from "./styles";
 import PageEndReel from "../../Components/PageEndReel";
+import LinkButton from "../../Components/LinkButton";
 
 const About = () => {
+  const theme = useTheme();
   return (
     <>
       <Helmet>
@@ -234,61 +236,53 @@ const About = () => {
             background: (theme) => theme.palette.white.main,
           }}
         >
-          <Button
-            href="/productions/0"
-            variant="contained"
-            aria-label="Go to Productions page"
-            color="dark"
-            sx={{
+          <LinkButton
+            path="/productions/0"
+            ariaLabel="Go to Productions page"
+            color="primary"
+            styles={{
               p: 2,
               borderRadius: 0,
               maxWidth: 200,
               width: { xs: "100%", md: "-webkit-fill-available" },
               mb: { xs: 5, md: 0 },
               "&:hover": {
-                backgroundColor: (theme) => theme.palette.dark.light,
+                backgroundColor: theme.palette.primary.light,
               },
             }}
-          >
-            Go To Productions
-          </Button>
-
-          <Button
-            href="/the-creatives"
-            aria-label="Go to The Creatives page"
-            variant="contained"
-            color="dark"
-            sx={{
+            label="Go To Productions"
+          />
+          <LinkButton
+            path="/the-creatives"
+            ariaLabel="Go to The Creatives page"
+            color="primary"
+            styles={{
               p: 2,
               borderRadius: 0,
               maxWidth: 200,
               width: { xs: "100%", md: "-webkit-fill-available" },
               mb: { xs: 5, md: 0 },
               "&:hover": {
-                backgroundColor: (theme) => theme.palette.dark.light,
+                backgroundColor: theme.palette.primary.light,
               },
             }}
-          >
-            Meet our Creatives
-          </Button>
-
-          <Button
-            href="/reach-out"
-            aria-label="Go to Reach Out page"
-            variant="contained"
-            color="dark"
-            sx={{
+            label="Meet our Creatives"
+          />
+          <LinkButton
+            path="/reach-out"
+            ariaLabel="Go to Reach Out page"
+            color="primary"
+            styles={{
               p: 2,
               borderRadius: 0,
               maxWidth: 200,
               width: { xs: "100%", md: "-webkit-fill-available" },
               "&:hover": {
-                backgroundColor: (theme) => theme.palette.dark.light,
+                backgroundColor: theme.palette.primary.light,
               },
             }}
-          >
-            Reach Out
-          </Button>
+            label="Reach Out"
+          />
         </Stack>
       </Box>
 

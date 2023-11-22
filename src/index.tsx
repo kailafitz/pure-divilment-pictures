@@ -6,9 +6,9 @@ import "./Styling/styles.css";
 import { StyledEngineProvider } from "@mui/material/styles";
 import { ThemeProvider } from "@mui/material/styles";
 import { responsiveTheme } from "./Styling/Theme";
-import ReactGA from "react-ga4";
+// import ReactGA from "react-ga4";
 
-ReactGA.initialize("G-WYHDKQXV40");
+// ReactGA.initialize("G-WYHDKQXV40");
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement

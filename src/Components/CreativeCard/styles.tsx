@@ -1,7 +1,7 @@
 import { styled } from "@mui/material/styles";
 import { Typography, Box } from "@mui/material";
 
-export const CreativeMemberCardContainer = styled(Box)(({ theme }) => ({
+export const CreativeCardContainer = styled(Box)(({ theme }) => ({
   display: "flex",
   flexDirection: "column",
   svg: {

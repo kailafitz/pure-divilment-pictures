@@ -79,6 +79,7 @@ const Productions = () => {
           columnSpacing={0.3}
           rowSpacing={{ xs: 3, md: 0 }}
           xs={12}
+          sx={{ "div:first-of-type": { paddingLeft: 0 } }}
         >
           {ProductionData.map((item, index) => {
             return (

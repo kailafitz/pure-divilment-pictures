@@ -59,7 +59,11 @@ export default function Navbar() {
           >
             {NavigationItems.map((navObj) => {
               return (
-                <NavigationLink linkObject={navObj} key={navObj.linkLabel} />
+                <NavigationLink
+                  link={navObj.link}
+                  label={navObj.label}
+                  key={navObj.label}
+                />
               );
             })}
           </Box>

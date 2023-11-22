@@ -1,5 +1,6 @@
 import { HomeTitleContainer } from "./styles";
-import { Typography, Button } from "@mui/material";
+import { Typography } from "@mui/material";
+import LinkButton from "../../LinkButton";
 
 type textProps = {
   logo: JSX.Element;
@@ -33,14 +34,12 @@ const SlideText = (props: textProps) => {
       >
         {props.text}
       </Typography>
-      <Button
+      <LinkButton
+        label="Find out more"
+        path={`/productions/${props.id}`}
         color="white"
-        variant="contained"
-        href={`/productions/${props.id}`}
-        sx={{ width: "fit-content", m: "0 auto", borderRadius: 0 }}
-      >
-        Find out more
-      </Button>
+        styles={{ width: "fit-content", m: "0 auto", borderRadius: 0 }}
+      />
     </HomeTitleContainer>
   );
 };

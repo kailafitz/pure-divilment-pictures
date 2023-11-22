@@ -1,5 +1,5 @@
 // Variables
-$dark: #0d0c0c;
+$primary: #0d0c0c;
 $light: #f9f9f9;
 $light-hover: #c9c9c9;
 
@@ -39,7 +39,7 @@ body {
 // Productions page -> active grid reel
 .active-production {
     background-color: $light;
-    color: $dark;
+    color: $primary;
 }
 
 // Home page -> Swiper
@@ -50,7 +50,7 @@ body {
 }
 
 .swiper-pagination {
-    background-color: $dark;
+    background-color: $primary;
     bottom: 0 !important;
     padding-top: 10px;
 }

@@ -1,20 +1,21 @@
 import React from "react";
 import {
-  CreativeMemberCardContainer,
+  CreativeCardContainer,
   CreativeImage,
   CreativeMemberTitle,
 } from "./styles";
-import { Box, Button, useTheme } from "@mui/material";
+import { Box, useTheme } from "@mui/material";
 import { CreativeInterface } from "../../Data/CreativesData";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
+import { Link } from "react-router-dom";
 
 const CompanyCreativeCard = (props: CreativeInterface) => {
   const theme = useTheme();
   return (
-    <CreativeMemberCardContainer
-      component={Button}
+    <CreativeCardContainer
+      component={Link}
       color="primary"
-      href={`/the-creatives/creative/${props.Creative.id}`}
+      to={`/the-creatives/creative/${props.Creative.id}`}
     >
       <picture>
         <source
@@ -26,6 +27,7 @@ const CompanyCreativeCard = (props: CreativeInterface) => {
           alt={props.Creative.name}
         />
       </picture>
+
       <Box
         sx={{
           width: "100%",
@@ -54,7 +56,7 @@ const CompanyCreativeCard = (props: CreativeInterface) => {
         </div>
         <NavigateNextIcon />
       </Box>
-    </CreativeMemberCardContainer>
+    </CreativeCardContainer>
   );
 };
 

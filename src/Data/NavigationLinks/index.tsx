@@ -1,22 +1,22 @@
 export const NavigationItems = [
   {
-    linkLabel: "About",
+    label: "About",
     link: "/about",
   },
   {
-    linkLabel: "The Creatives",
+    label: "The Creatives",
     link: "/the-creatives",
   },
   {
-    linkLabel: "Productions",
+    label: "Productions",
     link: "/productions/0",
   },
   // {
-  //   linkLabel: "Press",
+  //   label: "Press",
   //   link: "/press",
   // },
   {
-    linkLabel: "Reach Out",
+    label: "Reach Out",
     link: "/reach-out",
   },
 ];

@@ -17,18 +17,15 @@ const theme = createTheme({
   },
   palette: {
     primary: {
+      light: "#3c3c3c",
       main: "#0d0c0c",
+      dark: "#000000",
+      contrastText: "#f9f9f9",
     },
     white: {
       main: "#f9f9f9",
       dark: "#c9c9c9",
       contrastText: "#000000",
-    },
-    dark: {
-      light: "#3c3c3c",
-      main: "#0d0c0c",
-      dark: "#000000",
-      contrastText: "#f9f9f9",
     },
   },
   components: {

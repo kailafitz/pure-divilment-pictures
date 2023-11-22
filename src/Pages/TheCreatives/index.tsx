@@ -28,6 +28,7 @@ const TheCreatives = () => {
         container
         maxWidth="lg"
         rowSpacing={6}
+        columnSpacing={2}
         sx={{
           display: "flex",
           flexGrow: 1,

@@ -5,18 +5,15 @@ declare module '@mui/material/styles' {
     interface Palette {
         // neutral: Palette['primary'];
         white: Palette["primary"];
-        dark: Palette["primary"];
     }
 
     interface PaletteOptions {
         // neutral?: PaletteOptions['primary'];
         white: PaletteOptions["primary"];
-        dark: PaletteOptions["primary"];
     }
 
     interface CommonColors {
         white: string;
-        dark: string;
     }
 }
 
@@ -24,7 +21,6 @@ declare module '@mui/material/Typography' {
     interface TypographyPropsColorOverrides {
         // neutral: true;
         white: true;
-        dark: true;
     }
 }
 

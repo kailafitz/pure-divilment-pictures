@@ -100,7 +100,7 @@ const Footer = () => {
               color="inherit"
               sx={{ textTransform: "uppercase" }}
               target="_blank"
-              to="https://www.instagram.com/puredivilmentpictures/"
+              to="https://www.instagram.com/puredivilment/"
             >
               Instagram
             </Link>

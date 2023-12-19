@@ -92,7 +92,7 @@ const ReachOut = () => {
               IMDB
             </Link>
             <Link
-              href="https://www.instagram.com/puredivilmentpictures/"
+              href="https://www.instagram.com/puredivilment/"
               display="block"
               color="primary"
               target="_blank"

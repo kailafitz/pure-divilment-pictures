@@ -19,7 +19,7 @@ function App() {
 
   return (
     <>
-      {current === "/" && <OpeningAnimation />}
+      {/* {current === "/" && <OpeningAnimation />} */}
       <Container
         maxWidth="xl"
         disableGutters={true}

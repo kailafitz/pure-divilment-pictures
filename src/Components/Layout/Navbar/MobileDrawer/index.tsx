@@ -17,7 +17,7 @@ const MobileDrawer = (props: MobileDrawerProps) => {
       PaperProps={{
         sx: { backgroundColor: (theme) => theme.palette.white.main },
       }}
-      sx={{ zIndex: 0 }}
+      sx={{ zIndex: 1 }} // 0 when we need cookies banner
     >
       <List sx={{ pt: (theme) => theme.spacing(12) }}>
         {NavigationItems.map((navObj, i) => (

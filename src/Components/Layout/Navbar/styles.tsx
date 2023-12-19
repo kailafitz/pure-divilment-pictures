@@ -23,7 +23,7 @@ export const NavigationContainer = styled("div")(({ theme }) => ({
   },
   background: theme.palette.white.main,
   top: 0,
-  zIndex: 1,
+  zIndex: 2, // 1 When cookie banner is needed
 }));
 
 export const HamburgerContainer = styled("div")(({ theme }) => ({
